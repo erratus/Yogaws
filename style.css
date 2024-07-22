@@ -6,6 +6,7 @@
 
 body {
     font-family: sans-serif;
+    background-color: #f8f8f5;
 }
 
 .navbar {
@@ -287,3 +288,122 @@ body {
     color: #555;
     font-family: 'Roboto', sans-serif;
 }
+.specialbatches-section{
+    background-color: #f8f8f5;
+    margin: 60px;
+}
+
+.special-container{
+    display: flex;
+    gap: 12px;
+  
+}
+
+
+.placeholder-image{
+   margin-left: 60px;
+    height : 570px;
+    width : 50vw;
+}
+.specialbatchescard{
+    background-color: #fff;
+    width: 650px;
+    position: relative;
+    top: 90px;
+    right: 120px;
+    padding: 40px;
+    height : 500px;
+
+
+}
+.specialbatchescard h1{
+    font-family: "Playfair Display", serif;
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 88px;
+    color: #0d2123;
+    text-wrap: wrap;
+    padding : 12px;
+}
+.specialbatchescard p{
+    margin: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28.8px;
+    color: #0d2123;
+}
+.specialbatchescard button{
+    align-items: center;
+    display: flex;
+    flex-basis: auto;
+    flex-direction: row;
+    flex-grow: 1;
+    height: 6.8%;
+    justify-content: center;
+    overflow: hidden; 
+    width: 28%;
+    background-color: #000;
+    color: white;
+    transition : all .2s ease;
+    border: none;
+    margin: 20px;
+}
+
+.specialbatchescard button:hover{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+.hello-section{
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    padding: 3rem 5rem;
+    background-color: #0D2123; 
+    margin: 60px 0px;
+    height: 90vh;
+}
+.hello-img{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    
+    background-color: white;
+    height: 32rem;
+    
+}
+.hello-img img {
+   height: 30rem;
+  align-self: center;
+
+}
+.hello-container{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: flex-start;
+}
+.hello-container h1{
+    font-family: "Playfair Display", serif;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 54px;
+    color: #fffef8;
+}
+.hello-container p{
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28.125px;
+    color: #fffef8;
+}
+
+
+
+
+
