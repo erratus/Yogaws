@@ -1,6 +1,8 @@
 # Yogaws
 
 ****https://www.indramala.yoga/****
+incase virtual env dont work
+https://www.youtube.com/watch?v=6M3LzGmIAso
 
 yoga ws website project of me and my team 
 ADD ANY NEW HTML FILES TO TEMPLATES
