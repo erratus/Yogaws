@@ -1,0 +1,141 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css);
+
+body {
+  background: url(http://jsrun.it/assets/p/r/8/X/pr8Xi.png);  /*bg  1a1a1a  434240  */
+  color: white;
+  font-family: 'Roboto';
+}
+
+p {
+  color: none;
+}
+
+input:focus {
+  background-color: yellow;
+}
+
+.flat-form {
+  background: #34495e;  /*tablebg e74c3c #34495e  #88565b ed7271*/
+  margin: 25px auto;
+  width: 390px;
+  height: auto;
+  padding-bottom: 20px;
+  position: relative;
+  font-family: 'Roboto';
+}
+
+.tabs {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: #ed7271; /* topbar color */
+}
+
+.tabs li {
+  flex: 1; /* Makes each tab take up equal space */
+  margin: 0;
+}
+
+.tabs a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  padding: 12px;
+  background: #ed7271; /* topbar color */
+  transition: all 0.5s linear;
+}
+
+.tabs a.active {
+  background: #c0392b; /* active tab color */
+}
+
+.form-action {
+  padding: 0;
+  position: relative;
+}
+
+.form-action h1 {
+  text-align: center;
+  font-size: 42px;
+  padding-bottom: 10px;
+  padding-top: 5px;
+  padding-left: 10px;
+}
+
+.form-action ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+#login, #register {
+  display: none; /* Hide both initially */
+}
+
+#login.show, #register.show {
+  display: block; /* Show only the active one */
+}
+
+form {
+  padding: 0 20px; /* Adjust padding for overall form */
+}
+
+form input[type=text],
+form input[type=password] {
+  width: calc(100% - 30px);
+  height: 40px;
+  margin-bottom: 10px;
+  padding-left: 15px;
+  background: #fff;
+  border: none;
+  color: #e74c3c;
+  outline: none;
+}
+
+form input[type=submit] {
+  width: calc(50% - 10px); /* Each button takes half of the form width minus a margin */
+  margin: 10px;
+}
+
+.button {
+  border: none;
+  display: block;
+  background: #136899;
+  height: 40px;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 5px;
+  transition: all 0.15s linear;
+  margin: 0; /* Remove margin from the button */
+}
+
+.button:hover {
+  background: #1e75aa;
+}
+
+.button:active {
+  background: #136899;
+}
+
+::-webkit-input-placeholder {
+  color: dark;    
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #e74c3c;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #e74c3c;
+}
+
+:-ms-input-placeholder {
+  color: #e74c3c;
+}
