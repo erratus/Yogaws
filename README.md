@@ -1,8 +1,13 @@
 # Yogaws
 
 ****https://www.indramala.yoga/****
+
+run this code in python terminal to run the website
+python -m flask --app .\main.py run
+
 incase virtual env dont work
 https://www.youtube.com/watch?v=6M3LzGmIAso
+
 
 yoga ws website project of me and my team 
 ADD ANY NEW HTML FILES TO TEMPLATES
