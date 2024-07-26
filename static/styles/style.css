@@ -1,0 +1,411 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #f8f8f5;
+}
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgb(251, 251, 248);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.playfair-display-main-heading {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing:auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 72px; 
+}
+
+#nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-left: 10rem;
+}
+
+.logo img {
+    max-height: 100px;
+    margin-left: 4rem;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+}
+
+.nav-links a:hover {
+    color: #f76b1c;
+}
+
+.social-media a {
+    text-decoration: none;
+}
+
+.social-media img {
+    max-height: 25px;
+    margin-right: 1rem;
+}
+
+/* Home Section Styles */
+.home-section {
+    padding: 3rem 1rem;
+    text-align: center;
+    position: relative;
+    background: url('/static/assets/mainbg.webp') no-repeat center center/cover;
+    color: #333;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5); /* Adjust transparency as needed */
+    z-index: 1;
+}
+
+.home-container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.home-section h1 {
+    font-size: 72px; 
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.home-section p {
+    font-size: 1.2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #000;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #f76b1c;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e65a10;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* About Section Styles */
+.about-section {
+    display: flex;
+    align-items: center;
+    padding: 3rem 1rem;
+    background-color: #121212; 
+}
+
+#about-img {
+    flex: 1;
+    max-width: 60%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 2rem; 
+}
+
+#about-img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px; 
+}
+
+.about-container {
+    flex: 1; 
+    padding-left: 2rem;
+    color: #f5f5f5; 
+    font-family: 'Roboto', sans-serif; 
+}
+
+.about-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff; 
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+}
+
+.about-container h5 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #f76b1c; 
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+}
+
+.about-container p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #e0e0e0; 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    #about-img, .about-container {
+        max-width: 100%;
+        padding: 0;
+    }
+    .about-container {
+        padding-top: 2rem;
+    }
+}
+
+.yoga-benefits-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3rem 1rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+.benefits-container,
+.class-info-container {
+    flex: 1;
+    padding: 1rem;
+}
+
+.benefits-container img,
+.class-info-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+/* Services Section Styles */
+.services-section {
+    padding: 3rem 1rem;
+    background-color: #f8f8f5; 
+}
+
+.services-heading {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    font-family: "Playfair Display", serif;
+    color: #333;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.service-card {
+    background-color: #fff;
+    display:flex;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 7px;
+    overflow: hidden;
+    max-width: 900px;
+    margin: 15px;
+    flex: 1;
+    min-width: 570px;
+    height:250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    cursor: pointer;
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.service-content {
+    padding: 1.5rem;
+}
+
+.service-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-family: "Playfair Display", serif;
+    color: #333;
+}
+
+.service-description {
+    font-size: 1rem;
+    color: #555;
+    font-family: 'Roboto', sans-serif;
+}
+.specialbatches-section{
+    background-color: #f8f8f5;
+    margin: 60px;
+}
+
+.special-container{
+    display: flex;
+    gap: 12px;
+  
+}
+
+
+.placeholder-image{
+   margin-left: 60px;
+    height : 570px;
+    width : 50vw;
+}
+.specialbatchescard{
+    background-color: #fff;
+    width: 650px;
+    position: relative;
+    top: 90px;
+    right: 120px;
+    padding: 40px;
+    height : 500px;
+
+
+}
+.specialbatchescard h1{
+    font-family: "Playfair Display", serif;
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 88px;
+    color: #0d2123;
+    text-wrap: wrap;
+    padding : 12px;
+}
+.specialbatchescard p{
+    margin: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28.8px;
+    color: #0d2123;
+}
+.specialbatchescard button{
+    align-items: center;
+    display: flex;
+    flex-basis: auto;
+    flex-direction: row;
+    flex-grow: 1;
+    height: 6.8%;
+    justify-content: center;
+    overflow: hidden; 
+    width: 28%;
+    background-color: #000;
+    color: white;
+    transition : all .2s ease;
+    border: none;
+    margin: 20px;
+}
+
+.specialbatchescard button:hover{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+.hello-section{
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    padding: 3rem 5rem;
+    background-color: #0D2123; 
+    margin: 60px 0px;
+    height: 90vh;
+}
+.hello-img{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    
+    background-color: white;
+    height: 32rem;
+    
+}
+.hello-img img {
+   height: 30rem;
+  align-self: center;
+
+}
+.hello-container{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: flex-start;
+}
+.hello-container h1{
+    font-family: "Playfair Display", serif;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 54px;
+    color: #fffef8;
+}
+.hello-container p{
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28.125px;
+    color: #fffef8;
+}
+
+
+
+
+
