@@ -406,6 +406,150 @@ body {
 }
 
 
+.praise-section {
+    padding: 40px;
+    text-align: center;
+}
+
+.praise-container {
+    margin: 0 auto;
+    font-family: "Playfair Display", serif;
+}
+
+.praise-container h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 54px;
+    color: #0d2123;
+}
+
+.praise-container p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28.125px;
+    color: #0d2123;
+    margin-bottom: 20px;
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.testimonial.card {
+    background-color: #fbf9eb;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 10px;
+}
+
+.quote-icon {
+    font-size: 80px;
+    color: #ccc;
+}
+
+.ourteam-section {
+    padding: 3rem 5rem;
+    background-color: #fff;
+    margin: 60px 0;
+}
+
+.ourteam-wrapper {
+    display: flex;
+    flex-direction: column; /* Arrange children vertically */
+    align-items: center; /* Center align children horizontally */
+    justify-content: center; /* Center align children vertically */
+    padding: 40px 0; /* Vertical padding */
+    text-align: center; /* Center text inside the wrapper */
+    gap: 40px; /* Space between elements inside the wrapper */
+}
+
+.ourteam-wrapper h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 40px;
+    margin: 0; /* Adjust margin if needed */
+    color: #0d2123;
+}
+
+.ourteam-wrapper p {
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    color: #0d2123;
+    display: block; /* add this */
+    text-align: justify; /* add this */
+    width: 800px; /* set the width */
+    height: 150px;
+}
+
+.ourteam-container {
+    display: flex;
+    justify-content: center; /* Center align team member cards horizontally */
+    flex-wrap: wrap; /* Allow cards to wrap onto new lines */
+    gap: 50px; /* Space between team member cards */
+}
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* or any other height you prefer */
+    position: relative; /* Make the team member container relative */
+    width: 300px; /* Set a fixed width for the container */
+    height: 350px; /* Set a fixed height for the container */
+}
+
+.member-image {
+    background-color: #f5f5f5;
+    width: 80%;
+    min-height: 300px; /* Set a minimum height */
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.member-text {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: white;
+    padding: 5px;
+    width: 200px;
+    height: 100px;
+    font-size: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+    overflow: hidden;
+}
+
+.member-text h4 {
+    font-family: "Playfair Display", serif;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.member-text p {
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .ourteam-container {
+        flex-direction: column;
+    }
+    .team-member {
+        width: 80%;
+        margin: 10px auto;
+    }
+}
 
 
 
