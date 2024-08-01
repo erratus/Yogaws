@@ -229,6 +229,8 @@ body {
 
 /* Services Section Styles */
 .services-section {
+    display: flex;
+    flex-direction: column;
     padding: 3rem 1rem;
     background-color: #f8f8f5; 
 }
@@ -240,6 +242,12 @@ body {
     font-family: "Playfair Display", serif;
     color: #333;
 }
+.services-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    gap: 200px;
+}
 
 
   
@@ -249,7 +257,7 @@ body {
     display:flex;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 7px;
-    max-width: 30rem;
+    max-width: 92%;
     margin: 15px auto;
     height: 500px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -307,7 +315,7 @@ body {
     top: 90px;
     right: 120px;
     padding: 40px;
-    height : 500px;
+    height : 36rem;
 
 
 }
@@ -357,7 +365,7 @@ body {
     gap: 5rem;
     padding: 3rem 5rem;
     background-color: #0D2123; 
-    margin: 60px 0px;
+    margin: 14rem 0px;
     height: 90vh;
 }
 .hello-img{
