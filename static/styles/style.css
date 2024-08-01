@@ -241,24 +241,17 @@ body {
     color: #333;
 }
 
-.services-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-}
+
+  
 
 .service-card {
     background-color: #fff;
     display:flex;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 7px;
-    overflow: hidden;
-    max-width: 900px;
-    margin: 15px;
-    flex: 1;
-    min-width: 570px;
-    height:250px;
+    max-width: 30rem;
+    margin: 15px auto;
+    height: 500px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -550,6 +543,15 @@ body {
         margin: 10px auto;
     }
 }
-
+.prev-icon{
+    position: absolute;
+    bottom: -50px;
+    left: 40%;
+}
+.next-icon{
+    position: absolute;
+    bottom: -50px;
+    right: 40%;
+}
 
 
