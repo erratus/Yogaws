@@ -24,7 +24,6 @@ IN ORDER TO VIEW DB USE sqlite3 viewer online
 #TODO
 founder-section-soham
 scroll animation - soham
-collage-arya
 website calendar- arya
 carousel - tushar
 trainers section - tushar

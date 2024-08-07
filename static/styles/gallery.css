@@ -1,0 +1,98 @@
+body {
+    font-family: Montserrat; 
+    line-height: 1.6; 
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+
+    background: linear-gradient(180deg, rgba(243,179,150,1) 0%, rgba(255,255,255,1) 55%, rgba(255,255,255,1) 100%);   background: linear-gradient(180deg, rgba(241,169,136,1) 0%, rgba(255,255,255,1) 60%, rgba(255,255,255,1) 100%);
+    background-attachment: fixed;
+}
+
+.intro {
+    font-family: 'Helvetica Neue', Montserrat;
+    background-color: white;
+    padding: 20px;
+    text-align: center; 
+    max-width: 1200px; 
+    margin: 20px auto; 
+    line-height: 1.2;
+}
+
+.intro h1 {
+    font-size: 2.5em; 
+    color: #2c3e50; 
+    margin-bottom: 0.5em;
+}
+
+.intro p {
+    font-size: 1.125em; 
+    color: #555; 
+    margin-bottom: 1.5em;
+    padding: 10px;
+}
+
+.gallery {
+    column-count: 4;
+    column-gap: 15px;
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 15px; 
+}
+
+.gallery-item {
+    position: relative; /* Positioning context for caption */
+    break-inside: avoid;
+    margin-bottom: 15px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto; 
+    display: block;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.caption {
+    position: absolute; /* Position over image */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.gallery-item:hover .caption {
+    opacity: 1; /* Show on hover */
+}
+@media (min-width: 576px) {
+    .gallery {
+        column-count: 2;
+    }
+}
+
+@media (min-width: 768px) {
+    .gallery {
+        column-count: 3;
+    }
+}
+
+@media (min-width: 992px) {
+    .gallery {
+        column-count: 4;
+    }
+}
