@@ -18,3 +18,16 @@ libraries to use
 2. sqlite3
 
 IN ORDER TO VIEW DB USE sqlite3 viewer online
+
+
+
+#TODO
+founder-section-soham
+scroll animation - soham
+collage-arya
+website calendar- arya
+carousel - tushar
+trainers section - tushar
+quick links brochure - surya
+i want to teach btn - surya
+registration form (transparent) - surya
