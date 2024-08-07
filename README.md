@@ -27,6 +27,13 @@ scroll animation - soham
 website calendar- arya
 carousel - tushar
 trainers section - tushar
-quick links brochure - surya
-i want to teach btn - surya
-registration form (transparent) - surya
+i want to teach btn - surya (WAITING FOR CAROUSEL)
+registration form (transparent) - surya (partial-DONE){
+    add form validation
+    connect db
+    change theme 
+    re route to success (done error handling)
+    add login if user alr exists (partial-done w landing page)
+}
+vision and mission (partially done styling left)
+quick links brochure - surya (DONE)
