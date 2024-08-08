@@ -1,5 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/static/styles/style.css">
+        <link rel="stylesheet" href="/static/styles/footer.css">
+        <link rel="stylesheet" href="/static/styles/registration.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <header class="header">
+            <!-- <h1>Indramala Yoga stansta</h1> -->
+        <img src="/static/assets/website_icon.webp" alt="The Art of Living Logo">
+    </header>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#" class="dropbtn">Home</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Meditation</a>
+                <div class="dropdown-content">
+                    <a href="#">Meditation Techniques</a>
+                    <a href="#">Benefits of Meditation</a>
+                    <a href="#">Meditation Courses</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Yoga</a>
+                <div class="dropdown-content">
+                    <a href="#">Yoga Styles</a>
+                    <a href="#">Yoga for Beginners</a>
+                    <a href="#">Yoga Retreats</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Wisdom</a>
+                <div class="dropdown-content">
+                    <a href="#">Inspirational Quotes</a>
+                    <a href="#">Ancient Wisdom</a>
+                    <a href="#">Articles on Self-Improvement</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Events</a>
+                <div class="dropdown-content">
+                    <a href="#">Upcoming Events</a>
+                    <a href="#">Past Events</a>
+                    <a href="#">Register for Events</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Social Impact</a>
+                <div class="dropdown-content">
+                    <a href="#">Our Initiatives</a>
+                    <a href="#">Volunteer Opportunities</a>
+                    <a href="#">Impact Reports</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">About Us</a>
+                <div class="dropdown-content">
+                    <a href="#">Our Vision & Mission</a>
+                    <a href="#">Our History</a>
+                    <a href="#">Meet Our Team</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">India - English</a>
+                <div class="dropdown-content">
+                    <a href="#">India - English</a>
+                    <a href="#">India - Hindi</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <section class="hero">
+        <h2>Making Life a Celebration</h2>
+        <p>Fostering well-being through breath, meditation & yoga programs since 1981</p>
+        <a a href="#" class="call-to-action" id="openModal">Find a Solution for...</a>
+    </section>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Register</h2>
+            <form id="registration"  action="/templates/success.html" method="post" autocomplete="on">
+                <!--First name-->
+                <div class="box">
+                    <div class="iconBox">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </div>
+                    <input type="text" name="firstName" placeholder="First Name" class="textBox" autofocus="on" required>
+                </div>
+            
+                <!--Second name-->
+                <div class="box">
+                    <div class="iconBox"><i class="fa fa-user" aria-hidden="true"></i></div>
+                    <input type="text" required name="secondName" placeholder="Last Name" class="textBox">
+                </div>
+            
+                <!--Phone No.-->
+                <div class="box">
+                    <div class="iconBox"><i class="fa fa-phone-square" aria-hidden="true"></i></div>
+                    <input type="text" required name="phoneNo" maxlength="10" placeholder="Phone No." class="textBox">
+                </div>
+            
+                <!--Password-->
+                <div class="box">
+                    <div class="iconBox"><i class="fa fa-key" aria-hidden="true"></i></div>
+                    <input type="password" required name="password" placeholder="Password" class="textBox">
+                </div>
+
+                <div class="box">
+                    <div class="iconBox"><i class="fa fa-key" aria-hidden="true"></i></div>
+                    <input type="password" required name="password" placeholder="Confirm Password" class="textBox">
+                </div>
+            
+                <!--Gender-->
+                <div class="box radio">
+                    <label for="gender" class="fl fontLabel">Gender:</label>
+                    <input type="radio" name="Gender" value="Male" required> Male &nbsp; &nbsp; &nbsp; &nbsp;
+                    <input type="radio" name="Gender" value="Female" required> Female
+                </div>
+            
+                <!--Submit Button-->
+                <div class="box" style="background: #2d3e3f">
+                    <input type="submit" name="Submit" class="submit" value="SUBMIT">
+                </div>
+
+                <a href="/templates/success.html" id="alrchk">already logged in?</a>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="/templates/visionNmission.html">Vision & Mission</a></li>
+                        <li><a href="#">Distinctive Features</a></li>
+                        <li><a href="#">Organizational Structure</a></li>
+                        <li><a href="#">Previous Question Paper</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Documents & Certificate</a></li>
+                        <li><a href="#">Grievance</a></li>
+                        <li><a href="/templates/gallery.html">Gallery</a></li>
+                        <li><a href="/static/assets/Yoga Brochure-1.pdf">Brochure</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/people/Indramala-yoga-sansthan/100083211976601/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://m.youtube.com/@IndramalayogaSansthan"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/indramala_yoga?igsh=eDk3NmcyZ2JweWtj"><i class="fab fa-instagram"></i></a>
+                        <img src="/static/assets/website_icon.webp" alt="">
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Address</h4>
+                    <ul class="Address">
+                        <li>Plot No. 56, 1st Floor,Shivaji Hsg. Soc, Senapati Bapat Rd, Pune,Maharashtra 411016 (INDIA)</li>
+                        <li><h5>Contact us at:</h5>8851246435,<br>9096384926</li>
+                        <li><h5>Mail to:</h5>indramalayogasansthan@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -95,4 +270,8 @@
     </script>
    
 </body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="/static/scripts/main.js" defer></script>
 </html>
