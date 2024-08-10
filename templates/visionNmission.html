@@ -4,15 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vision and Mission</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            background-color: #fadd77;
+        }
+
+        .section {
+            display: flex;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        .section:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+        
+        .section img {
+            width: 30%; 
+            height: auto;
+            border-radius: 255px;
+        }
+        
+        .section div {
+            width: 70%; 
+            padding: 20px;
+        }
+        
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
+    </style>
 </head>
 <body>
-    <div class="vision">
-        <h1>OUR VISION</h1>
-        <p>At Indramala Yoga Sansthan, our vision is to create a world where individuals are empowered to cultivate holistic well-being, inner peace, and personal transformation through the practice of yoga. We envision a community where everyone has access to the tools and support they need to thrive physically, mentally, and spiritually.</p>
+    <div class="section vision">
+        <div>
+            <h1>OUR VISION</h1>
+            <p>At Indramala Yoga Sansthan, our vision is to create a world where individuals are empowered to cultivate holistic well-being, inner peace, and personal transformation through the practice of yoga. We envision a community where everyone has access to the tools and support they need to thrive physically, mentally, and spiritually.</p>
+        </div>
+        <img src="/static/assets/placeholder.webp" alt="Vision Image">
     </div>
-    <div class="mission">
-        <h1>OUR MISSION</h1>
-        <p>Our mission at Indramala Yoga Sansthan is to provide a nurturing and inclusive space where individuals of all backgrounds and abilities can explore the transformative power of yoga.</p>
+    
+    <div class="section mission">
+        <div>
+            <h1>OUR MISSION</h1>
+            <p>Our mission at Indramala Yoga Sansthan is to provide a nurturing and inclusive space where individuals of all backgrounds and abilities can explore the transformative power of yoga.</p>
+        </div>
+        <img src="/static/assets/placeholder.webp" alt="Mission Image">
     </div>
 </body>
 </html>
