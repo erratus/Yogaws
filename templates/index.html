@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,22 @@
     <header class="header">
         <h1>Indramala Yoga stansta</h1>
         <img src="/delta-demo/website_icon.webp" alt="The Art of Living Logo">
+=======
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/static/styles/style.css">
+        <link rel="stylesheet" href="/static/styles/footer.css">
+        <link rel="stylesheet" href="/static/styles/registration.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <header class="header">
+            <!-- <h1>Indramala Yoga stansta</h1> -->
+            <a href="#" class="auth-link" id="openModal">register/login</a>
+            <img src="/static/assets/website_icon.webp" alt="Indramala yoga sansthan logo" >
+>>>>>>> e401ec7914b39a36ceca3830cc13d66ca0f86d12
     </header>
     <nav>
         <ul class="nav-links">
@@ -73,9 +90,13 @@
         </ul>
     </nav>
     <section class="hero">
+<<<<<<< HEAD
         <h2>Making Life a Celebration</h2>
         <p>Fostering well-being through breath, meditation & yoga programs since 1981</p>
         <a href="#" class="call-to-action">Find a Solution for...</a>
+=======
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque cum in repudiandae quos porro sapiente nostrum consectetur ut, a voluptatem qui dicta labore recusandae, placeat magni aliquam voluptate suscipit laudantium!</p>
+>>>>>>> e401ec7914b39a36ceca3830cc13d66ca0f86d12
     </section>
     
     <section id="hello" class="hello-section">
@@ -88,16 +109,72 @@
                 prenatal yoga,Iyengar Yoga, Aerial Yoga, and Traditional Yoga.</p>
 
             <p>My passion lies in guiding individuals towards holistic well-being through the integration of these diverse yoga practices.
-                 Let's embark on a transformative journey to nurture your mind, body, and spirit!</p>
+                Let's embark on a transformative journey to nurture your mind, body, and spirit!</p>
         </div>  
 
     </section>
 
+<<<<<<< HEAD
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <main>
     </main>
+=======
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Register</h2>
+            <form id="registration"  action="/templates/success.html" method="post" autocomplete="on">
+                <!--First name-->
+                <div class="box">
+                    <div class="iconBox">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </div>
+                    <input type="text" name="firstName" placeholder="First Name" class="textBox" autofocus="on" required>
+                </div>
+            
+                <!--Second name-->
+                <div class="box">
+                    <div class="iconBox"><i class="fa fa-user" aria-hidden="true"></i></div>
+                    <input type="text" required name="secondName" placeholder="Last Name" class="textBox">
+                </div>
+            
+                <!--Phone No.-->
+                <div class="box">
+                    <div class="iconBox"><i class="fa fa-phone-square" aria-hidden="true"></i></div>
+                    <input type="text" required name="phoneNo" maxlength="10" placeholder="Phone No." class="textBox">
+                </div>
+            
+                <!--Password-->
+                <div class="box">
+                    <div class="iconBox"><i class="fa fa-key" aria-hidden="true"></i></div>
+                    <input type="password" required name="password" placeholder="Password" class="textBox">
+                </div>
+
+                <div class="box">
+                    <div class="iconBox"><i class="fa fa-key" aria-hidden="true"></i></div>
+                    <input type="password" required name="password" placeholder="Confirm Password" class="textBox">
+                </div>
+            
+                <!--Gender-->
+                <div class="box radio">
+                    <label for="gender" class="fl fontLabel">Gender:</label>
+                    <input type="radio" name="Gender" value="Male" required> Male &nbsp; &nbsp; &nbsp; &nbsp;
+                    <input type="radio" name="Gender" value="Female" required> Female
+                </div>
+            
+                <!--Submit Button-->
+                <div class="box" style="background: #2d3e3f">
+                    <input type="submit" name="Submit" class="submit" value="SUBMIT">
+                </div>
+
+                <a href="/templates/login.html" id="alrchk">already have an account?</a>
+            </form>
+        </div>
+    </div>
+
+>>>>>>> e401ec7914b39a36ceca3830cc13d66ca0f86d12
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -106,17 +183,20 @@
                     <ul>
                         <li><a href="#">Vision & Mission</a></li>
                         <li><a href="#">Distinctive Features</a></li>
-                        <li><a href="#">Organizational Structure</a></li>
-                        <li><a href="#">Previous Question Paper</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="#">Documents & Certificate</a></li>
+<<<<<<< HEAD
                         <li><a href="#">Grievance</a></li>
                         <li><a href="#">Gallery</a></li>
                         <li><a href="#">Career</a></li>
+=======
+                        <li><a href="/templates/gallery.html">Gallery</a></li>
+                        <li><a href="/static/assets/Yoga Brochure-1.pdf">Brochure</a></li>
+>>>>>>> e401ec7914b39a36ceca3830cc13d66ca0f86d12
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -140,6 +220,13 @@
             </div>
         </div>
     </footer>
+<<<<<<< HEAD
     
 </body>
+=======
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="/static/scripts/main.js" defer></script>
+>>>>>>> e401ec7914b39a36ceca3830cc13d66ca0f86d12
 </html>

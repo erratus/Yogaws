@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 body{
 	line-height: 1.5;
@@ -109,10 +110,32 @@ body {
 
 .header {
     background-color: #fff;
+=======
+
+.header {
+    position: relative;
+    background-color: #fff4cc;
+>>>>>>> e401ec7914b39a36ceca3830cc13d66ca0f86d12
     padding: 1rem 0;
-    text-align: center;
     border-bottom: 2px solid #e0e0e0;
+<<<<<<< HEAD
+=======
+    display: flex;
+    justify-content: center;
+    align-items: center;
+>>>>>>> e401ec7914b39a36ceca3830cc13d66ca0f86d12
 }
+
+
+.auth-link {
+    position: absolute;
+    right: 1rem;
+    font-size: 1rem;
+    color: black;
+    text-decoration: none;
+    margin-right: 45px;
+}
+
 
 .header h1 {
     font-size: 2rem;
@@ -190,13 +213,14 @@ nav {
 }
 
 .hero {
-    background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
+    background-image: url("/static/assets/testbg.png");
     background-size: cover;
     background-position: center;
     color: #ffffff;
     text-align: center;
     padding: 10rem 0;
     position: relative;
+    height: 100vh;
 }
 
 .hero::after {
