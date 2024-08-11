@@ -12,10 +12,6 @@
     align-items: center;
 } */
 
-#open-model{
-    color: #ffffff;
-}
-
 .modal-content {
     background-color: #fff;
     margin: auto;
@@ -128,14 +124,14 @@
     background: #ff6600;
     color: #070707;
     border-radius: 4px 0 0 4px;
-    margin-right: 10px; 
+    margin-right: 10px; /* Space between icon and input */
 }
 
 .textBox {
     height: 35px;
-    flex: 1; 
+    flex: 1; /* Make the textbox take up remaining space */
     border: none;
-    padding-left: 10px; 
+    padding-left: 10px; /* Space between icon and text */
     border-radius: 4px;
     background: #fff;
     color: #333;

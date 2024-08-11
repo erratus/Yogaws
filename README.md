@@ -19,12 +19,7 @@ libraries to use
 
 IN ORDER TO VIEW DB USE sqlite3 viewer online
 
-palette used
-fff4cc
-fadd77
-ff7f0e
-d35400
-8c564b
+
 
 #TODO
 founder-section-soham
@@ -36,5 +31,9 @@ i want to teach btn - surya (WAITING FOR CAROUSEL)
 registration form (transparent) - surya (partial-DONE){
     add form validation
     connect db
-    re route to success 
+    change theme 
+    re route to success (done error handling)
+    add login if user alr exists (partial-done w landing page)
 }
+vision and mission (partially done styling left)
+quick links brochure - surya (DONE)
