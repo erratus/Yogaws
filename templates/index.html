@@ -68,6 +68,7 @@
             </li>
         </ul>
     </nav>
+    <div class="header-space"></div>
     <section class="hero">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque cum in repudiandae quos porro sapiente nostrum consectetur ut, a voluptatem qui dicta labore recusandae, placeat magni aliquam voluptate suscipit laudantium!</p>
     </section>
@@ -226,38 +227,25 @@
         </div>
     </footer>
     <script>
-    let lastScrollTop = 0;
-    const nav = document.querySelector('nav');
-    let scrollTimeout;
-    let hideTimeout;
+let lastScrollTop = 0;
+const nav = document.querySelector('nav');
 
-    window.addEventListener('scroll', function() {
-        // Clear any previous timeout that would hide the nav
-        clearTimeout(hideTimeout);
+window.addEventListener('scroll', function() {
+    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-        let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    if (currentScroll > lastScrollTop) {
+        // Scrolling down - hide the nav
+        nav.classList.add('hide');
+    } else {
+        // Scrolling up - show the nav
+        nav.classList.remove('hide');
+    }
 
-        if (currentScroll > lastScrollTop) {
-            // Scrolling down - hide the nav
-            nav.classList.add('hide');
-        } else {
-            // Scrolling up - show the nav
-            nav.classList.remove('hide');
-        }
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
+});
 
-        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
-
-        // Clear the previous scroll timeout if scrolling continues
-        clearTimeout(scrollTimeout);
-
-        // Set a timeout to add the hide class after a delay
-        scrollTimeout = setTimeout(function() {
-            hideTimeout = setTimeout(function() {
-                nav.classList.add('hide');
-            }, 3000); // Wait 3 seconds before hiding the nav (you can adjust this time)
-        }, 100); // Short delay to ensure smooth operation after stopping the scroll
-    });
 </script>
+
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

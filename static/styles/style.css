@@ -18,6 +18,14 @@
     text-decoration: none;
     margin-right: 45px;
 }
+.auth-linky {
+    position: absolute;
+    left: 1rem;
+    font-size: 1rem;
+    color: black;
+    text-decoration: none;
+    margin-left: 45px;
+}
 
 
 .header h1 {
@@ -30,14 +38,6 @@
     height: 100px;
 }
 
-
-nav {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    padding: 0.5rem 0;
-}
 
 .nav-links {
     list-style: none;
@@ -62,11 +62,6 @@ nav {
     transition: background-color 0.3s, color 0.3s;
 }
 
-.nav a:hover {
-    background-color: #f1f1f1;
-    color: #007bff;
-}
-
 .dropdown-content {
     display: none;
     position: absolute;
@@ -86,25 +81,10 @@ nav {
     transition: background-color 0.3s, color 0.3s;
 }
 
-.dropdown-content a:hover {
-    background-color: #007bff;
-    color: #ffffff;
-}
-
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-.hero {
-    background-image: url("/static/assets/testbg.png");
-    background-size: cover;
-    background-position: center;
-    color: #ffffff;
-    text-align: center;
-    padding: 10rem 0;
-    position: relative;
-    height: 100vh;
-}
 
 .hero::after {
     content: '';
@@ -202,7 +182,7 @@ nav {
     gap: 5rem;
     padding: 3rem 5rem;
     background-color: #FFD54F; 
-    margin: 60px 0px;
+    margin: 0px 0px;
     height: 90vh;
 }
 .hello-img{
@@ -242,21 +222,61 @@ nav {
     line-height: 28.125px;
     color: #000000;
 }   
-/* CSS for the nav */
+
+/* Navbar styles */
 nav {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    padding: 0.5rem 0;
-    position: fixed; /* Keeps the nav fixed at the top */
-    top: 0;
+    position: fixed;
     width: 100%;
-    z-index: 999;
-    transition: transform 0.5s ease-in-out; /* Smooth slide-up animation */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: #333;
+    color: #333;
+    text-align: center;
+    padding: 0.5rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    height: 80px; /* Height of the navbar */
+    transition: transform 0.5s ease-in-out;
 }
 
-/* Hidden state for the nav */
 nav.hide {
-    transform: translateY(-100%); /* Slides the nav up off-screen */
+    transform: translateY(-170%); /* Move the nav completely out of view */
+    transition: transform 0.3s ease-in-out;
+    position: fixed; /* Ensure nav stays fixed at the top */
+    top: 0;
+    width: 100%; /* Maintain full width */
+    z-index: 1000; /* Ensure it's above other elements */
 }
+
+.header-space {
+    background-color: black;
+    height: 100px; /* Adjust this value for the amount of extra space you want */
+}
+
+/* Hero section styling */
+.hero {
+    margin-top: 80px; /* Matches the height of the navbar */
+    background-image: url("/static/assets/testbg.png");
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 10rem 0;
+    position: relative;
+    height: 100vh;
+}
+
+/* Navbar container styles */
+.nav-links {
+    background-color: #333; /* Background color for the entire navbar line */
+    padding: 0; /* Remove padding around the nav-links */
+    margin: 0; /* Remove margin around the nav-links */
+    list-style: none; /* Remove bullets from the list */
+    display: flex; /* Use flexbox to align items horizontally */
+    justify-content: center; /* Center align the navbar items */
+}
+body{
+    background-color: #000;
+}
+
+
