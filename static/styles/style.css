@@ -242,3 +242,21 @@ nav {
     line-height: 28.125px;
     color: #000000;
 }   
+/* CSS for the nav */
+nav {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 0.5rem 0;
+    position: fixed; /* Keeps the nav fixed at the top */
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    transition: transform 0.5s ease-in-out; /* Smooth slide-up animation */
+}
+
+/* Hidden state for the nav */
+nav.hide {
+    transform: translateY(-100%); /* Slides the nav up off-screen */
+}

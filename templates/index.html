@@ -11,12 +11,12 @@
         <title>Document</title>
     </head>
     <body>
+    <nav>
         <header class="header">
             <!-- <h1>Indramala Yoga stansta</h1> -->
             <a href="#" class="auth-link" id="openModal">register/login</a>
             <img src="/static/assets/website_icon.webp" alt="Indramala yoga sansthan logo" >
     </header>
-    <nav>
         <ul class="nav-links">
             <li><a href="#" class="dropbtn">Home</a></li>
             <li class="dropdown">
@@ -33,14 +33,6 @@
                     <a href="#">Yoga Styles</a>
                     <a href="#">Yoga for Beginners</a>
                     <a href="#">Yoga Retreats</a>
-                </div>
-            </li>
-            <li class="dropdown">
-                <a href="#" class="dropbtn">Wisdom</a>
-                <div class="dropdown-content">
-                    <a href="#">Inspirational Quotes</a>
-                    <a href="#">Ancient Wisdom</a>
-                    <a href="#">Articles on Self-Improvement</a>
                 </div>
             </li>
             <li class="dropdown">
@@ -233,6 +225,39 @@
             </div>
         </div>
     </footer>
+    <script>
+    let lastScrollTop = 0;
+    const nav = document.querySelector('nav');
+    let scrollTimeout;
+    let hideTimeout;
+
+    window.addEventListener('scroll', function() {
+        // Clear any previous timeout that would hide the nav
+        clearTimeout(hideTimeout);
+
+        let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (currentScroll > lastScrollTop) {
+            // Scrolling down - hide the nav
+            nav.classList.add('hide');
+        } else {
+            // Scrolling up - show the nav
+            nav.classList.remove('hide');
+        }
+
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
+
+        // Clear the previous scroll timeout if scrolling continues
+        clearTimeout(scrollTimeout);
+
+        // Set a timeout to add the hide class after a delay
+        scrollTimeout = setTimeout(function() {
+            hideTimeout = setTimeout(function() {
+                nav.classList.add('hide');
+            }, 3000); // Wait 3 seconds before hiding the nav (you can adjust this time)
+        }, 100); // Short delay to ensure smooth operation after stopping the scroll
+    });
+</script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
