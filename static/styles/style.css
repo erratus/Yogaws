@@ -1,9 +1,9 @@
 
 .header {
     position: relative;
-    background-color: #fff4cc;
+    background-color: #CCC5B9;
     padding: 1rem 0;
-    border-bottom: 2px solid #e0e0e0;
+    border-bottom: 2px solid #CCC5B9;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,7 +14,7 @@
     position: absolute;
     right: 1rem;
     font-size: 1rem;
-    color: black;
+    color: #333;
     text-decoration: none;
     margin-right: 45px;
 }
@@ -172,7 +172,7 @@
     padding: 0.75rem 1rem;
     display: block;
     font-size: 1rem;
-    color: #fff;
+    color: #333 ;
     text-decoration: none;
 }
 
@@ -230,7 +230,7 @@ nav {
     top: 0;
     left: 0;
     z-index: 1000;
-    background-color: #333;
+    background-color: #CCC5B9;
     color: #333;
     text-align: center;
     padding: 0.5rem 0;
@@ -268,7 +268,7 @@ nav.hide {
 
 /* Navbar container styles */
 .nav-links {
-    background-color: #333; /* Background color for the entire navbar line */
+    background-color: #CCC5B9; /* Background color for the entire navbar line */
     padding: 0; /* Remove padding around the nav-links */
     margin: 0; /* Remove margin around the nav-links */
     list-style: none; /* Remove bullets from the list */

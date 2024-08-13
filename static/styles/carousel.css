@@ -40,7 +40,7 @@
 .team-section .container > div:nth-of-type(4),
 .team-section .container > div:nth-of-type(5),
 .team-section .container > div:nth-of-type(6) {
-    background: url("/static/assets/placeholder.webp") no-repeat 50% / cover;
+    background: url("/static/assets/trainer.webp") no-repeat 50% / cover;
 }
 
 .team-section .content {
