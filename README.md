@@ -28,13 +28,14 @@ d35400
 
 #TODO
 founder-section-soham
-scroll animation - soham
 website calendar- arya
 carousel - tushar
-trainers section - tushar
-i want to teach btn - surya (WAITING FOR CAROUSEL)
 registration form (transparent) - surya (partial-DONE){
     add form validation
     connect db
-    re route to success 
 }
+
+requirements
+trainer photos
+org. videos
+any docs and/or certificates

@@ -1,101 +1,118 @@
-body{
-    background-color: rgb(162, 211, 211)
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;    
+    font-family: Raleway, sans-serif;
+}
+
+html, body {
+    overflow: auto;
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(90deg, #fff4cc, #fadd77); /* Light Cream to Golden Yellow */
 }
 
 section {
-    margin: 0 350px;
-    padding: 10px 40px;
-    background-color: #FFF4CC; /* Light yellow background */
-    border-radius: 5px;
-    box-shadow: 4px 4px #FADD77; /* Soft shadow with a slightly darker yellow */
-    font-family: 'Poppins', sans-serif;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(90deg, #ff7f0e, #d35400);
+    border-radius: 15px;
+    box-shadow: 0px 0px 24px #8c564b; /* Soft Brown shadow */
+    max-width: 600px;
+    position: relative;
 }
 
-.candidate-name {
-    display: flex;
-    justify-content: space-between;
+::placeholder {
+    color: #000000; /* Light grey color */
+    opacity: 1; /* Ensures the color is fully applied */
 }
 
-.candidate-name input {
-    margin-bottom: 20px;
-    width: 230px;
-    height: 35px;
-    border: 1px solid #9792E3; /* Border in a light purple shade */
-    border-radius: 5px;
+.heading {
+    text-align: center;
+    color: white;
 }
 
-.dob {
-    display: flex;
-    justify-content: space-between;
+.heading h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
 }
 
-.dob select {
-    width: 236px;
-    height: 40px;
-    border: 1px solid #9792E3;
-    border-radius: 5px;
+.heading p {
     margin-bottom: 20px;
 }
 
-.address-1 input, 
-.address-2 input, 
-.address-3 input {
-    margin-bottom: 20px;
-    height: 35px;
-    border: 1px solid #9792E3;
-    border-radius: 5px;
-    width: 100%;
+hr {
+    border: none;
+    height: 1px;
+    background: #8c564b; /* Soft Brown */
+    margin-bottom: 30px;
 }
 
-.email-add, .phone-num {
-    margin-bottom: 20px;
-}
-
-.info {
-    display: flex;
-    justify-content: space-between;
-}
-
-.info input {
-    margin-bottom: 20px;
-    width: 230px;
-    height: 35px;
-    border: 1px solid #9792E3;
-    border-radius: 5px;
-}
-
-.job-applying .pos-applied, 
-.job-applying .pos-applied-hear {
+.candidate-name,
+.dob,
+.address-1,
+.address-2,
+.address-3,
+.info,
+.job-applying {
     margin-bottom: 20px;
 }
 
-.job-applying select {
-    width: 100%;
-    height: 35px;
-    border: 1px solid #9792E3;
-    border-radius: 5px;
-    margin-bottom: 20px;
-}
-
+.candidate-name input,
+.dob select,
+.address-1 input,
+.address-2 input,
+.address-3 input,
+.info input,
+.job-applying select,
 .start-date input {
-    margin-bottom: 20px;
     width: 100%;
-    height: 35px;
-    border: 1px solid #9792E3;
-    border-radius: 5px;
+    height: 40px;
+    border: none;
+    border-bottom: 2px solid #d35400; /* Dark Orange */
+    background: none;
+    padding: 10px;
+    font-weight: 700;
+    color: #333; /* Dark text color */
+    transition: .2s;
+}
+
+.candidate-name input:focus,
+.dob select:focus,
+.address-1 input:focus,
+.address-2 input:focus,
+.address-3 input:focus,
+.info input:focus,
+.job-applying select:focus,
+.start-date input:focus {
+    outline: none;
+    border-bottom-color: #ff7f0e; /* Vibrant Orange */
 }
 
 .submit-form {
     display: flex;
     justify-content: center;
+    margin-top: 30px;
 }
 
 .submit-form input {
-    border-radius: 15px;
     width: 100px;
-    height: 35px;
-    background-color: #FF6600; /* Orange button */
-    color: white;
-    border: none;
+    height: 40px;
+    background: #fff4cc; /* Light Cream */
+    color: #333; /* Dark text color */
+    border-radius: 20px;
+    border: 1px solid #d35400; /* Dark Orange */
     font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+    box-shadow: 0px 2px 2px #8c564b; /* Soft Brown shadow */
+}
+
+.submit-form input:hover {
+    border-color: #ff7f0e; /* Vibrant Orange */
 }
