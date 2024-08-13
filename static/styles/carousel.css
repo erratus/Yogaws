@@ -24,6 +24,7 @@
 }
 
 .team-section .container > div {
+  margin-top: 20px;
   flex: 0 0 120px;
   border-radius: 0.5rem;
   transition: 0.5s ease-in-out;
@@ -54,7 +55,7 @@
   justify-content: flex-end;
   background: linear-gradient(
     0deg,
-    rgba(151, 146, 227, 0.675) 0%, /* Gradient using the purple shade */
+    #9792e3ac 0%, /* Gradient using the purple shade */
     rgba(255, 255, 255, 0) 100%
   );
   transform: translatey(100%);
@@ -78,4 +79,11 @@
   opacity: 1;
   transform: translatey(0%);
   visibility: visible;
+}
+
+.joinus{
+  /* font-family:"Ubuntu Mono",monospace ;*/
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: larger;
+  color: white;
 }

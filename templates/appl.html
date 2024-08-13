@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles/appl.css">
+    <title>Apply</title>
+</head>
+<body>
+    <section class="main-body">
+        <div class="heading">
+            <h1>Trainer program</h1>
+            <p>Please complete the form below to apply for a position with us.</p>
+            <hr>
+        </div>
+        <form action="/templates/success.html" method="post">
+            <div class="app-form">
+                <label for="fname">Full Name</label><br>
+                <div class="candidate-name">
+                    <input type="text" name="fname" id="fname" placeholder="First Name" required>
+                    <input type="text" name="lname" id="lname" placeholder="Last Name" required>
+                </div>
+
+                <label for="dob-month">Birth Date</label><br>
+                <div class="dob">
+                    <select name="dob-month" id="dob-month" required>
+                        <option value="" disabled selected>Month</option>
+                        <option value="1">January</option>
+                        <option value="2">February</option>
+                        <option value="3">March</option>
+                    </select>
+                    <select name="dob-date" id="dob-date" required>
+                        <option value="" disabled selected>Day</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                    <select name="dob-year" id="dob-year" required>
+                        <option value="" disabled selected>Year</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                    </select>
+                </div>
+
+                <label for="address">Current Address</label><br>
+                <div class="address-1">
+                    <input class="strt-1" type="text" name="address" id="address" placeholder="Street Address" required>
+                    <input class="strt-2" type="text" name="address2" id="address2" placeholder="Street Address Line 2">
+                </div>
+                <div class="address-2">
+                    <input class="city" type="text" name="city" id="city" placeholder="City" required>
+                    <input class="state" type="text" name="state" id="state" placeholder="State / Province" required>
+                </div>
+                <div class="address-3">
+                    <input class="postal" type="text" name="postal" id="postal" placeholder="Postal / Zip Code" required>
+                </div>
+
+                <label for="email">Contact info</label>
+                <div class="info">
+                    <br>
+                    <input type="email" name="email" id="email" placeholder="ex: myname@example.com" required><br>
+                    <label for="phone"></label>
+                    <input type="tel" name="phone" id="phone" placeholder="+91 00000 00000" required><br>
+                </div>
+            </div>
+
+            <div class="job-applying">
+                <div class="pos-applying">
+                    <div class="pos-applied">
+                        <label for="position">Course of choice</label><br>
+                        <select name="position" id="position" required>
+                            <option value="" disabled selected>Please Select</option>
+                            <option value="Trainer program">Trainer program</option>
+                            <option value="YCB 200 hour">YCB 200 hour</option>
+                            <option value="YCB 300 hour">YCB 300 hour</option>
+                            <option value="YCB 500 hour">YCB 500 hour</option>
+                        </select>
+                    </div>
+                    <div class="pos-applied-hear">
+                        <label for="hear">How did you hear about us?</label><br>
+                        <select name="hear" id="hear" required>
+                            <option value="" disabled selected>Please Select</option>
+                            <option value="Event">Event</option>
+                            <option value="Social Media">Social Media</option>
+                            <option value="IRL">Friend/colleague/family</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="submit-form">
+                    <input type="submit" name="btn" id="btn">
+                </div>
+            </div>
+        </form>
+    </section>
+</body>
+<script>
+    
+let dateOptions = "<option value='' disabled selected>Day</option>";
+let monthOptions = "<option value='' disabled selected>Month</option>";
+let yearOptions = "<option value='' disabled selected>Year</option>";
+
+for (let d = 1; d <= 31; d++) {
+    dateOptions += `<option value="${d}">${d}</option>`;
+}
+
+for (let m = 1; m <= 12; m++) {
+    monthOptions += `<option value="${m}">${m}</option>`;
+}
+
+for (let y = 1947; y <= 2023; y++) {
+    yearOptions += `<option value="${y}">${y}</option>`;
+}
+
+document.getElementById('dob-date').innerHTML = dateOptions;
+document.getElementById('dob-month').innerHTML = monthOptions;
+document.getElementById('dob-year').innerHTML = yearOptions;
+
+</script>
+</html>
