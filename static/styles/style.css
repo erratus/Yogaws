@@ -181,7 +181,7 @@
     align-items: center;
     gap: 5rem;
     padding: 3rem 5rem;
-    background-color: #FFD54F; 
+    background-color: #191919; 
     margin: 0px 0px;
     height: 90vh;
 }
@@ -190,16 +190,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-   
-    
-    background-color: #FFD54F;
-    height: 32rem;
-    
+    /* background-color: #191919; */
+    height: 30rem;
 }
 .hello-img img {
-   height: 30rem;
-  align-self: center;
-
+    height: 30rem;
+    align-self: center;
 }
 .hello-container{
     color: rgb(255, 255, 255);
@@ -213,14 +209,14 @@
     font-size: 40px;
     font-weight: 400;
     line-height: 54px;
-    color: #000000;
+    color: #fff;
 }
 .hello-container p{
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 28.125px;
-    color: #000000;
+    color: #fff;
 }   
 
 /* Navbar styles */
@@ -278,5 +274,120 @@ nav.hide {
 body{
     background-color: #000;
 }
+.mycarousel{
+    background-color: #fff;
+   
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    
+}
+.carousel-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.carousel-content{
+   display: flex;
+   justify-content: center;
+   position: relative;
+   padding: 0 2rem;
+  
+}
+.carousel-content p{
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 26.4px;
+    color: #333333;
+    text-align: center;
+    display: flex;
+    gap: 2rem;
+  
+}
+.person{
+    display: flex;
+    justify-content: center;
+}
+.person img{
+  border-radius: 50%;
+}
+.person ul{
+    list-style: none;
+}
+.person ul>:nth-child(1){
+    font-weight: bolder;
+}
+.slick-dots {
+	display: flex;
+	justify-content: center;
+	margin: 0;
+	padding: 1rem 0;
+	
+	list-style-type: none;
+	
+		li {
+			margin: 0 0.25rem;
+		}
+	
+		button {
+			width: 1rem;
+			height: 1rem;
+			padding: 0;
+			
+			border: none;
+			border-radius: 100%;
+			background-color: orange;
+			
+			text-indent: -9999px;
+		}
+	
+		li.slick-active button {
+			background-color: red;
+		}
+	
+}
+.left-icon{
+   align-self: flex-start;
+   color: #FFA500;
+}
+.right-icon{
+   align-self: flex-end;
+   color: #FFA500;
+}
+.teacher-carousel{
+    background-color: #fff;
+}
 
+.services .slick-slide{
+    background-color: #b32532;
+    color: #FFF;
+    height: 200px;
+    border-radius: 30px;
+    margin: 0 15px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0.8);
+    transition: all 0.4s ease-in-out;
+  }
+.services .slick-slide,
+.services .slick-slide[aria-hidden="true"]:not(.slick-cloned) ~ .slick-cloned[aria-hidden="true"] {
+  transform: scale(0.8, 0.8);
+  transition: all 0.4s ease-in-out;
+}
+
+.services .slick-center,
+.services .slick-slide[aria-hidden="true"]:not([tabindex="-1"]) + .slick-cloned[aria-hidden="true"] {
+  transform: scale(1.1);
+  background-color: #000000;
+}
+.services .slick-current.slick-active{
+  transform: scale(1.1);
+  background-color: #000000;
+}
 

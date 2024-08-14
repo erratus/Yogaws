@@ -24,7 +24,7 @@ ul{
 }
 
 .footer{
-	background-color: #fff4cc;
+	background-color: #ccc5b9;
     padding: 70px 0;
 }
 .footer-col{
@@ -70,7 +70,7 @@ ul{
 	display: inline-block;
 	height: 40px;
 	width: 40px;
-	background-color: rgba(255,255,255,0.2);
+	background-color: ccc5b9(255,255,255,0.2);
 	margin:0 10px 10px 0;
 	text-align: center;
 	line-height: 40px;
@@ -80,11 +80,11 @@ ul{
 }
 .footer-col .social-links a:hover{
     color: #000000;
-	background-color: #fadd77;
+	background-color: #ecd5ac;
 }
 
 .footer-col .Address{
-    background-color: #fff4cc;
+    background-color: #ccc5b9;
     color: #24262b;
 }
 
