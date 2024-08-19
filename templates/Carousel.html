@@ -19,7 +19,7 @@
                     <p><sup><i class="fa-solid fa-quote-left left-icon"></i></sup>Indramala Yoga @ Sb road is a gem! Shiv sir's advanced yoga classes are nothing short of amazing. His expertise shines through in every session, especially during Ariel yoga. What truly sets this place apart is Shiv sir's personal connection with every student. His guidance is exceptional, fostering an environment where you feel supported and motivated.<sup><i class="fa-solid fa-quote-right right-icon"></i></sup></p>
                 </div>
                 <div class="person">
-                    <!-- <img src="/static/assets/placeholderpfp.png" alt=""> -->
+                    
                     <ul> 
                         <li>Rinku B</li>
                     </ul>
@@ -60,6 +60,50 @@
             </div>
         </div>
     </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.5.2/jquery-migrate.min.js" integrity="sha512-BzvgYEoHXuphX+g7B/laemJGYFdrq4fTKEo+B3PurSxstMZtwu28FHkPKXu6dSBCzbUWqz/rMv755nUwhjQypw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript">
+            $('.container').slick({
+                dots: true,
+                arrows:false,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                responsive: [
+                    {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: true,
+                        scale: 0.3
+                    }
+                    },
+                    {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: true,
+                        scale:0.8
 
+                    }
+                    },
+                    {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        dots: true,
+                        scale:0.7
+                    }
+                    }
+                ]
+            });
+    </script>
 </body>
 </html>

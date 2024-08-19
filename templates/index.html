@@ -44,7 +44,7 @@
                 </div>
             </li>
             <li class="dropdown">
-                <a href="/templates/gallery.html" class="dropbtn">Gallery</a>
+                <a href="{{ url_for('gallery') }}" class="dropbtn">Gallery</a>
             </li>
             <li class="dropdown">
                 <a href="#" class="dropbtn">About Us</a>
@@ -112,7 +112,7 @@
                 </div>
             </div>
         </div>
-         <a class="joinus" href="/templates/appl.html">Become a trainer</a>
+         <a class="joinus" href="{{ url_for('apply') }}">Become a trainer</a>
     </div>
 </section>
 
@@ -218,7 +218,7 @@
         <div class="modal-content">
             <span class="close-button">&times;</span>
             <h2>Register</h2>
-            <form id="registration"  action="/templates/success.html" method="get" autocomplete="on">
+            <form id="registration"  action="{{ url_for('register') }}" method="post" autocomplete="on">
                 <!--First name-->
                 <div class="box">
                     <div class="iconBox">
@@ -262,7 +262,7 @@
                     <input type="submit" name="Submit" class="submit" value="SUBMIT">
                 </div>
 
-                <a href="/templates/login.html" id="alrchk">already have an account?</a>
+                <a href="{{ url_for('login') }}" id="alrchk">already have an account?</a>
             </form>
         </div>
     </div>

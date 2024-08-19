@@ -39,3 +39,11 @@ requirements
 trainer photos
 org. videos
 any docs and/or certificates
+
+user
+no-1234567890
+pass-1234
+
+instructor
+no-23423434323
+pass-qwert
