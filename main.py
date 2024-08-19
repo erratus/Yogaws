@@ -59,6 +59,11 @@ def login():
         phone = request.form['phoneNo']
         password = request.form['password']
 
+        # Special admin login
+        if phone == '9999999999' and password == 'yogaws':
+            session['user_type'] = 'admin'
+            return redirect(url_for('admin'))
+
         # Connect to the database
         db = get_db()
         cursor = db.cursor()
@@ -158,6 +163,53 @@ def success():
 @app.route('/gallery')
 def gallery():
     return render_template('gallery.html')
+
+@app.route('/vision')
+def vision():
+    return render_template('visionNmission.html')
+
+@app.route('/admin')
+def admin_panel():
+    db = get_db()
+    cursor = db.cursor()
+
+    # Total enrollments (entries in applicants table)
+    cursor.execute('SELECT COUNT(*) FROM applicants')
+    total_enrollments = cursor.fetchone()[0]
+
+    # Total instructors (entries in instructors table)
+    cursor.execute('SELECT COUNT(*) FROM instructors')
+    total_instructors = cursor.fetchone()[0]
+
+    # Total courses (entries in course table)
+    cursor.execute('SELECT COUNT(*) FROM course')
+    total_courses = cursor.fetchone()[0]
+
+    # Total income (sum of Fees in applicants table)
+    cursor.execute('SELECT SUM(Fees) FROM applicants')
+    total_income = cursor.fetchone()[0] or 0  # Default to 0 if there are no fees
+
+    # New students (first 10 entries from applicants table, join with users to get names)
+    cursor.execute('''
+        SELECT u.name, u.lastname 
+        FROM applicants a 
+        JOIN users u ON a.UID = u.UID 
+        LIMIT 10
+    ''')
+    new_students = cursor.fetchall()
+
+    return render_template(
+        'admin.html',
+        total_enrollments=total_enrollments,
+        total_instructors=total_instructors,
+        total_courses=total_courses,
+        total_income=total_income,
+        new_students=new_students
+)
+
+@app.route('/view_all_students')
+def view_all_students():
+    return render_template('view_all_students.html')
 
 
 if __name__ == '__main__':

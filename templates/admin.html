@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles/admin.css">
+    <title>Admin Panel</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="cards">
+                <div class="card">
+                    <div class="box">
+                        <h1>{{ total_enrollments }}</h1>
+                        <h3>Enrollments</h3>
+                    </div>
+                    <div class="icon-case">
+                        <img src="students.png" alt="">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <h1>{{ total_instructors }}</h1>
+                        <h3>Instructors</h3>
+                    </div>
+                    <div class="icon-case">
+                        <img src="teachers.png" alt="">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <h1>{{ total_courses }}</h1>
+                        <h3>Courses</h3>
+                    </div>
+                    <div class="icon-case">
+                        <img src="schools.png" alt="">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <h1>{{ total_income }}</h1>
+                        <h3>Income</h3>
+                    </div>
+                    <div class="icon-case">
+                        <img src="income.png" alt="">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="new-students">
+                <div class="title">
+                    <h2>New Students</h2>
+                    <a href="{{ url_for('view_all_students') }}" class="btn">View All</a>
+                </div>
+                <table>
+                    <tr>
+                        <th>Profile</th>
+                        <th>Name</th>
+                    </tr>
+                    {% for student in new_students %}
+                    <tr>
+                        <td><img src="https://via.placeholder.com/50" alt="Profile Picture"></td>
+                        <td>{{ student[0] }} {{ student[1] }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+            
+            <div class="content-2">
+                <div class="recent-payments">
+                    <div class="title">
+                        <h2>Recent Payments</h2>
+                        <a href="#" class="btn">View All</a>
+                    </div>
+                    <table>
+                        <!-- Leave this table for recent payments -->
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

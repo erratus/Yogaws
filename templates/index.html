@@ -49,7 +49,7 @@
             <li class="dropdown">
                 <a href="#" class="dropbtn">About Us</a>
                 <div class="dropdown-content">
-                    <a href="/templates/visionNmission.html">Our Vision & Mission</a>
+                    <a href="{{ url_for('vision') }}">Our Vision & Mission</a>
                     <a href="#">Our History</a>
                     <a href="#">Meet Our Team</a>
                 </div>
@@ -218,13 +218,13 @@
         <div class="modal-content">
             <span class="close-button">&times;</span>
             <h2>Register</h2>
-            <form id="registration"  action="{{ url_for('register') }}" method="post" autocomplete="on">
+            <form id="registration"  action="{{ url_for('register') }}" method="post" autocomplete="on" onsubmit="return validateForm()">
                 <!--First name-->
                 <div class="box">
                     <div class="iconBox">
                         <i class="fa fa-user" aria-hidden="true"></i>
                     </div>
-                    <input type="text" name="firstName" placeholder="First Name" class="textBox" autofocus="on" required>
+                    <input type="text" name="firstName" placeholder="First Name" class="textBox" autofocus="on"  required>
                 </div>
             
                 <!--Second name-->
@@ -236,18 +236,18 @@
                 <!--Phone No.-->
                 <div class="box">
                     <div class="iconBox"><i class="fa fa-phone-square" aria-hidden="true"></i></div>
-                    <input type="text" required name="phoneNo" maxlength="10" placeholder="Phone No." class="textBox">
+                    <input type="text" required name="phoneNo" maxlength="10" required pattern="[0-9]{10}" placeholder="Phone No." class="textBox">
                 </div>
             
                 <!--Password-->
                 <div class="box">
                     <div class="iconBox"><i class="fa fa-key" aria-hidden="true"></i></div>
-                    <input type="password" required name="password" placeholder="Password" class="textBox">
+                    <input type="password" required name="password" placeholder="Password" maxlength="20" minlength="8" class="textBox" id="password" >
                 </div>
 
                 <div class="box">
                     <div class="iconBox"><i class="fa fa-key" aria-hidden="true"></i></div>
-                    <input type="password" required name="password" placeholder="Confirm Password" class="textBox">
+                    <input type="password" required name="confirmpassword" placeholder="Confirm Password" maxlength="20" minlength="8" class="textBox" id="confirmpassword" >
                 </div>
             
                 <!--Gender-->
@@ -273,7 +273,7 @@
                 <div class="footer-col">
                     <h4>Explore</h4>
                     <ul>
-                        <li><a href="/templates/visionNmission.html">Vision & Mission</a></li>
+                        <li><a href="{{ url_for('vision') }}">Vision & Mission</a></li>
                         <li><a href="#">Distinctive Features</a></li>
                     </ul>
                 </div>
@@ -281,7 +281,7 @@
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="#">Documents & Certificate</a></li>
-                        <li><a href="/templates/gallery.html">Gallery</a></li>
+                        <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
                         <li><a href="/static/assets/Yoga Brochure-1.pdf">Brochure</a></li>
                     </ul>
                 </div>
@@ -322,6 +322,7 @@ window.addEventListener('scroll', function() {
 
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
 });
+
 
 </script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

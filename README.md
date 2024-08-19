@@ -30,10 +30,6 @@ d35400
 founder-section-soham
 website calendar- arya
 carousel - tushar
-registration form (transparent) - surya (partial-DONE){
-    add form validation
-    connect db
-}
 
 requirements
 trainer photos
@@ -47,3 +43,12 @@ pass-1234
 instructor
 no-23423434323
 pass-qwert
+
+admin
+no-9999999999
+pass-yogaws
+
+TODO
+for admin dashboard display the course name as well
+take care of viewallstudents page
+payment setup (ASAP)
