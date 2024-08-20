@@ -8,34 +8,44 @@
     <title>Login</title>
 </head>
 <body>
-    <div class="container">
-            <img src="/static/assets/yogapose3.png" alt="Image 1" class="side-image left-image">
-            <div class="screen">
-                <div class="screen__content">
-                    <form class="login" action="\templates\success.html" method="get">
-                        <div class="login__field">
-                            <i class="fa fa-phone"></i>
-                            <input type="number" class="login__input" placeholder="Phone No.">
-                        </div>
-                        <div class="login__field">
-                            <i class="fa fa-lock" aria-hidden="true"></i>
-                            <input type="password" class="login__input" placeholder="Password">
-                        </div>
-                        <button class="button login__submit">
-                            <span class="button__text">Log In Now</span>
-                            <i class="button__icon fas fa-chevron-right"></i>
-                        </button>				
-                    </form>
-                </div>
-                <div class="screen__background">
-                    <span class="screen__background__shape screen__background__shape4"></span>
-                    <span class="screen__background__shape screen__background__shape3"></span>		
-                    <span class="screen__background__shape screen__background__shape2"></span>
-                    <span class="screen__background__shape screen__background__shape1"></span>
-                </div>		
+    <!-- Display flash messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <div class="flashes">
+                {% for category, message in messages %}
+                    <div class="flash {{ category }}">{{ message }}</div>
+                {% endfor %}
             </div>
-            <img src="/static/assets/yogapose4.png" alt="Image 2" class="side-image right-image">
-        </div>
-    </body>
-    </html>
+        {% endif %}
+    {% endwith %}
     
+    <div class="container">
+        <img src="/static/assets/yogapose3.png" alt="Image 1" class="side-image left-image">
+        <div class="screen">
+            <div class="screen__content">
+                <form class="login" action="{{ url_for('login') }}" method="post">
+                    <div class="login__field">
+                        <i class="fa fa-phone"></i>
+                        <input type="number" class="login__input" placeholder="Phone No." name="phoneNo" required>
+                    </div>
+                    <div class="login__field">
+                        <i class="fa fa-lock" aria-hidden="true"></i>
+                        <input type="password" class="login__input" placeholder="Password" name="password" required>
+                    </div>
+                    <button class="button login__submit">
+                        <span class="button__text">Log In Now</span>
+                        <i class="button__icon fas fa-chevron-right"></i>
+                    </button>
+                </form>
+            </div>
+            <div class="screen__background">
+                <span class="screen__background__shape screen__background__shape4"></span>
+                <span class="screen__background__shape screen__background__shape3"></span>        
+                <span class="screen__background__shape screen__background__shape2"></span>
+                <span class="screen__background__shape screen__background__shape1"></span>
+            </div>        
+        </div>
+        <img src="/static/assets/yogapose4.png" alt="Image 2" class="side-image right-image">
+    </div>
+</body>
+</html>

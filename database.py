@@ -1,55 +1,75 @@
 import sqlite3
-conn=sqlite3.connect('./instances/YWS.db')
-cursor=conn.cursor()
 
+# Connect to the database (or create it if it doesn't exist)
+conn = sqlite3.connect('./instances/YWS.db')
+cursor = conn.cursor()
+
+# # Create the users table
+# cursor.execute('''
+# CREATE TABLE IF NOT EXISTS users (
+#     UID INTEGER PRIMARY KEY AUTOINCREMENT,
+#     name TEXT,
+#     lastname TEXT,
+#     Ph_no TEXT,
+#     gender TEXT,
+#     password TEXT
+# );
+# ''')
+
+# # Create the instructors table
+# cursor.execute('''
+# CREATE TABLE IF NOT EXISTS instructors (
+#     TID INTEGER PRIMARY KEY AUTOINCREMENT,
+#     name TEXT,
+#     lastname TEXT,
+#     Ph_no TEXT,
+#     DOB TEXT,
+#     Address TEXT,
+#     Course INTEGER,
+#     reference TEXT,
+#     password TEXT, 
+#     FOREIGN KEY (Course) REFERENCES course(CID)
+# );
+# ''')
+
+# # Create the course table
+# cursor.execute('''
+# CREATE TABLE IF NOT EXISTS course (
+#     CID INTEGER PRIMARY KEY AUTOINCREMENT,
+#     Course_name TEXT,
+#     Price REAL,
+#     to_date TEXT,
+#     from_date TEXT
+# );
+# ''')
+
+# # Create the applicants table
+# cursor.execute('''
+# CREATE TABLE IF NOT EXISTS applicants (
+#     APPID INTEGER PRIMARY KEY AUTOINCREMENT,
+#     UID INTEGER,
+#     CID INTEGER,
+#     Fees REAL,
+#     Course_name TEXT,
+#     FOREIGN KEY (UID) REFERENCES users(UID),
+#     FOREIGN KEY (CID) REFERENCES course(CID)
+# );
+# ''')
 
 cursor.execute('''
+INSERT INTO applicants (UID, CID, Fees, Course_name)
+VALUES 
+    (1, 1, 500.00, 'Yoga Basics'),
+    (2, 2, 700.00, 'Advanced Yoga'),
+    (3, 1, 550.00, 'Yoga Basics'),
+    (4, 3, 800.00, 'Yoga for Flexibility'),
+    (5, 2, 750.00, 'Advanced Yoga');
 ''')
 
 
+# Commit the transaction
 conn.commit()
+
+# Close the cursor and connection
 cursor.close()
 conn.close()
-
-# TODO
-# 1. Change the column o_date to to_date
-
-# CREATE TABLE users (
-#     uid INTEGER PRIMARY KEY AUTOINCREMENT,
-#     name TEXT NOT NULL,
-#     lastname TEXT NOT NULL,
-#     phone_no TEXT NOT NULL,
-#     password TEXT NOT NULL
-# )
-
-# CREATE TABLE courses (
-#     cid INTEGER PRIMARY KEY AUTOINCREMENT,
-#     course_name TEXT NOT NULL,
-#     price REAL NOT NULL,
-#     from_date DATE NOT NULL,
-#     o_date DATE NOT NULL
-# )
-
-# CREATE TABLE enrollments (
-#     uid INTEGER NOT NULL,
-#     cid INTEGER NOT NULL,
-#     fee REAL NOT NULL,
-#     enrollment_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-#     PRIMARY KEY (uid, cid),
-#     FOREIGN KEY (uid) REFERENCES users(uid),
-#     FOREIGN KEY (cid) REFERENCES courses(cid)
-# )
-
-# CREATE TRIGGER IF NOT EXISTS set_fee_on_enrollment
-# AFTER INSERT ON enrollments
-# FOR EACH ROW
-# BEGIN
-#     UPDATE enrollments
-#     SET fee = (SELECT price FROM courses WHERE cid = NEW.cid)
-#     WHERE rowid = NEW.rowid;
-# END;
-
-# INSERT INTO enrollments (uid, cid, fee)
-# VALUES (1, 1, 199.99)
-
-

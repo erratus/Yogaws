@@ -168,3 +168,24 @@ body {
 	margin-left: auto;
 	color: #8c564b; /* Soft Brown */
 }
+
+.flashes {
+    margin: none;
+}
+
+.flash {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.flash.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.flash.error {
+    background: linear-gradient(90deg, #fff4cc, #fadd77);
+    color: #000000;
+	text-align: center;
+}

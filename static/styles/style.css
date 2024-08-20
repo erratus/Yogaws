@@ -1,43 +1,16 @@
-
 .header {
-    position: relative;
-    background-color: #CCC5B9;
+    background-color: white; /* Set background color to white */
     padding: 1rem 0;
-    border-bottom: 2px solid #CCC5B9;
+    border-bottom: 2px solid #ffffff;
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* Space out elements in the header */
     align-items: center;
 }
 
-
-.auth-link {
-    position: absolute;
-    right: 1rem;
-    font-size: 1rem;
-    color: #333;
-    text-decoration: none;
-    margin-right: 45px;
-}
-.auth-linky {
-    position: absolute;
-    left: 1rem;
-    font-size: 1rem;
-    color: black;
-    text-decoration: none;
-    margin-left: 45px;
-}
-
-
-.header h1 {
-    font-size: 2rem;
-    margin: 0;
-    color: #333;
-}
-
 .header img {
-    height: 100px;
+    height: 85px; /* Adjusted the height for better alignment */
+    margin-left: 4rem; /* Margin to push the logo slightly away from the edge */
 }
-
 
 .nav-links {
     list-style: none;
@@ -45,7 +18,7 @@
     padding: 0;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    flex: 1; /* Flex property to take up available space between logo and register/login */
 }
 
 .nav-links li {
@@ -54,12 +27,19 @@
 }
 
 .nav a {
-    color: #fff;
+    color: #333; /* Change text color to black */
     text-decoration: none;
     padding: 0.75rem 1rem;
     display: block;
     font-size: 1rem;
     transition: background-color 0.3s, color 0.3s;
+}
+
+.auth-link {
+    font-size: 1rem;
+    color: #333;
+    text-decoration: none;
+    margin-right: 4rem;
 }
 
 .dropdown-content {
@@ -74,7 +54,7 @@
 }
 
 .dropdown-content a {
-    color: #fff;
+    color: #333; /* Adjusted text color to black */
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -83,33 +63,6 @@
 
 .dropdown:hover .dropdown-content {
     display: block;
-}
-
-
-.hero::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.3);
-    z-index: 0;
-}
-
-.hero h2, .hero p, .call-to-action {
-    position: relative;
-    z-index: 1;
-}
-
-.hero h2 {
-    font-size: 3rem;
-    margin: 0;
-}
-
-.hero p {
-    font-size: 1.5rem;
-    margin: 2rem 0;
 }
 
 .call-to-action {
@@ -130,7 +83,7 @@
 .nav-links .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #FFECB3; /* Light yellow background */
+    background-color: #fbf5e9; /* Light yellow background */
     min-width: 200px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     z-index: 1;
@@ -149,7 +102,7 @@
 }
 
 .nav-links .dropdown-content a:hover {
-    background-color: #FFD54F; /* Darker yellow on hover */
+    background-color: #ff7f51; /* Darker yellow on hover */
 }
 
 .nav-links .dropdown:hover .dropdown-content {
@@ -181,7 +134,7 @@
     align-items: center;
     gap: 5rem;
     padding: 3rem 5rem;
-    background-color: #191919; 
+    background-color: #ebfbf3; 
     margin: 0px 0px;
     height: 90vh;
 }
@@ -209,14 +162,14 @@
     font-size: 40px;
     font-weight: 400;
     line-height: 54px;
-    color: #fff;
+    color: #000000;
 }
 .hello-container p{
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 28.125px;
-    color: #fff;
+    color: #000000;
 }   
 
 /* Navbar styles */
@@ -226,7 +179,7 @@ nav {
     top: 0;
     left: 0;
     z-index: 1000;
-    background-color: #CCC5B9;
+    background-color: #ebfbf3;
     color: #333;
     text-align: center;
     padding: 0.5rem 0;
@@ -245,15 +198,13 @@ nav.hide {
 }
 
 .header-space {
-    background-color: black;
+    background-color: #fff;
     height: 100px; /* Adjust this value for the amount of extra space you want */
 }
 
 /* Hero section styling */
 .hero {
     margin-top: 80px; /* Matches the height of the navbar */
-    background-image: url("/static/assets/testbg.png");
-    background-size: cover;
     background-position: center;
     color: #fff;
     text-align: center;
@@ -264,7 +215,7 @@ nav.hide {
 
 /* Navbar container styles */
 .nav-links {
-    background-color: #CCC5B9; /* Background color for the entire navbar line */
+    background-color: #ffffff; /* Background color for the entire navbar line */
     padding: 0; /* Remove padding around the nav-links */
     margin: 0; /* Remove margin around the nav-links */
     list-style: none; /* Remove bullets from the list */
@@ -272,5 +223,205 @@ nav.hide {
     justify-content: center; /* Center align the navbar items */
 }
 body{
-    background-color: #000;
+    background-color: #fbf5e9;
+}
+
+
+.flash-messages {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.yogsec {
+    display: flex; 
+    justify-content: center; 
+    overflow: hidden; 
+    width: 100%;
+    background-color: #fbf5e9;
+}
+
+.yogsec img {
+    width: 80%;
+    max-width: 90%; /* Makes the image a bit larger */
+    height: auto; 
+    display: block;
+    margin: 0 auto; /* Centers the image */
+    padding-bottom: 150px;
+}
+
+.wowim {
+    display: flex; 
+    justify-content: center; 
+    overflow: hidden; 
+    width: 100%;
+}
+
+.wowim img {
+    width: 100%;
+    max-width: 90%; /* Makes the image a bit larger */
+    height: auto; 
+    display: block;
+    margin: 0 auto; /* Centers the image */
+    padding-bottom: 120px;
+    padding-top: 120px;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+    background-color: #ebfbf3;
+    position: relative;
+}
+
+.hero-images {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 3rem 2rem;
+}
+
+.hero-image-left {
+    max-width: 30%;
+}
+
+.hero-image-right {
+    max-width: 30%;
+    margin-left: auto;
+    padding-right: 1rem;
+}
+
+.hero-text-content {
+    text-align: center;
+    max-width: 600px;
+    z-index: 1;
+}
+
+.hero-title {
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #4a4a4a;
+    margin-bottom: 1rem;
+}
+
+.hero-text {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background-color: #ff7f51;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: #e06c43;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ebfbf3;
+    color: #333;
+}
+header {
+    background-color: #fff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: 'Georgia', serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+.nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav ul li {
+    list-style: none;
+}
+
+.nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav ul li a:hover {
+    color: #fff;
+    background-color: #ff7f51;
+    border-radius: 5px;
+}
+.join-button {
+    background-color: #ff7f51;
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem; /* Make the font size consistent */
+    margin-right: 2rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.join-button:hover {
+    background-color: #e06c43;
+    transform: scale(1.05); /* Slightly enlarges the button on hover */
+}
+
+.join-button a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 1.5rem; /* Vertically center the text within the button */
 }

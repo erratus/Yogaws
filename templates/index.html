@@ -11,61 +11,38 @@
         <title>Document</title>
     </head>
     <body>
-    <nav>
-        <header class="header">
-            <!-- <h1>Indramala Yoga stansta</h1> -->
-            <a href="#" class="auth-link" id="openModal">register/login</a>
-            <img src="/static/assets/website_icon.webp" alt="Indramala yoga sansthan logo" >
-    </header>
-        <ul class="nav-links">
-            <li><a href="#" class="dropbtn">Home</a></li>
-            <li class="dropdown">
-                <a href="#" class="dropbtn">Meditation</a>
-                <div class="dropdown-content">
-                    <a href="#">Meditation Techniques</a>
-                    <a href="#">Benefits of Meditation</a>
-                    <a href="#">Meditation Courses</a>
-                </div>
-            </li>
-            <li class="dropdown">
-                <a href="#" class="dropbtn">Yoga</a>
-                <div class="dropdown-content">
-                    <a href="#">Yoga Styles</a>
-                    <a href="#">Yoga for Beginners</a>
-                    <a href="#">Yoga Retreats</a>
-                </div>
-            </li>
-            <li class="dropdown">
-                <a href="#" class="dropbtn">Events</a>
-                <div class="dropdown-content">
-                    <a href="#">Upcoming Events</a>
-                    <a href="#">Past Events</a>
-                    <a href="#">Register for Events</a>
-                </div>
-            </li>
-            <li class="dropdown">
-                <a href="/templates/gallery.html" class="dropbtn">Gallery</a>
-            </li>
-            <li class="dropdown">
-                <a href="#" class="dropbtn">About Us</a>
-                <div class="dropdown-content">
-                    <a href="/templates/visionNmission.html">Our Vision & Mission</a>
-                    <a href="#">Our History</a>
-                    <a href="#">Meet Our Team</a>
-                </div>
-            </li>
-            <li class="dropdown">
-                <a href="#" class="dropbtn">India - English</a>
-                <div class="dropdown-content">
-                    <a href="#">India - English</a>
-                    <a href="#">India - Hindi</a>
-                </div>
-            </li>
-        </ul>
-    </nav>
-    <div class="header-space"></div>
+        <nav class="nav">
+            <header class="header">
+                <img src="/static/assets/website_icon.webp" alt="Indramala yoga sansthan logo">
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+                    <li><a href="#">Classes</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">About Us</a>
+                        <div class="dropdown-content">
+                            <a href="#">Our Vision & Mission</a>
+                            <a href="#">Our History</a>
+                            <a href="#">Meet Our Team</a>
+                        </div>
+                    </li>
+                </ul>
+                <button class="join-button" id="openModal">register/login</button>
+            </header>
+        </nav>
     <section class="hero">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque cum in repudiandae quos porro sapiente nostrum consectetur ut, a voluptatem qui dicta labore recusandae, placeat magni aliquam voluptate suscipit laudantium!</p>
+            <div class="container hero-content">
+                <div class="hero-images">
+                    <img src="/static/assets/img1.png" alt="Yoga pose 1" class="hero-image-left">
+                    <img src="/static/assets/img2.png" alt="Yoga pose 2" class="hero-image-right">
+                </div>
+                <div class="hero-text-content">
+                    <h1 class="hero-title">Discover the Blissful Journey of Yoga</h1>
+                    <p class="hero-text">Embrace the harmonious union of mind, body, and spirit through our comprehensive yoga offerings.</p>
+                    <a href="#" class="hero-button">Explore Now</a>
+                </div>
+            </div>
     </section>
 
     <section id="trainers">
@@ -112,9 +89,97 @@
                 </div>
             </div>
         </div>
-         <a class="joinus" href="/templates/appl.html">Become a trainer</a>
+         <!-- class="joinus" href="/templates/appl.html">I want to become a trainer  -->
     </div>
 </section>
+
+<section class="courses">
+    <div class="custom-carousel-container">
+        <input class="custom-carousel-radio" type="radio" name="position" checked />
+        <input class="custom-carousel-radio" type="radio" name="position" />
+        <input class="custom-carousel-radio" type="radio" name="position" />
+        <input class="custom-carousel-radio" type="radio" name="position" />
+        <input class="custom-carousel-radio" type="radio" name="position" />
+        <input class="custom-carousel-radio" type="radio" name="position" />
+        <input class="custom-carousel-radio" type="radio" name="position" />
+        <input class="custom-carousel-radio" type="radio" name="position" />
+        <input class="custom-carousel-radio" type="radio" name="position" />
+        <input class="custom-carousel-radio" type="radio" name="position" />
+        <input class="custom-carousel-radio" type="radio" name="position" />
+        <input class="custom-carousel-radio" type="radio" name="position" />
+        <input class="custom-carousel-radio" type="radio" name="position" />
+        <input class="custom-carousel-radio" type="radio" name="position" />
+        <main class="custom-carousel">
+            <div class="custom-carousel-item"> hath yoga</div>
+            <div class="custom-carousel-item">Iyengar yoga</div>
+            <div class="custom-carousel-item"> ashtanga yoga</div>
+            <div class="custom-carousel-item">power yoga</div>
+            <div class="custom-carousel-item">aerial yoga</div>
+            <div class="custom-carousel-item">Advanced yoga</div>
+            <div class="custom-carousel-item">weight loss yoga</div>
+            <div class="custom-carousel-item">competitive yoga</div>
+            <div class="custom-carousel-item">pregnancy yoga</div>
+            <div class="custom-carousel-item">kids yoga</div>
+            <div class="custom-carousel-item">Meditation</div>
+            <div class="custom-carousel-item">viyasa flow</div>
+            <div class="custom-carousel-item">stress managament</div>
+            <div class="custom-carousel-item">yog therapy</div>
+        </div>
+    </section>
+    
+    <!-- <section class="Bcustom-carousel">
+        <div class="Bcustom-container">
+            <div class="Bcustom-carousel-item">
+                <div class="Bcustom-carousel-content">
+                    <p><sup><i class="fa-solid fa-quote-left custom-left-icon"></i></sup>Indramala Yoga @ Sb road is a gem! Shiv sir's advanced yoga classes are nothing short of amazing. His expertise shines through in every session, especially during Ariel yoga. What truly sets this place apart is Shiv sir's personal connection with every student. His guidance is exceptional, fostering an environment where you feel supported and motivated.<sup><i class="fa-solid fa-quote-right custom-right-icon"></i></sup></p>
+                </div>
+                <div class="Bcustom-person">
+                    <img src="/static/assets/placeholderpfp.png" alt="">
+                    <ul> 
+                        <li>Rinku B</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="Bcustom-carousel-item">
+                <div class="Bcustom-carousel-content">
+                    <p><sup><i class="fa-solid fa-quote-left custom-left-icon"></i></sup>It's been more than 7 months with the Indramala Yoga Sansthan and had an exceptional experience. The instructor was incredibly knowledgeable and guided the class with expertise, catering to all skill levels. Highly recommend this class for anyone looking to enhance their yoga practice from basic to advanced level.<sup><i class="fa-solid fa-quote-right custom-right-icon"></i></sup></p>
+                </div>
+                <div class="Bcustom-person">
+                    <img src="/static/assets/placeholderpfp.png" alt=""> 
+                    <ul> 
+                        <li>Rahul S</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="Bcustom-carousel-item">
+                <div class="Bcustom-carousel-content">
+                    <p><sup><i class="fa-solid fa-quote-left custom-left-icon"></i></sup>Before writing about Indramala Yoga Sansthan, I would like to share that I have gone through the major spine surgery last year. I have joined Indramala Yoga Sansthan last month and ilt has been a great experience so far. They have designed a separate protocol for me to take care of my spine. I feel very relaxed now.<sup><i class="fa-solid fa-quote-right custom-right-icon"></i></sup></p>
+                </div>
+                <div class="Bcustom-person">
+                    <img src="/static/assets/placeholderpfp.png" alt=""> 
+                    <ul> 
+                        <li>Tejas J</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="Bcustom-carousel-item">
+                <div class="Bcustom-carousel-content">
+                    <p><sup><i class="fa-solid fa-quote-left custom-left-icon"></i></sup>I used experience shoulder and neck pain due to my IT job and long hours of sitting. However ,after enrolling at the Indramala Yoga, all my pain disappeared, and I felt incredible. The experience and following Shiv Sir's guidance has been immediately helpful. I'm grateful to Shiv Sir for his support and guidance.<sup><i class="fa-solid fa-quote-right custom-right-icon"></i></sup></p>
+                </div>
+                <div class="Bcustom-person">
+                    <img src="/static/assets/placeholderpfp.png" alt=""> 
+                    <ul> 
+                        <li>Harish P</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </section> -->
+        <section>
+            <div class="wowim">
+                <img src="/static/assets/wowim.png" alt="hi">
+            </div>
+        </section>
 
 <section id="hello" class="hello-section">
     <div class="hello-img">
@@ -131,17 +196,23 @@
 
     </section>
 
+<section>
+    <div class="yogsec">
+        <img src="/static/assets/yogsec.png" alt="hi">
+    </div>
+</section>
+
     <div id="modal" class="modal">
         <div class="modal-content">
             <span class="close-button">&times;</span>
             <h2>Register</h2>
-            <form id="registration"  action="/templates/success.html" method="get" autocomplete="on">
+            <form id="registration"  action="{{ url_for('register') }}" method="post" autocomplete="on" onsubmit="return validateForm()">
                 <!--First name-->
                 <div class="box">
                     <div class="iconBox">
                         <i class="fa fa-user" aria-hidden="true"></i>
                     </div>
-                    <input type="text" name="firstName" placeholder="First Name" class="textBox" autofocus="on" required>
+                    <input type="text" name="firstName" placeholder="First Name" class="textBox" autofocus="on"  required>
                 </div>
             
                 <!--Second name-->
@@ -153,18 +224,18 @@
                 <!--Phone No.-->
                 <div class="box">
                     <div class="iconBox"><i class="fa fa-phone-square" aria-hidden="true"></i></div>
-                    <input type="text" required name="phoneNo" maxlength="10" placeholder="Phone No." class="textBox">
+                    <input type="text" required name="phoneNo" maxlength="10" required pattern="[0-9]{10}" placeholder="Phone No." class="textBox">
                 </div>
             
                 <!--Password-->
                 <div class="box">
                     <div class="iconBox"><i class="fa fa-key" aria-hidden="true"></i></div>
-                    <input type="password" required name="password" placeholder="Password" class="textBox">
+                    <input type="password" required name="password" placeholder="Password" maxlength="20" minlength="8" class="textBox" id="password" >
                 </div>
 
                 <div class="box">
                     <div class="iconBox"><i class="fa fa-key" aria-hidden="true"></i></div>
-                    <input type="password" required name="password" placeholder="Confirm Password" class="textBox">
+                    <input type="password" required name="confirmpassword" placeholder="Confirm Password" maxlength="20" minlength="8" class="textBox" id="confirmpassword" >
                 </div>
             
                 <!--Gender-->
@@ -179,7 +250,7 @@
                     <input type="submit" name="Submit" class="submit" value="SUBMIT">
                 </div>
 
-                <a href="/templates/login.html" id="alrchk">already have an account?</a>
+                <a href="{{ url_for('login') }}" id="alrchk">already have an account?</a>
             </form>
         </div>
     </div>
@@ -190,7 +261,7 @@
                 <div class="footer-col">
                     <h4>Explore</h4>
                     <ul>
-                        <li><a href="/templates/visionNmission.html">Vision & Mission</a></li>
+                        <li><a href="{{ url_for('vision') }}">Vision & Mission</a></li>
                         <li><a href="#">Distinctive Features</a></li>
                     </ul>
                 </div>
@@ -198,7 +269,7 @@
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="#">Documents & Certificate</a></li>
-                        <li><a href="/templates/gallery.html">Gallery</a></li>
+                        <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
                         <li><a href="/static/assets/Yoga Brochure-1.pdf">Brochure</a></li>
                     </ul>
                 </div>
@@ -240,8 +311,8 @@ window.addEventListener('scroll', function() {
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
 });
 
-</script>
 
+</script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

@@ -7,13 +7,24 @@
     <title>Apply</title>
 </head>
 <body>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        <div class="flashes">
+            {% for category, message in messages %}
+                <div class="flash {{ category }}">{{ message }}</div>
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endwith %}
+
     <section class="main-body">
         <div class="heading">
             <h1>Trainer program</h1>
             <p>Please complete the form below to apply for a position with us.</p>
             <hr>
         </div>
-        <form action="/templates/success.html" method="post">
+        <form action="{{ url_for('apply') }}" method="post">
             <div class="app-form">
                 <label for="fname">Full Name</label><br>
                 <div class="candidate-name">
@@ -43,6 +54,11 @@
                     </select>
                 </div>
 
+                <label for="password">Password</label><br>
+                <div class="password">
+                    <input type="password" name="password" id="password" placeholder="Password" required style="color:aliceblue;">
+                </div>
+<br>
                 <label for="address">Current Address</label><br>
                 <div class="address-1">
                     <input class="strt-1" type="text" name="address" id="address" placeholder="Street Address" required style="color:aliceblue;">
@@ -56,12 +72,12 @@
                     <input class="postal" type="text" name="postal" id="postal" placeholder="Postal / Zip Code" required style="color:aliceblue;">
                 </div>
 
-                <label for="email">Contact info</label>
+                <label for="phoneNo">Contact info</label>
                 <div class="info">
                     <br>
-                    <input type="email" name="email" id="email" placeholder="ex: myname@example.com" required style="color:aliceblue;"><br>
-                    <label for="phone" style="color:aliceblue;"></label>
-                    <input type="tel" name="phone" id="phone" placeholder="+91 00000 00000" required style="color:aliceblue;"><br>
+                    <input type="email" name="email" id="email" placeholder="ex: myname@example.com" required><br>
+                    <label for="phone"></label>
+                    <input type="tel" name="phone" id="phone" placeholder="+91 00000 00000" required><br>
                 </div>
             </div>
 
