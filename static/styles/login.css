@@ -14,7 +14,7 @@ html, body {
 
 
 body {
-	background: linear-gradient(90deg, #fff4cc, #fadd77); /* Light Cream to Golden Yellow */
+	background: linear-gradient(90deg, #dbffec, #e6dec3); /* Light Cream to Golden Yellow */
 }
 
 .container {
@@ -87,7 +87,7 @@ body {
 .screen__background__shape3 {
 	height: 540px;
 	width: 190px;
-	background: linear-gradient(270deg, #ff7f0e, #d35400); /* Vibrant Orange to Dark Orange */
+	background: linear-gradient(270deg, #f6853f, #f36011); /* Vibrant Orange to Dark Orange */
 	top: -24px;
 	right: 0;	
 	border-radius: 32px;

@@ -8,7 +8,7 @@ body {
     flex-direction: column;
     align-items: center; 
 
-    background: linear-gradient(180deg, rgba(243,179,150,1) 0%, rgba(255,255,255,1) 55%, rgba(255,255,255,1) 100%);   background: linear-gradient(180deg, rgba(241,169,136,1) 0%, rgba(255,255,255,1) 60%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(180deg, #bcd4cd 0%, #ebfbf3 100%);
     background-attachment: fixed;
 }
 
@@ -20,11 +20,12 @@ body {
     max-width: 1200px; 
     margin: 20px auto; 
     line-height: 1.2;
+    box-shadow: 0 0.5rem 1rem #86a87e70;
 }
 
 .intro h1 {
     font-size: 2.5em; 
-    color: #2c3e50; 
+    color: #447a3d; 
     margin-bottom: 0.5em;
 }
 
@@ -41,6 +42,7 @@ body {
     max-width: 1200px; 
     margin: 0 auto; 
     padding: 0 15px; 
+    padding-top: 30px;
 }
 
 .gallery-item {

@@ -20,7 +20,7 @@
     background-color: #fff;
     margin: auto;
     padding: 20px;
-    border: 1px solid #888;
+    border: 1px solid #f6853f;
     width: 80%;
     max-width: 500px;
     border-radius: 10px;
@@ -125,7 +125,7 @@
     width: 40px;
     line-height: 35px;
     text-align: center;
-    background: #FFD54F;
+    background: #e6dec3;
     color: #070707;
     border-radius: 4px 0 0 4px;
     margin-right: 10px; 

@@ -10,7 +10,7 @@
   min-height: 100vh;
   display: grid;
   place-items: center;
-  background: #48435c; /* Darker background color from the palette */
+  background: #ffffff; /* Darker background color from the palette */
   font-family: "Ubuntu Mono", monospace;
   font-weight: 400;
 }
@@ -25,7 +25,7 @@
 
 .team-section .container > div {
   margin-top: 20px;
-  flex: 0 0 120px;
+  flex: 0 0 200px;
   border-radius: 0.5rem;
   transition: 0.5s ease-in-out;
   cursor: pointer;
@@ -34,18 +34,29 @@
   overflow: hidden;
 }
 
-.team-section .container > div:nth-of-type(1),
-.team-section .container > div:nth-of-type(2),
-.team-section .container > div:nth-of-type(3),
-.team-section .container > div:nth-of-type(4),
-.team-section .container > div:nth-of-type(5),
-.team-section .container > div:nth-of-type(6) {
-    background: url("/static/assets/placeholder.webp") no-repeat 50% / cover;
+.team-section .container > div:nth-of-type(1) {
+  background: url("/static/assets/trainer.webp") no-repeat 50% / cover;
 }
+.team-section .container > div:nth-of-type(5){
+  background: url("/static/assets/trainer.webp") no-repeat 50% / cover;
+}
+.team-section .container > div:nth-of-type(2) {
+  background: url("/static/assets/trainer2.webp") no-repeat 50% / cover;
+}
+.team-section .container > div:nth-of-type(3) {
+  background: url("/static/assets/trainer3.webp") no-repeat 50% / cover;
+}
+.team-section .container > div:nth-of-type(4) {
+  background: url("/static/assets/trainer4.webp") no-repeat 50% / cover;
+}
+.team-section .container > div:nth-of-type(6) {
+  background: url("/static/assets/trainer2.webp") no-repeat 50% / cover;
+}
+
 
 .team-section .content {
   font-size: 1.5rem;
-  color: #fafafa; /* Accent text color */
+  color: #ffffff; /* Accent text color */
   display: flex;
   align-items: center;
   padding: 15px;
@@ -55,8 +66,8 @@
   justify-content: flex-end;
   background: linear-gradient(
     0deg,
-    #9792e3ac 0%, /* Gradient using the purple shade */
-    rgba(255, 255, 255, 0) 100%
+    #7aab9c 0%, /* Gradient using the purple shade */
+    rgba(255, 255, 255, 0) 60%
   );
   transform: translatey(100%);
   transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
@@ -71,7 +82,7 @@
 
 .team-section .container > div:hover {
   flex: 0 0 250px;
-  box-shadow: 1px 3px 15px #9792e3; /* Bright hover state shadow */
+  box-shadow: 1px 3px 15px #54784f; /* Bright hover state shadow */
   transform: translatey(-30px);
 }
 
@@ -137,7 +148,7 @@
 .custom-carousel-item:nth-of-type(5) { --offset: 5; background-color: #e9ff70; }
 .custom-carousel-item:nth-of-type(6) { --offset: 6; background-color: #70ff96; }
 .custom-carousel-item:nth-of-type(7) { --offset: 7; background-color: #70a6ff; }
-.custom-carousel-item:nth-of-type(8) { --offset: 8; background-color: #b070ff; }
+.custom-carousel-item:nth-of-type(8) { --offset: 8; background-color: #fbf5e9; }
 .custom-carousel-item:nth-of-type(9) { --offset: 9; background-color: #ff70e1; }
 .custom-carousel-item:nth-of-type(10) { --offset: 10; background-color: #ff7070; }
 .custom-carousel-item:nth-of-type(11) { --offset: 11; background-color: #70ffda; }
