@@ -13,6 +13,25 @@ window.addEventListener('click', function(event) {
     }
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const navbar = document.querySelector('nav');
+    let lastScrollTop = 0;
+
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop) {
+            // User is scrolling down
+            navbar.classList.add('hide');
+        } else {
+            // User is scrolling up
+            navbar.classList.remove('hide');
+        }
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For mobile or negative scrolling
+    });
+});
+
 function validateForm() {
     var password = document.getElementById("password").value;
     var confirmPassword = document.getElementById("confirmpassword").value;

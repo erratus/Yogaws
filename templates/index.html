@@ -96,7 +96,6 @@
 <section class="courses">
     <div class="custom-carousel-container">
         <!-- Radio buttons (hidden) -->
-        <input class="custom-carousel-radio" type="radio" name="position" checked />
         <input class="custom-carousel-radio" type="radio" name="position" />
         <input class="custom-carousel-radio" type="radio" name="position" />
         <input class="custom-carousel-radio" type="radio" name="position" />
@@ -104,6 +103,7 @@
         <input class="custom-carousel-radio" type="radio" name="position" />
         <input class="custom-carousel-radio" type="radio" name="position" />
         <input class="custom-carousel-radio" type="radio" name="position" />
+        <input class="custom-carousel-radio" type="radio" name="position" id="pos8" checked />
         <input class="custom-carousel-radio" type="radio" name="position" />
         <input class="custom-carousel-radio" type="radio" name="position" />
         <input class="custom-carousel-radio" type="radio" name="position" />
@@ -335,12 +335,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const items = document.querySelectorAll('.custom-carousel-item');
     const prevButton = document.querySelector('.carousel-prev');
     const nextButton = document.querySelector('.carousel-next');
-    let position = 1;
     const totalItems = items.length;
+    let middlePosition = Math.ceil(totalItems / 2); // Find the middle position
+    let position = middlePosition; // Set initial position to middle
 
     function updateCarouselPosition() {
         carousel.style.setProperty('--position', position);
     }
+
+    // Set initial position to the middle
+    updateCarouselPosition();
 
     prevButton.addEventListener('click', () => {
         position = position > 1 ? position - 1 : totalItems;
@@ -352,6 +356,7 @@ document.addEventListener('DOMContentLoaded', () => {
         updateCarouselPosition();
     });
 });
+
 
 document.addEventListener('DOMContentLoaded', () => {
     // Existing carousel code

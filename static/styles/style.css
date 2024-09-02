@@ -173,6 +173,7 @@
 }   
 
 /* Navbar styles */
+/* Navbar styles */
 nav {
     position: fixed;
     width: 100%;
@@ -185,17 +186,13 @@ nav {
     padding: 0.5rem 0;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     height: 80px; /* Height of the navbar */
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.3s ease-in-out; /* Updated transition for smoother animation */
 }
 
 nav.hide {
-    transform: translateY(-170%); /* Move the nav completely out of view */
-    transition: transform 0.3s ease-in-out;
-    position: fixed; /* Ensure nav stays fixed at the top */
-    top: 0;
-    width: 100%; /* Maintain full width */
-    z-index: 1000; /* Ensure it's above other elements */
+    transform: translateY(-100%); /* Move the nav completely out of view */
 }
+
 
 .header-space {
     background-color: #fff;
