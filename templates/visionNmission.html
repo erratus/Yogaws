@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,59 +13,135 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            padding: 20px;
-            background-color: #fadd77;
+            font-family: 'Poppins', sans-serif;
+            background-color: #c3e6cb; /* Theme color background */
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px); /* Soft blur effect */
+            transform: scale(0.95);
+            animation: fadeIn 1.2s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
         }
 
         .section {
             display: flex;
             align-items: center;
+            justify-content: space-between;
             margin-bottom: 50px;
+            opacity: 0;
+            animation: slideIn 1s ease forwards;
         }
 
         .section:nth-child(odd) {
             flex-direction: row-reverse;
         }
-        
+
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         .section img {
-            width: 30%; 
+            width: 40%;
             height: auto;
-            border-radius: 255px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        
+
+        .section img:hover {
+            transform: scale(1.05); /* Zoom on image hover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
         .section div {
-            width: 70%; 
-            padding: 20px;
+            width: 55%;
+            padding: 40px;
+            animation-delay: 0.3s; /* Delay to create staggered animations */
         }
-        
+
         h1 {
-            font-size: 2rem;
+            font-size: 2.5rem;
             margin-bottom: 20px;
+            color: #2d5f7a; /* Darker shade for headings */
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
         }
 
         p {
             font-size: 1.2rem;
-            line-height: 1.5;
+            line-height: 1.8;
+            color: #5f7f6e; /* Softer color for body text */
+            text-align: justify;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .section div, .section img {
+                width: 100%;
+                padding: 20px 0;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
+
 <body>
-    <div class="section vision">
-        <div>
-            <h1>OUR VISION</h1>
-            <p>At Indramala Yoga Sansthan, our vision is to create a world where individuals are empowered to cultivate holistic well-being, inner peace, and personal transformation through the practice of yoga. We envision a community where everyone has access to the tools and support they need to thrive physically, mentally, and spiritually.</p>
+    <div class="container">
+        <div class="section vision">
+            <div>
+                <h1>Our Vision</h1>
+                <p>At Indramala Yoga Sansthan, our vision is to create a world where individuals are empowered to cultivate holistic well-being, inner peace, and personal transformation through the practice of yoga. We envision a community where everyone has access to the tools and support they need to thrive physically, mentally, and spiritually.</p>
+            </div>
+            <img src="/static/assets/grp.webp" alt="Vision Image">
         </div>
-        <img src="/static/assets/placeholder.webp" alt="Vision Image">
-    </div>
-    
-    <div class="section mission">
-        <div>
-            <h1>OUR MISSION</h1>
-            <p>Our mission at Indramala Yoga Sansthan is to provide a nurturing and inclusive space where individuals of all backgrounds and abilities can explore the transformative power of yoga.</p>
+
+        <div class="section mission">
+            <div>
+                <h1>Our Mission</h1>
+                <p>Our mission at Indramala Yoga Sansthan is to provide a nurturing and inclusive space where individuals of all backgrounds and abilities can explore the transformative power of yoga.</p>
+            </div>
+            <img src="/static/assets/mainbg.webp" alt="Mission Image">
         </div>
-        <img src="/static/assets/placeholder.webp" alt="Mission Image">
     </div>
 </body>
+
 </html>

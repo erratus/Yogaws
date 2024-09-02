@@ -164,9 +164,10 @@ def success():
 def gallery():
     return render_template('gallery.html')
 
-@app.route('/vision')
+@app.route('/vision', methods=['GET'])
 def vision():
     return render_template('visionNmission.html')
+
 
 @app.route('/admin')
 def admin():

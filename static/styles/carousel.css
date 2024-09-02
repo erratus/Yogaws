@@ -10,7 +10,7 @@
   min-height: 100vh;
   display: grid;
   place-items: center;
-  background: #ffffff; /* Darker background color from the palette */
+  background: linear-gradient(to bottom, #ffffff, #588d69);
   font-family: "Ubuntu Mono", monospace;
   font-weight: 400;
 }
@@ -29,7 +29,7 @@
   border-radius: 0.5rem;
   transition: 0.5s ease-in-out;
   cursor: pointer;
-  box-shadow: 1px 5px 15px #ebfbf3; /* Subtle shadow color */
+  box-shadow: 1px 5px 15px #3e3e20; /* Subtle shadow color */
   position: relative;
   overflow: hidden;
 }
@@ -66,7 +66,7 @@
   justify-content: flex-end;
   background: linear-gradient(
     0deg,
-    #7aab9c 0%, /* Gradient using the purple shade */
+    #faae21 0%, /* Gradient using the purple shade */
     rgba(255, 255, 255, 0) 60%
   );
   transform: translatey(100%);
@@ -82,7 +82,7 @@
 
 .team-section .container > div:hover {
   flex: 0 0 250px;
-  box-shadow: 1px 3px 15px #54784f; /* Bright hover state shadow */
+  box-shadow: 1px 3px 15px #525a2f; /* Bright hover state shadow */
   transform: translatey(-30px);
 }
 
@@ -108,6 +108,7 @@
   grid-template-columns: repeat(16, 1fr); /* Adjusted for 14 radio buttons plus some spacing */
   align-items: center;
   justify-items: center;
+  background: linear-gradient(to bottom, #588d69, #7c9885);
 }
 
 .custom-carousel {

@@ -23,9 +23,12 @@ ul{
 	list-style: none;
 }
 
-.footer{
-	background-color: #ffffff;
+.footer {
+    background-color: #ffffff;
     padding: 70px 0;
+    border-top: 5px solid #033f63; /* Add a top border to separate from other content */
+    position: relative;
+    z-index: 1; /* Ensure the border is above other content */
 }
 .footer-col{
    width: 25%;
