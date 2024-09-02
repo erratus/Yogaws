@@ -45,3 +45,7 @@ pass-qwert
 admin dummy
 no-9999999999
 pass-yogaws
+
+user dummy
+no-2234567890
+pass-qweasdzxc
