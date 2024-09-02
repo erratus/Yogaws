@@ -56,15 +56,15 @@ cursor = conn.cursor()
 # );
 # ''')
 
-cursor.execute('''
-INSERT INTO applicants (UID, CID, Fees, Course_name)
-VALUES 
-    (1, 1, 500.00, 'Yoga Basics'),
-    (2, 2, 700.00, 'Advanced Yoga'),
-    (3, 1, 550.00, 'Yoga Basics'),
-    (4, 3, 800.00, 'Yoga for Flexibility'),
-    (5, 2, 750.00, 'Advanced Yoga');
-''')
+# cursor.execute('''
+# INSERT INTO applicants (UID, CID, Fees, Course_name)
+# VALUES 
+#     (1, 1, 500.00, 'Yoga Basics'),
+#     (2, 2, 700.00, 'Advanced Yoga'),
+#     (3, 1, 550.00, 'Yoga Basics'),
+#     (4, 3, 800.00, 'Yoga for Flexibility'),
+#     (5, 2, 750.00, 'Advanced Yoga');
+# ''')
 
 
 # Commit the transaction
