@@ -17,14 +17,14 @@
                 <ul class="nav-links">
                     <li><a href="#">Home</a></li>
                     <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
-                    <li><a href="#">Classes</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#courses1">Classes</a></li>
+                    <li><a href="#foot">Contact</a></li>
                     <li class="dropdown">
-                        <a href="#" class="dropbtn">About Us</a>
+                        <a class="dropbtn">About Us</a>
                         <div class="dropdown-content">
                             <a href="{{ url_for('vision') }}">Our Vision & Mission</a>
                             <a href="#">Our History</a>
-                            <a href="#gohere">Meet Our Team</a>
+                            <a href="#trainers">Meet Our Team</a>
                         </div>
                     </li>
                 </ul>
@@ -93,7 +93,8 @@
     </div>
 </section>
 
-<section class="courses">
+<section class="courses"  id="courses1">
+
     <div class="custom-carousel-container">
         <!-- Radio buttons (hidden) -->
         <input class="custom-carousel-radio" type="radio" name="position" />
@@ -291,12 +292,13 @@
         </div>
     </div>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="footer-col">
-                    <h4>Explore</h4>
-                    <ul>
+    <section id="foot">
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>Explore</h4>
+                        <ul>
                         <li><a href="{{ url_for('vision') }}">Vision & Mission</a></li>
                         <li><a href="#">Distinctive Features</a></li>
                     </ul>
@@ -329,6 +331,8 @@
             </div>
         </div>
     </footer>
+</section>
+
     <script>
 document.addEventListener('DOMContentLoaded', () => {
     const carousel = document.querySelector('.custom-carousel');
