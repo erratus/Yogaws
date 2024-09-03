@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, g, session
 import sqlite3
 from werkzeug.security import generate_password_hash, check_password_hash
+import time
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'  # For flashing messages
@@ -128,7 +129,7 @@ def apply():
 
         if existing_instructor:
             flash("Phone number already registered. Please use a different number.", "error")
-            return redirect(url_for('gallery'))  # Redirect back to the application form
+            return redirect(url_for('apply'))  # Redirect back to the application form
 
         # Insert data into the instructors table
         cursor.execute('''
@@ -210,7 +211,25 @@ def admin():
 
 @app.route('/view_all_students')
 def view_all_students():
-    return render_template('view_all_students.html')
+    # Connect to the database
+    conn = sqlite3.connect('./instances/YWS.db')
+    cursor = conn.cursor()
+
+    # Query to get the students' first name, last name, and course name from the applicants table
+    cursor.execute('''
+        SELECT users.name, users.lastname, course.Course_name 
+        FROM applicants 
+        JOIN users ON applicants.UID = users.UID
+        JOIN course ON applicants.CID = course.CID
+    ''')
+    students = cursor.fetchall()
+
+    # Close the connection
+    cursor.close()
+    conn.close()
+
+    # Pass the data to the template
+    return render_template('view_all_students.html', students=students)
 
 
 if __name__ == '__main__':
