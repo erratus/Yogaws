@@ -26,17 +26,6 @@ ff7f0e
 d35400
 8c564b
 
-#TODO
-founder-section-soham
-website calendar- arya
-carousel - tushar
-trainers section - tushar
-i want to teach btn - surya (WAITING FOR CAROUSEL)
-registration form (transparent) - surya (partial-DONE){
-    add form validation
-    connect db
-    re route to success 
-}
 
 instructor dummy
 no-23423434323
