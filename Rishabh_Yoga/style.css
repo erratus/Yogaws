@@ -1,0 +1,427 @@
+.header {
+    background-color: #033f63; /* Set background color to white */
+    padding: 1rem 0;
+    border-bottom: 2px solid #ffffff;
+    display: flex;
+    justify-content: space-between; /* Space out elements in the header */
+    align-items: center;
+}
+
+.header img {
+    height: 85px; /* Adjusted the height for better alignment */
+    margin-left: 4rem; /* Margin to push the logo slightly away from the edge */
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex: 1; /* Flex property to take up available space between logo and register/login */
+}
+
+.nav-links li {
+    margin: 0 1rem;
+    position: relative;
+}
+
+.nav a {
+    color: #033f63; /* Change text color to black */
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    display: block;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.auth-link {
+    font-size: 1rem;
+    color: #033f63;
+    text-decoration: none;
+    margin-right: 4rem;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #5ebbc8;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    z-index: 1;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: #033f63; /* Adjusted text color to black */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.call-to-action {
+    background-color: #007bff;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.25rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.call-to-action:hover {
+    background-color: #0056b3;
+}
+
+/* Updated styles for the dropdown menu */
+.nav-links .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fbf5e9; /* Light yellow background */
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.nav-links .dropdown-content a {
+    color: #033f63;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links .dropdown-content a:hover {
+    background-color: #fa7921; /* Darker yellow on hover */
+}
+
+.nav-links .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.nav-links .dropdown-content a::after {
+    content: '\25B6'; /* Right arrow character */
+    font-size: 0.8rem;
+    color: #999;
+    margin-left: auto;
+}
+
+.nav-links .dropdown-content a:hover::after {
+    color: #fff;
+}
+
+/* Add this class if needed to adjust the dropdown button style */
+.nav-links .dropbtn {
+    padding: 0.75rem 1rem;
+    display: block;
+    font-size: 1rem;
+    color: #fff ;
+    text-decoration: none;
+}
+
+.hello-section{
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    padding: 3rem 5rem;
+    background-color: #fedc97; 
+    margin: 0px 0px;
+    height: 90vh;
+}
+.hello-img{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #191919; */
+    height: 30rem;
+}
+.hello-img img {
+    height: 30rem;
+    align-self: center;
+}
+.hello-container{
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: flex-start;
+}
+.hello-container h1{
+    font-family: "Playfair Display", serif;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 54px;
+    color: #000000;
+}
+.hello-container p{
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28.125px;
+    color: #000000;
+}   
+
+/* Navbar styles */
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: #033f63;
+    color: #033f63;
+    text-align: center;
+    padding: 0.5rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    height: 80px; /* Height of the navbar */
+    transition: transform 0.5s ease-in-out;
+}
+
+nav.hide {
+    transform: translateY(-170%); /* Move the nav completely out of view */
+    transition: transform 0.3s ease-in-out;
+    position: fixed; /* Ensure nav stays fixed at the top */
+    top: 0;
+    width: 100%; /* Maintain full width */
+    z-index: 1000; /* Ensure it's above other elements */
+}
+
+.header-space {
+    background-color: #fff;
+    height: 100px; /* Adjust this value for the amount of extra space you want */
+}
+
+/* Hero section styling */
+.hero {
+    margin-top: 80px; /* Matches the height of the navbar */
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 10rem 0;
+    position: relative;
+    height: 100vh;
+}
+
+/* Navbar container styles */
+.nav-links {
+    background-color: #033f63; /* Background color for the entire navbar line */
+    padding: 0; /* Remove padding around the nav-links */
+    margin: 0; /* Remove margin around the nav-links */
+    list-style: none; /* Remove bullets from the list */
+    display: flex; /* Use flexbox to align items horizontally */
+    justify-content: center; /* Center align the navbar items */
+}
+body{
+    background-color: #fbf5e9;
+}
+
+
+.flash-messages {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.yogsec {
+    display: flex; 
+    justify-content: center; 
+    overflow: hidden; 
+    width: 100%;
+    background: linear-gradient(to bottom, #fedc97, #588d69);
+}
+
+.yogsec img {
+    width: 80%;
+    max-width: 90%; /* Makes the image a bit larger */
+    height: auto; 
+    display: block;
+    margin: 0 auto; /* Centers the image */
+    padding-bottom: 150px;
+}
+
+.wowim {
+    display: flex; 
+    justify-content: center; 
+    overflow: hidden; 
+    width: 100%;
+    background: linear-gradient(to bottom, #588d69, #033f63);
+}
+
+.wowim img {
+    width: 100%;
+    max-width: 90%; /* Makes the image a bit larger */
+    height: auto; 
+    display: block;
+    margin: 0 auto; /* Centers the image */
+    padding-bottom: 120px;
+    padding-top: 120px;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+    background: linear-gradient(to bottom, #fedc97, #ffffff);
+    position: relative;
+}
+
+.hero-images {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 3rem 2rem;
+}
+
+.hero-image-left {
+    max-width: 30%;
+}
+
+.hero-image-right {
+    max-width: 30%;
+    margin-left: auto;
+    padding-right: 1rem;
+}
+
+.hero-text-content {
+    text-align: center;
+    max-width: 600px;
+    z-index: 1;
+}
+
+.hero-title {
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #033f63;
+    margin-bottom: 1rem;
+}
+
+.hero-text {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background-color: #fa7921;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: #e06c43;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    color: #033f63;
+}
+header {
+    background-color: #fff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: 'Georgia', serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #033f63;
+    text-decoration: none;
+}
+
+.nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav ul li {
+    list-style: none;
+}
+
+.nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav ul li a:hover {
+    color: #fff;
+    background-color: #fa7921;
+    border-radius: 5px;
+}
+.join-button {
+    background-color: #fa7921;
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem; /* Make the font size consistent */
+    margin-right: 2rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.join-button:hover {
+    background-color: #e06c43;
+    transform: scale(1.05); /* Slightly enlarges the button on hover */
+}
+
+.join-button a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 1.5rem; /* Vertically center the text within the button */
+}
