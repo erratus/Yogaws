@@ -4,17 +4,20 @@
     box-sizing: border-box;
     font-family: 'poppins', sans-serif;
     font-size: 18px;
+    
 }
 body{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    
 }
+
 .header{
-    height: 80px;
+    height: 150px;
     width: 70%;
-    background-color: goldenrod;
+    background-color: #fedc97;
     border-radius: 3px;
     margin: 30px 0px;
     display: flex;
@@ -22,10 +25,9 @@ body{
     justify-content: space-between;
     padding: 15px;
 }
-.header .logo{
-    font-size: 30px;
-    font-weight: bold;
-    color: white;
+.logo{
+    margin-left: 20px;
+    object-fit: cover;
 }
 .cart{
     display: flex;
@@ -36,8 +38,28 @@ body{
     border-radius: 3px;
     width: 80px;
 }
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.cart-item {
+    animation: slideIn 0.5s ease;
+}
+
+.quantity {
+    font-size: 14px;
+    margin-left: 10px;
+    color: #333;
+}
 .fa-solid{
-    color: goldenrod;
+    color: #fa7921;
 }
 .cart p{
     height: 22px;
@@ -46,13 +68,16 @@ body{
     align-items: center;
     justify-content: center;
     border-radius: 22px;
-    background-color: goldenrod;
+    background-color: #fa7921;
     color: white;
 }
+
 .container{
     display: flex;
     width: 70%;
     margin-bottom: 30px;
+    position: sticky;
+    top: 0;
 }
 #root{
     width: 60%;
@@ -67,9 +92,11 @@ body{
     margin-left: 20px;
     padding: 15px;
     text-align: center;
+    position: sticky;
+    top: 0;
 }
 .head{
-    background-color: goldenrod;
+    background-color: #fed480;
     border-radius: 3px;
     height: 40px;
     padding: 10px;
@@ -90,10 +117,11 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid goldenrod;
-    border-radius: 5px;
+    border: 1px solid #ffc95c;
+    border-radius: 10px;
     padding: 15px;
 }
+
 .img-box{
     width: 100%;
     height: 180px;
@@ -126,13 +154,13 @@ button{
     position: relative;
     border: none;
     border-radius: 5px;
-    background-color: goldenrod;
+    background-color: #ffc95c;
     padding: 7px 25px;
     cursor: pointer;
     color: white;
 }
 button:hover{
-    background-color: #333;
+    background-color: #fa7921;
 }
 .cart-item{
     display: flex;
@@ -148,7 +176,7 @@ button:hover{
     width: 50px;
     height: 50px;
     border-radius: 50px;
-    border: 1px solid goldenrod;
+    border: 1px solid #ffc95c;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -161,4 +189,62 @@ button:hover{
 .fa-trash:hover{
     cursor: pointer;
     color: #333;
+}
+
+.description-box {
+    margin-top: 10px;
+    text-align: center;
+    padding: 0 10px;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s ease; /* Smooth transition on height */
+}
+
+.description-content {
+    background-color: #ffc95c;
+    color: white;
+    padding: 10px;
+    border-radius: 12px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.qty-btn{
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+    padding-right: 20px;
+    padding-left: 7px;
+    padding-bottom: 25px;
+}
+
+@media (max-width: 850px) {
+    .header, .container {
+        width: 90%;
+    }
+
+    #root {
+        width: 100%;
+        grid-template-columns: 1fr; /* Stack the grid items in a single column */
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-left: 10px;
+    }
+
+    .cart {
+        width: 60px; /* Shrink the cart icon to fit smaller screens */
+        padding: 5px;
+        
+    }
+
+    .cart-item {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    button {
+        padding: 10px 20px;
+    }
 }
