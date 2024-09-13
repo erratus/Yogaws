@@ -19,13 +19,11 @@
                 <tr>
                     <th>Profile</th>
                     <th>Name</th>
-                    <th>Course</th>
                 </tr>
                 {% for student in students %}
                 <tr>
                     <td><img src="https://via.placeholder.com/50" alt="Profile Picture"></td>
                     <td>{{ student[0] }} {{ student[1] }}</td>
-                    <td>{{ student[2] }}</td>
                 </tr>
                 {% endfor %}
             </table>
