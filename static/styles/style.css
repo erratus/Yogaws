@@ -1,5 +1,5 @@
 .header {
-    background-color: #033f63; /* Set background color to white */
+    background-color: white; /* Set background color to white */
     padding: 1rem 0;
     border-bottom: 2px solid #ffffff;
     display: flex;
@@ -27,7 +27,7 @@
 }
 
 .nav a {
-    color: #033f63; /* Change text color to black */
+    color: #333; /* Change text color to black */
     text-decoration: none;
     padding: 0.75rem 1rem;
     display: block;
@@ -37,7 +37,7 @@
 
 .auth-link {
     font-size: 1rem;
-    color: #033f63;
+    color: #333;
     text-decoration: none;
     margin-right: 4rem;
 }
@@ -45,7 +45,7 @@
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #5ebbc8;
+    background-color: #ffffff;
     min-width: 160px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.1);
     z-index: 1;
@@ -54,7 +54,7 @@
 }
 
 .dropdown-content a {
-    color: #033f63; /* Adjusted text color to black */
+    color: #333; /* Adjusted text color to black */
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -92,7 +92,7 @@
 }
 
 .nav-links .dropdown-content a {
-    color: #033f63;
+    color: #333;
     padding: 12px 16px;
     text-decoration: none;
     display: flex;
@@ -102,7 +102,7 @@
 }
 
 .nav-links .dropdown-content a:hover {
-    background-color: #fa7921; /* Darker yellow on hover */
+    background-color: #ff7f51; /* Darker yellow on hover */
 }
 
 .nav-links .dropdown:hover .dropdown-content {
@@ -117,7 +117,7 @@
 }
 
 .nav-links .dropdown-content a:hover::after {
-    color: #fff;
+    color: #333;
 }
 
 /* Add this class if needed to adjust the dropdown button style */
@@ -125,7 +125,7 @@
     padding: 0.75rem 1rem;
     display: block;
     font-size: 1rem;
-    color: #fff ;
+    color: #333 ;
     text-decoration: none;
 }
 
@@ -134,7 +134,7 @@
     align-items: center;
     gap: 5rem;
     padding: 3rem 5rem;
-    background-color: #fedc97; 
+    background-color: #ebfbf3; 
     margin: 0px 0px;
     height: 90vh;
 }
@@ -179,8 +179,8 @@ nav {
     top: 0;
     left: 0;
     z-index: 1000;
-    background-color: #033f63;
-    color: #033f63;
+    background-color: #ebfbf3;
+    color: #333;
     text-align: center;
     padding: 0.5rem 0;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -215,7 +215,7 @@ nav.hide {
 
 /* Navbar container styles */
 .nav-links {
-    background-color: #033f63; /* Background color for the entire navbar line */
+    background-color: #ffffff; /* Background color for the entire navbar line */
     padding: 0; /* Remove padding around the nav-links */
     margin: 0; /* Remove margin around the nav-links */
     list-style: none; /* Remove bullets from the list */
@@ -256,7 +256,7 @@ body{
     justify-content: center; 
     overflow: hidden; 
     width: 100%;
-    background: linear-gradient(to bottom, #fedc97, #588d69);
+    background-color: #fbf5e9;
 }
 
 .yogsec img {
@@ -273,7 +273,6 @@ body{
     justify-content: center; 
     overflow: hidden; 
     width: 100%;
-    background: linear-gradient(to bottom, #588d69, #033f63);
 }
 
 .wowim img {
@@ -291,7 +290,7 @@ body{
     justify-content: center;
     align-items: center;
     padding: 3rem 0;
-    background: linear-gradient(to bottom, #fedc97, #ffffff);
+    background-color: #ffd670;
     position: relative;
 }
 
@@ -326,7 +325,7 @@ body{
     font-family: 'Georgia', serif;
     font-size: 2.5rem;
     font-weight: bold;
-    color: #033f63;
+    color: #4a4a4a;
     margin-bottom: 1rem;
 }
 
@@ -339,7 +338,7 @@ body{
 .hero-button {
     display: inline-block;
     padding: 0.75rem 2rem;
-    background-color: #fa7921;
+    background-color: #ff7f51;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -355,7 +354,8 @@ body {
     font-family: 'Georgia', serif;
     margin: 0;
     padding: 0;
-    color: #033f63;
+    background-color: #ebfbf3;
+    color: #333;
 }
 header {
     background-color: #fff;
@@ -370,7 +370,7 @@ header {
     font-family: 'Georgia', serif;
     font-size: 2rem;
     font-weight: bold;
-    color: #033f63;
+    color: #333;
     text-decoration: none;
 }
 
@@ -387,7 +387,7 @@ header {
 }
 
 .nav ul li a {
-    color: #fff;
+    color: #333;
     text-decoration: none;
     font-weight: 500;
     padding: 0.5rem 1rem;
@@ -396,11 +396,11 @@ header {
 
 .nav ul li a:hover {
     color: #fff;
-    background-color: #fa7921;
+    background-color: #ff7f51;
     border-radius: 5px;
 }
 .join-button {
-    background-color: #fa7921;
+    background-color: #ff7f51;
     color: #fff;
     padding: 0.5rem 1.5rem;
     border: none;

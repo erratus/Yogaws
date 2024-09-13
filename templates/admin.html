@@ -10,6 +10,16 @@
 </head>
 
 <body>
+    <div class="header">
+        <div class="logo">
+            <div class="logo">
+                <img src="/static/assets/website_icon.webp" alt="" srcset="">
+            </div>
+        </div>
+        <div class="header1">
+            <p class="head-txt">ADMIN DASHBOARD</p>
+        </div>
+    </div>
     <div class="container">
         <div class="content">
             <div class="cards">
@@ -51,34 +61,36 @@
                 </div>
             </div>
             
-            <div class="new-students">
-                <div class="title">
-                    <h2>New Students</h2>
-                    <a href="{{ url_for('view_all_students') }}" class="btn">View All</a>
-                </div>
-                <table>
-                    <tr>
-                        <th>Profile</th>
-                        <th>Name</th>
-                    </tr>
-                    {% for student in new_students %}
-                    <tr>
-                        <td><img src="https://via.placeholder.com/50" alt="Profile Picture"></td>
-                        <td>{{ student[0] }} {{ student[1] }}</td>
-                    </tr>
-                    {% endfor %}
-                </table>
-            </div>
-            
-            <div class="content-2">
-                <div class="recent-payments">
+            <div class="tables">
+                <div class="new-students">
                     <div class="title">
-                        <h2>Recent Payments</h2>
-                        <a href="#" class="btn">View All</a>
+                        <h2>New Students</h2>
+                        <a href="{{ url_for('view_all_students') }}" class="btn">View All</a>
                     </div>
                     <table>
-                        <!-- Leave this table for recent payments -->
+                        <tr>
+                            <th>Profile</th>
+                            <th>Name</th>
+                        </tr>
+                        {% for student in new_students %}
+                        <tr>
+                            <td><img src="https://via.placeholder.com/50" alt="Profile Picture"></td>
+                            <td>{{ student[0] }} {{ student[1] }}</td>
+                        </tr>
+                        {% endfor %}
                     </table>
+                </div>
+                
+                <div class="content-2">
+                    <div class="recent-payments">
+                        <div class="title">
+                            <h2>Recent Payments</h2>
+                            <a href="#" class="btn">View All</a>
+                        </div>
+                        <table>
+                            <!--Leave table empty for entries-->
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>

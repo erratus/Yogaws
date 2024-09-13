@@ -58,7 +58,6 @@
   "C_Cpp_Runner.useLinkTimeOptimization": false,
   "C_Cpp_Runner.msvcSecureNoWarnings": false,
   "files.associations": {
-    "BOUNDARY.C": "cpp",
-    "LINECLIP.C": "cpp"
+    "BOUNDARY.C": "cpp"
   }
 }

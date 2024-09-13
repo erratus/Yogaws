@@ -62,7 +62,6 @@ hr {
     margin-bottom: 20px;
 }
 
-
 .candidate-name input,
 .password input,
 .dob select,
@@ -117,30 +116,4 @@ hr {
 
 .submit-form input:hover {
     border-color: #ff7f0e; /* Vibrant Orange */
-}
-
-.flash-messages {
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.flash-message {
-    padding: 15px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    font-weight: 700;
-    color: #333; /* Dark text color */
-    box-shadow: 0px 2px 2px #8c564b; /* Soft Brown shadow */
-}
-
-/* Success Message */
-.flash-message.success {
-    background-color: #d4edda; /* Light Green */
-    border: 1px solid #c3e6cb; /* Green Border */
-}
-
-/* Error Message */
-.flash-message.error {
-    background-color: #f8d7da; /* Light Red */
-    border: 1px solid #f5c6cb; /* Red Border */
 }

@@ -1,4 +1,4 @@
-!<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -17,13 +17,12 @@
                 <ul class="nav-links">
                     <li><a href="#">Home</a></li>
                     <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
-                    <li><a href="#courses1">Classes</a></li>
-                    <li><a href="#foot">Contact</a></li>
+                    <li><a href="#">Classes</a></li>
+                    <li><a href="#">Contact</a></li>
                     <li class="dropdown">
-                        <a class="dropbtn">About Us</a>
+                        <a href="#" class="dropbtn">About Us</a>
                         <div class="dropdown-content">
-                            <a href="./visionNmission.html">Our Vision & Mission</a><!-- Corrected route -->
-                            <a href="#">Our History</a>
+                            <a href="{{ url_for('vision') }}">Our Vision & Mission</a>
                             <a href="#trainers">Meet Our Team</a>
                         </div>
                     </li>
@@ -31,7 +30,6 @@
                 <button class="join-button" id="openModal">register/login</button>
             </header>
         </nav>
-        
     <section class="hero">
             <div class="container hero-content">
                 <div class="hero-images">
@@ -90,20 +88,13 @@
                 </div>
             </div>
         </div>
-         <!-- class="joinus" href="/templates/appl.html">I want to become a trainer  -->
+         <a href="{{ url_for('apply') }}">Become a trainer </a> 
     </div>
 </section>
 
-<section class="courses"  id="courses1">
-
+<section class="courses">
     <div class="custom-carousel-container">
-        <input class="custom-carousel-radio" type="radio" name="position" />
-        <input class="custom-carousel-radio" type="radio" name="position" />
-        <input class="custom-carousel-radio" type="radio" name="position" />
-        <input class="custom-carousel-radio" type="radio" name="position" />
-        <input class="custom-carousel-radio" type="radio" name="position" />
-        <input class="custom-carousel-radio" type="radio" name="position" />
-        <input class="custom-carousel-radio" type="radio" name="position" />
+        <!-- Radio buttons (hidden) -->
         <input class="custom-carousel-radio" type="radio" name="position" checked />
         <input class="custom-carousel-radio" type="radio" name="position" />
         <input class="custom-carousel-radio" type="radio" name="position" />
@@ -111,23 +102,65 @@
         <input class="custom-carousel-radio" type="radio" name="position" />
         <input class="custom-carousel-radio" type="radio" name="position" />
         <input class="custom-carousel-radio" type="radio" name="position" />
-        <main class="custom-carousel">
-            <div class="custom-carousel-item"> hath yoga</div>
-            <div class="custom-carousel-item">Iyengar yoga</div>
-            <div class="custom-carousel-item"> ashtanga yoga</div>
-            <div class="custom-carousel-item">power yoga</div>
-            <div class="custom-carousel-item">aerial yoga</div>
-            <div class="custom-carousel-item">Advanced yoga</div>
-            <div class="custom-carousel-item">weight loss yoga</div>
-            <div class="custom-carousel-item">competitive yoga</div>
-            <div class="custom-carousel-item">pregnancy yoga</div>
-            <div class="custom-carousel-item">kids yoga</div>
-            <div class="custom-carousel-item">Meditation</div>
-            <div class="custom-carousel-item">viyasa flow</div>
-            <div class="custom-carousel-item">stress managament</div>
-            <div class="custom-carousel-item">yog therapy</div>
+        <input class="custom-carousel-radio" type="radio" name="position" />
+        <input class="custom-carousel-radio" type="radio" name="position" />
+        <input class="custom-carousel-radio" type="radio" name="position" />
+        <input class="custom-carousel-radio" type="radio" name="position" />
+        <input class="custom-carousel-radio" type="radio" name="position" />
+        <input class="custom-carousel-radio" type="radio" name="position" />
+        <input class="custom-carousel-radio" type="radio" name="position" />
+
+        <div class="custom-carousel">
+            <!-- Carousel Items -->
+            <div class="custom-carousel-item">
+                <div class="image-container">
+                    <img src="/static/assets/photos/four.png" alt="Hatha Yoga Pose">
+                </div>
+                <h3>Hatha Yoga</h3>
+                <p>Experience the balance of body and mind with traditional Hatha Yoga.</p>
+                <button class="apply-btn">Apply Now</button>
+            </div>
+            <div class="custom-carousel-item">
+                <div class="image-container">
+                    <img src="/static/assets/photos/thirteen.png" alt="Iyengar Yoga Pose">
+                </div>
+                <h3>Iyengar Yoga</h3>
+                <p>Perfect your alignment with the precision of Iyengar Yoga.</p>
+                <button class="apply-btn">Apply Now</button>
+            </div>
+            <div class="custom-carousel-item">
+                <div class="image-container">
+                    <img src="/static/assets/photos/twelve.png" alt="Ashtanga Yoga Pose">
+                </div>
+                <h3>Ashtanga Yoga</h3>
+                <p>Flow through dynamic sequences with Ashtanga Yoga.</p>
+                <button class="apply-btn">Apply Now</button>
+            </div>
+            <div class="custom-carousel-item">
+                <div class="image-container">
+                    <img src="/static/assets/photos/two.png" alt="Power Yoga Pose">
+                </div>
+                <h3>Power Yoga</h3>
+                <p>Boost your strength and endurance with Power Yoga.</p>
+                <button class="apply-btn">Apply Now</button>
+            </div>
+            <div class="custom-carousel-item">
+                <div class="image-container">
+                    <img src="/static/assets/photos/seven.png" alt="Aerial Yoga Pose">
+                </div>
+                <h3>Aerial Yoga</h3>
+                <p>Defy gravity and find balance with Aerial Yoga.</p>
+                <button class="apply-btn">Apply Now</button>
+            </div>
+            <!-- Add more items as needed -->
         </div>
-    </section>
+
+        <!-- Navigation Arrows -->
+        <button class="carousel-prev">&#10094;</button>
+        <button class="carousel-next">&#10095;</button>
+    </div>
+</section>
+
     
     <!-- <section class="Bcustom-carousel">
         <div class="Bcustom-container">
@@ -257,13 +290,12 @@
         </div>
     </div>
 
-    <section id="foot">
-        <footer class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="footer-col">
-                        <h4>Explore</h4>
-                        <ul>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul>
                         <li><a href="{{ url_for('vision') }}">Vision & Mission</a></li>
                         <li><a href="#">Distinctive Features</a></li>
                     </ul>
@@ -296,24 +328,40 @@
             </div>
         </div>
     </footer>
-</section>
-
     <script>
-let lastScrollTop = 0;
-const nav = document.querySelector('nav');
+document.addEventListener('DOMContentLoaded', () => {
+    const carousel = document.querySelector('.custom-carousel');
+    const items = document.querySelectorAll('.custom-carousel-item');
+    const prevButton = document.querySelector('.carousel-prev');
+    const nextButton = document.querySelector('.carousel-next');
+    let position = 1;
+    const totalItems = items.length;
 
-window.addEventListener('scroll', function() {
-    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (currentScroll > lastScrollTop) {
-        // Scrolling down - hide the nav
-        nav.classList.add('hide');
-    } else {
-        // Scrolling up - show the nav
-        nav.classList.remove('hide');
+    function updateCarouselPosition() {
+        carousel.style.setProperty('--position', position);
     }
 
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
+    prevButton.addEventListener('click', () => {
+        position = position > 1 ? position - 1 : totalItems;
+        updateCarouselPosition();
+    });
+
+    nextButton.addEventListener('click', () => {
+        position = position < totalItems ? position + 1 : 1;
+        updateCarouselPosition();
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Existing carousel code
+
+    const applyButtons = document.querySelectorAll('.apply-btn');
+
+    applyButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            window.location.href = 'templates/successs.html'; // Update with the path to your dummy page
+        });
+    });
 });
 
 
