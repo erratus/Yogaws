@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Enrollments</title>
+    <link rel="stylesheet" href="/static/styles/enrollments.css">  <!-- Optional: Your CSS link -->
+    <script>
+        function confirmDeletion(appid) {
+            if (confirm('Are you sure you want to remove this enrollment?')) {
+                // Redirect to the delete route
+                fetch(`/delete_enrollment/${appid}`, {
+                    method: 'POST'
+                }).then(response => {
+                    if (response.ok) {
+                        alert('Enrollment deleted successfully!');
+                        window.location.reload();  // Reload the page to update the table
+                    } else {
+                        alert('Failed to delete enrollment.');
+                    }
+                });
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Edit Enrollments</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Course Name</th>
+                    <th>Fees Paid</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for enrollment in enrollments %}
+                <tr>
+                    <td>{{ enrollment[0] }}</td>
+                    <td>{{ enrollment[1] }}</td>
+                    <td>{{ enrollment[2] }}</td>
+                    <td>{{ enrollment[3] }}</td>
+                    <td><button onclick="confirmDeletion({{ enrollment[4] }})">Remove Enrollment</button></td> <!-- Pass APPID -->
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

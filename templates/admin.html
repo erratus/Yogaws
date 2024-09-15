@@ -23,43 +23,51 @@
     <div class="container">
         <div class="content">
             <div class="cards">
-                <div class="card">
-                    <div class="box">
-                        <h1>{{ total_enrollments }}</h1>
-                        <h3>Enrollments</h3>
+                <a href="{{ url_for('edit_enrollments') }}">
+                    <div class="card">
+                        <div class="box">
+                            <h1>{{ total_enrollments }}</h1>
+                            <h3>Enrollments</h3>
+                        </div>
+                        <div class="icon-case">
+                            <img src="students.png" alt="">
+                        </div>
                     </div>
-                    <div class="icon-case">
-                        <img src="students.png" alt="">
+                </a>
+                <a href="instructors.html">
+                    <div class="card">
+                        <div class="box">
+                            <h1>{{ total_instructors }}</h1>
+                            <h3>Instructors</h3>
+                        </div>
+                        <div class="icon-case">
+                            <img src="teachers.png" alt="">
+                        </div>
                     </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <h1>{{ total_instructors }}</h1>
-                        <h3>Instructors</h3>
+                </a>
+                <a href="courses.html">
+                    <div class="card">
+                        <div class="box">
+                            <h1>{{ total_courses }}</h1>
+                            <h3>Courses</h3>
+                        </div>
+                        <div class="icon-case">
+                            <img src="schools.png" alt="">
+                        </div>
                     </div>
-                    <div class="icon-case">
-                        <img src="teachers.png" alt="">
+                </a>
+                <a href="income.html">
+                    <div class="card">
+                        <div class="box">
+                            <h1>{{ total_income }}</h1>
+                            <h3>Income</h3>
+                        </div>
+                        <div class="icon-case">
+                            <img src="income.png" alt="">
+                        </div>
                     </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <h1>{{ total_courses }}</h1>
-                        <h3>Courses</h3>
-                    </div>
-                    <div class="icon-case">
-                        <img src="schools.png" alt="">
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <h1>{{ total_income }}</h1>
-                        <h3>Income</h3>
-                    </div>
-                    <div class="icon-case">
-                        <img src="income.png" alt="">
-                    </div>
-                </div>
-            </div>
+                </a>
+            </div>            
             
             <div class="tables">
                 <div class="new-students">

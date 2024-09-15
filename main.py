@@ -206,6 +206,53 @@ def admin():
         total_income=total_income,
         new_students=new_students
 )
+    
+@app.route('/edit_enrollments')
+def edit_enrollments():
+    # Connect to the database
+    db = get_db()
+    cursor = db.cursor()
+
+    # Query to get the user's name, lastname, course name, and fees paid
+    cursor.execute('''
+        SELECT users.name, users.lastname, applicants.Course_name, applicants.Fees, applicants.APPID
+        FROM applicants 
+        JOIN users ON applicants.UID = users.UID
+    ''')
+    enrollments = cursor.fetchall()
+
+    # Close the connection
+    cursor.close()
+
+    # Render enrollments.html and pass the enrollments data
+    return render_template('enrollments.html', enrollments=enrollments)
+
+@app.route('/delete_enrollment/<int:appid>', methods=['POST'])
+def delete_enrollment(appid):
+    db = get_db()
+    cursor = db.cursor()
+
+    # First, fetch the UID of the user associated with the given APPID
+    cursor.execute('SELECT UID FROM applicants WHERE APPID = ?', (appid,))
+    user = cursor.fetchone()
+
+    if user:
+        uid = user[0]
+
+        # Delete the enrollment from the applicants table
+        cursor.execute('DELETE FROM applicants WHERE APPID = ?', (appid,))
+        db.commit()
+
+        # Now delete the user from the users table based on the UID
+        cursor.execute('DELETE FROM users WHERE UID = ?', (uid,))
+        db.commit()
+
+        flash("Enrollment and user deleted successfully!", "success")
+    else:
+        flash("User not found or already deleted.", "error")
+
+    return redirect(url_for('edit_enrollments'))
+
 
 @app.route('/view_all_students')
 def view_all_students():
