@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Instructor</title>
+    <link rel="stylesheet" href="/static/styles/add_instructor.css">   
+</head>
+<body>
+    <div class="container">
+        <h2>Add Instructor</h2>
+        <form action="{{ url_for('add_instructor') }}" method="POST">
+            <label for="name">First Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastname" name="lastname" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <!-- New Address Fields -->
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="address2">Address 2:</label>
+            <input type="text" id="address2" name="address2">
+
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required>
+
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" required>
+
+            <label for="postal">Postal Code:</label>
+            <input type="text" id="postal" name="postal" required>
+
+            <!-- Select Course -->
+            <label for="course">Course:</label>
+            <select id="course" name="course" required>
+                {% for course in courses %}
+                <option value="{{ course[1] }}">{{ course[1] }}</option>  <!-- Save the course name -->
+                {% endfor %}
+            </select>
+
+            <label for="password">Password:</label>
+            <input type="password" required name="password" placeholder="Password" maxlength="20" minlength="8" class="textBox" id="password">
+
+            <label for="reference">Reference:</label>
+            <input type="text" id="reference" name="reference">
+
+            <button type="submit">Add Instructor</button>
+        </form>
+    </div>
+</body>
+</html>

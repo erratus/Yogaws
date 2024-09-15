@@ -34,7 +34,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="instructors.html">
+                <a href="{{ url_for('edit_instructors') }}">
                     <div class="card">
                         <div class="box">
                             <h1>{{ total_instructors }}</h1>
@@ -45,7 +45,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="courses.html">
+                <a href="{{ url_for('edit_course') }}">
                     <div class="card">
                         <div class="box">
                             <h1>{{ total_courses }}</h1>

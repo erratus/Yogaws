@@ -206,7 +206,8 @@ def admin():
         total_income=total_income,
         new_students=new_students
 )
-    
+
+#all about enrollment display and delete    
 @app.route('/edit_enrollments')
 def edit_enrollments():
     # Connect to the database
@@ -252,6 +253,127 @@ def delete_enrollment(appid):
         flash("User not found or already deleted.", "error")
 
     return redirect(url_for('edit_enrollments'))
+
+#all about editing instructors and deleting them
+@app.route('/edit_instructors', methods=['GET', 'POST'])
+def edit_instructors():
+    db = get_db()
+    cursor = db.cursor()
+
+    if request.method == 'POST':
+        # Handle adding a new instructor
+        name = request.form['name']
+        lastname = request.form['lastname']
+        phone = request.form['phone']
+        dob = request.form['dob']
+        course_name = request.form['course']  # Save course name instead of course_id
+        password = generate_password_hash(request.form['password'])
+        reference = request.form.get('reference', '')
+
+        # Get full address from form
+        address = request.form['address']
+        address2 = request.form.get('address2', '')
+        city = request.form['city']
+        state = request.form['state']
+        postal = request.form['postal']
+
+        full_address = f"{address}, {address2}, {city}, {state}, {postal}"
+
+        # Insert new instructor data into the instructors table
+        cursor.execute('''
+            INSERT INTO instructors (name, lastname, Ph_no, DOB, Address, Course, reference, password)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+        ''', (name, lastname, phone, dob, full_address, course_name, reference, password))
+        db.commit()
+
+        flash("Instructor added successfully!", "success")
+        return redirect(url_for('edit_instructors'))
+
+    # Query to display existing instructors
+    cursor.execute('''
+        SELECT i.name, i.lastname, i.Course, i.Ph_no, i.Address, i.TID 
+        FROM instructors i
+    ''')
+    instructors = cursor.fetchall()
+
+    # Fetch all courses for the dropdown in the add-instructor form
+    cursor.execute('SELECT CID, Course_name FROM course')
+    courses = cursor.fetchall()
+
+    return render_template('instructors.html', instructors=instructors, courses=courses)
+
+
+@app.route('/delete_instructor_enrollment/<int:tid>', methods=['POST'])
+def delete_instructor_enrollment(tid):
+    db = get_db()
+    cursor = db.cursor()
+
+    # Delete instructor from instructors table
+    cursor.execute('DELETE FROM instructors WHERE TID = ?', (tid,))
+    db.commit()
+
+    flash("Instructor and their data deleted successfully!", "success")
+    return redirect(url_for('edit_instructors'))
+
+
+#all about editing course
+@app.route('/edit_course', methods=['GET', 'POST'])
+def edit_course():
+    db = get_db()
+    cursor = db.cursor()
+
+    if request.method == 'POST':
+        # Check if the request is for adding a new course or updating an existing course
+        if 'course_id' in request.form:
+            # Update existing course's start and end dates
+            course_id = request.form['course_id']
+            from_date = request.form['from_date']
+            to_date = request.form['to_date']
+
+            cursor.execute('''
+                UPDATE course
+                SET from_date = ?, to_date = ?
+                WHERE CID = ?
+            ''', (from_date, to_date, course_id))
+            db.commit()
+            flash("Course dates updated successfully!", "success")
+
+        else:
+            # Insert new course
+            course_name = request.form['course_name']
+            price = request.form['price']
+            from_date = request.form['from_date']
+            to_date = request.form['to_date']
+
+            cursor.execute('''
+                INSERT INTO course (Course_name, Price, from_date, to_date)
+                VALUES (?, ?, ?, ?)
+            ''', (course_name, price, from_date, to_date))
+            db.commit()
+            flash("Course added successfully!", "success")
+
+        return redirect(url_for('edit_course'))
+
+    # Fetch all courses when the method is GET
+    cursor.execute('SELECT CID, Course_name, Price, from_date, to_date FROM course')
+    courses = cursor.fetchall()
+
+    return render_template('course.html', courses=courses)
+
+@app.route('/delete_course/<int:course_id>', methods=['POST'])
+def delete_course(course_id):
+    db = get_db()
+    cursor = db.cursor()
+
+    # Find and delete the course by course_id
+    cursor.execute('DELETE FROM course WHERE CID = ?', (course_id,))
+    db.commit()
+
+    flash("Course deleted successfully!", "success")
+    return redirect(url_for('edit_course'))
+
+
+
 
 
 @app.route('/view_all_students')
