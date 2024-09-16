@@ -25,6 +25,7 @@ ul{
 
 .footer{
 	background-color: #ffffff;
+	border-top: 5px solid #033f63;
     padding: 70px 0;
 }
 .footer-col{

@@ -2,6 +2,7 @@
     background-color: white; /* Set background color to white */
     padding: 1rem 0;
     border-bottom: 2px solid #ffffff;
+    border-bottom: 5px solid #033f63;
     display: flex;
     justify-content: space-between; /* Space out elements in the header */
     align-items: center;
@@ -134,7 +135,7 @@
     align-items: center;
     gap: 5rem;
     padding: 3rem 5rem;
-    background-color: #ebfbf3; 
+    background-color: #fedc97; 
     margin: 0px 0px;
     height: 90vh;
 }
@@ -226,31 +227,6 @@ body{
     background-color: #fbf5e9;
 }
 
-#joinbtn {
-    background-color: #f28b60; /* Button background color */
-    border: none;
-    border-radius: 20px; /* Rounded corners */
-    color: white; /* Text color */
-    cursor: pointer;
-    font-size: 1rem;
-    padding: 0.75rem 1.5rem;
-    text-align: center;
-    display: inline-block;
-    transition: background-color 250ms;
-}
-
-#joinbtn:hover {
-    background-color: #fb8332; /* Hover effect */
-}
-
-.btn {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    margin: 20px auto; /* Margin to ensure it's horizontally centered */
-    width: fit-content; /* Ensure the button width matches the content */
-}
-
 
 .flash-messages {
     margin: 10px 0;
@@ -281,7 +257,7 @@ body{
     justify-content: center; 
     overflow: hidden; 
     width: 100%;
-    background-color: #fbf5e9;
+    background: linear-gradient(to bottom, #fedc97, #fbf5e9);;
 }
 
 .yogsec img {
@@ -298,6 +274,7 @@ body{
     justify-content: center; 
     overflow: hidden; 
     width: 100%;
+    background: linear-gradient(to bottom, #588d69, #033f63)
 }
 
 .wowim img {
@@ -315,7 +292,7 @@ body{
     justify-content: center;
     align-items: center;
     padding: 3rem 0;
-    background-color: #ffd670;
+    background: linear-gradient(to bottom, #fedc97, #ffffff);
     position: relative;
 }
 
@@ -362,10 +339,9 @@ body{
 
 .hero-button {
     display: inline-block;
-    margin: 15px;
-    /* padding: 1rem 2rem; */
+    padding: 0.75rem 2rem;
     background-color: #ff7f51;
-    color: #030303;
+    color: #fff;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;

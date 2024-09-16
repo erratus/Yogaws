@@ -10,7 +10,7 @@
   min-height: 100vh;
   display: grid;
   place-items: center;
-  background: #ffffff; /* Darker background color from the palette */
+  background: linear-gradient(to bottom, #ffffff, #588d69);
   font-family: "Ubuntu Mono", monospace;
   font-weight: 400;
 }
@@ -29,7 +29,7 @@
   border-radius: 0.5rem;
   transition: 0.5s ease-in-out;
   cursor: pointer;
-  box-shadow: 1px 5px 15px #ebfbf3; /* Subtle shadow color */
+  box-shadow: 1px 5px 15px #263930; /* Subtle shadow color */
   position: relative;
   overflow: hidden;
 }
@@ -127,7 +127,7 @@
   perspective: 600px;
   --items: 14;
   --middle: 7;
-  --position: 1;
+  --position: 3;
   pointer-events: none;
 }
 
