@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Enrollments</title>
-    <link rel="stylesheet" href="/static/styles/enrollments.css">  <!-- Optional: Your CSS link -->
+    <link rel="stylesheet" href="/static/styles/enrollments.css"> 
     <script>
         function confirmDeletion(appid) {
             if (confirm('Are you sure you want to remove this enrollment?')) {
@@ -21,9 +21,24 @@
                 });
             }
         }
+
+        window.addEventListener('load', function() {
+            document.body.classList.add('loaded');
+        });
+    
     </script>
 </head>
 <body>
+    <div class="header">
+        <div class="logo">
+            <div class="logo">
+                <img src="/static/assets/website_icon.webp" alt="" srcset="">
+            </div>
+        </div>
+        <div class="header1">
+            <p class="head-txt">ENROLLMENTS</p>
+        </div>
+    </div>
     <div class="container">
         <h2>Edit Enrollments</h2>
         <table>

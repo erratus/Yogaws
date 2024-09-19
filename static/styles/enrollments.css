@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+.header {
+    height: 150px;
+    width: 80%;
+    background-color: #f4a261;
+    border-radius: 12px;
+    margin: 30px auto; 
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    padding: 12px;
+    position: relative;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.logo{
+    height: 125px;
+    width: 125px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    margin-left: 15px;
+    width: 100px; 
+}
+
+.header1 {
+    position: absolute; 
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center; 
+}
+
+.head-txt {
+    color: white; 
+    font-size: 24px; 
+}
+body {
+    background-color: #fee9d7;
+    padding: 20px;
+    display: flex;
+    flex-direction:column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    transition: opacity 0.5s ease-in; 
+    opacity: 0;
+}
+body.loaded {
+    opacity: 1; 
+}
+.container {
+    width: 80%;
+    background-color: white;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+h2 {
+    text-align: center;
+    color: #f1832a;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+thead {
+    background-color: #f4a261;
+    color: white;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+button {
+    background-color: #f1832a;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #fff;
+    color: #f1832a;
+    border: 2px solid #f1832a;
+    transition: 0.5s;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    button {
+        padding: 6px 10px;
+    }
+}

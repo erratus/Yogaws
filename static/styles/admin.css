@@ -8,14 +8,14 @@
 
 body {
     min-height: 100vh;
-    background-color: #e7f5fa;
+    background-color: #fff5f1;
     justify-content: center;
 }
 
 .header {
     height: 150px;
     width: 80%;
-    background-color: #264653;
+    background-color: #e97659;
     border-radius: 12px;
     margin: 30px auto; 
     display: flex;
@@ -23,6 +23,17 @@ body {
     justify-content: flex-start; 
     padding: 12px;
     position: relative; 
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.logo{
+    height: 125px;
+    width: 125px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo img {
@@ -43,20 +54,20 @@ body {
 }
 a {
     text-decoration: none;
-    color: #2a9d8f;
+    color: #f28c72;
 }
 
 h1, h2 {
-    color: #2a9d8f;
+    color: #f28c72;
     font-weight: 600;
 }
 
 h3 {
-    color: #2a9d8f;
+    color: #f28c72;
 }
 
 .btn {
-    background-color: #2a9d8f;
+    background-color: #e97659;
     color: white;
     padding: 8px 16px;
     border-radius: 5px;
@@ -65,8 +76,8 @@ h3 {
 
 .btn:hover {
     background-color: #fff;
-    color: #2a9d8f;
-    border: 2px solid #2a9d8f;
+    color: #e97659;
+    border: 2px solid #e97659;
 }
 
 .container {
@@ -79,7 +90,7 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 80px;
+    gap: 120px;
     margin-bottom: 40px;
     justify-content: center;
     margin-top: 20px;
@@ -103,8 +114,8 @@ h3 {
 }
 
 .card h1 {
-    font-size: 36px;
-    color: #2a9d8f;
+    font-size: 30px;
+    color: #f28c72;
 }
 
 .card h3 {
@@ -113,8 +124,8 @@ h3 {
 }
 
 .icon-case img {
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
 }
 
 .new-students, .content-2 {
@@ -150,7 +161,7 @@ table th, table td {
 }
 
 table th {
-    background-color: #356477;
+    background-color: #e97659;
     color: white;
 }
 
