@@ -10,7 +10,7 @@
   min-height: 100vh;
   display: grid;
   place-items: center;
-  background: linear-gradient(to bottom, #ffffff, #588d69);
+  background: linear-gradient(to bottom, #055B0B, #588d69);
   font-family: "Ubuntu Mono", monospace;
   font-weight: 400;
 }
@@ -19,7 +19,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  height: 500px;
+  height: 400px;
   gap: 10px;
 }
 
@@ -29,7 +29,7 @@
   border-radius: 0.5rem;
   transition: 0.5s ease-in-out;
   cursor: pointer;
-  box-shadow: 1px 5px 15px #263930; /* Subtle shadow color */
+  /* box-shadow: 1px 5px 15px #263930; Subtle shadow color */
   position: relative;
   overflow: hidden;
 }
@@ -108,10 +108,10 @@
   align-items: center;
   justify-items: center;
   position: relative;
-  background-color: #ebfbf3;
-  border-radius: 15px;
+  background: linear-gradient(to bottom, #588d69,#07a173);
+  /* border-radius: 15px; */
   overflow: hidden;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); */
 }
 
 .custom-carousel {

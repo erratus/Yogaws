@@ -2,7 +2,7 @@
     background-color: white; /* Set background color to white */
     padding: 1rem 0;
     border-bottom: 2px solid #ffffff;
-    border-bottom: 5px solid #033f63;
+    /* border-bottom: 5px solid #033f63; */
     display: flex;
     justify-content: space-between; /* Space out elements in the header */
     align-items: center;
@@ -135,7 +135,7 @@
     align-items: center;
     gap: 5rem;
     padding: 3rem 5rem;
-    background-color: #fedc97; 
+    background: linear-gradient(to bottom, #033f63,#819fb1);
     margin: 0px 0px;
     height: 90vh;
 }
@@ -206,12 +206,18 @@ nav {
     background-color: #fb8332; /* Hover effect */
 }
 
+#joinbtn a {
+    color: white;
+    text-decoration: none;
+}
+
 .btn {
     display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
     margin: 20px auto; /* Margin to ensure it's horizontally centered */
     width: fit-content; /* Ensure the button width matches the content */
+    color: white;
 }
 
 
@@ -283,7 +289,7 @@ body{
     justify-content: center; 
     overflow: hidden; 
     width: 100%;
-    background: linear-gradient(to bottom, #fedc97, #fbf5e9);;
+    background: linear-gradient(to bottom, #819fb1, #fbf5e9);;
 }
 
 .yogsec img {
@@ -300,7 +306,7 @@ body{
     justify-content: center; 
     overflow: hidden; 
     width: 100%;
-    background: linear-gradient(to bottom, #588d69, #033f63)
+    background: linear-gradient(to bottom, #07a173, #033f63)
 }
 
 .wowim img {
@@ -314,46 +320,29 @@ body{
 }
 
 .hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 3rem 0;
-    background: linear-gradient(to bottom, #fedc97, #ffffff);
+    background-image: url('/static/assets/itr2.png'); /* Set your right image as background */
+    background-size: cover; /* Ensure the background covers the entire section */
+    background-position: right center; /* Align the image to the right */
     position: relative;
-}
-
-.hero-images {
+    height: 100vh; /* Full viewport height */
+    padding: 4rem 2rem; /* Adjust padding as needed */
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-    padding: 3rem 2rem;
-}
-
-.hero-image-left {
-    max-width: 30%;
-}
-
-.hero-image-right {
-    max-width: 30%;
-    margin-left: auto;
-    padding-right: 1rem;
+    align-items: flex-start; /* Align items to the top */
+    justify-content: flex-start; /* Align content to the left */
+    padding-top: 80px; /* Ensure the text is below the navbar */
 }
 
 .hero-text-content {
-    text-align: center;
     max-width: 600px;
-    z-index: 1;
+    text-align: left; /* Align text to the left */
+    color: #fff; /* Ensure text color contrasts with the background */
 }
 
 .hero-title {
     font-family: 'Georgia', serif;
     font-size: 2.5rem;
     font-weight: bold;
-    color: #4a4a4a;
+    color: #000000; /* Adjust as needed */
     margin-bottom: 1rem;
 }
 

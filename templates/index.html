@@ -30,19 +30,15 @@
                 <button class="join-button" id="openModal">register/login</button>
             </header>
         </nav>
-    <section class="hero">
+        <section class="hero">
             <div class="container hero-content">
-                <div class="hero-images">
-                    <img src="/static/assets/img1.png" alt="Yoga pose 1" class="hero-image-left">
-                    <img src="/static/assets/img2.png" alt="Yoga pose 2" class="hero-image-right">
-                </div>
                 <div class="hero-text-content">
                     <h1 class="hero-title">Discover the Blissful Journey of Yoga</h1>
                     <p class="hero-text">Embrace the harmonious union of mind, body, and spirit through our comprehensive yoga offerings.</p>
-                    <a href="#" class="hero-button">Explore Now</a>
                 </div>
             </div>
-    </section>
+        </section>
+        
 
     <section id="trainers" id = "gohere">
         <div class="team-section">
@@ -88,7 +84,11 @@
                 </div>
             </div>
         </div>
-        <button class="btn" id="joinbtn" href="{{ url_for('apply') }}">become a trainer</button> 
+        <button class="btn" id="joinbtn" >
+            <a href="{{ url_for('apply') }}">
+                become a trainer
+            </a>
+            </button> 
     </div>
 </section>
 
