@@ -12,95 +12,124 @@
 <body>
     <div class="header">
         <div class="logo">
-            <div class="logo">
-                <img src="/static/assets/website_icon.webp" alt="" srcset="">
-            </div>
+            <img src="/static/assets/website_icon.webp" alt="" srcset="">
         </div>
         <div class="header1">
             <p class="head-txt">ADMIN DASHBOARD</p>
         </div>
     </div>
-    <div class="container">
-        <div class="content">
-            <div class="cards">
-                <a href="{{ url_for('edit_enrollments') }}">
-                    <div class="card">
-                        <div class="box">
-                            <h1>{{ total_enrollments }}</h1>
-                            <h3>Enrollments</h3>
+
+    <!-- Content wrapper with side icons -->
+    <div class="content-wrapper">
+        <!-- Left icon -->
+        <div class="icon-left">
+            <img src="/static/assets/Lotus.png" alt="Left Side Icon">
+        </div>
+
+        <!-- Main content area -->
+        <div class="container">
+            <div class="content">
+                <div class="cards">
+                    <a href="{{ url_for('edit_enrollments') }}">
+                        <div class="card">
+                            <div class="box">
+                                <h1>{{ total_enrollments }}</h1>
+                                <h3>Enrollments</h3>
+                            </div>
+                            <div class="icon-case">
+                                <img src="/static/assets/enrollments2.png" alt="">
+                            </div>
                         </div>
-                        <div class="icon-case">
-                            <img src="/static/assets/enrollments2.png" alt="">
+                    </a>
+                    <a href="{{ url_for('edit_instructors') }}">
+                        <div class="card">
+                            <div class="box">
+                                <h1>{{ total_instructors }}</h1>
+                                <h3>Instructors</h3>
+                            </div>
+                            <div class="icon-case">
+                                <img src="/static/assets/instructor.png" alt="">
+                            </div>
                         </div>
-                    </div>
-                </a>
-                <a href="{{ url_for('edit_instructors') }}">
-                    <div class="card">
-                        <div class="box">
-                            <h1>{{ total_instructors }}</h1>
-                            <h3>Instructors</h3>
+                    </a>
+                    <a href="{{ url_for('edit_course') }}">
+                        <div class="card">
+                            <div class="box">
+                                <h1>{{ total_courses }}</h1>
+                                <h3>Courses</h3>
+                            </div>
+                            <div class="icon-case">
+                                <img src="/static/assets/exercise.png" alt="">
+                            </div>
                         </div>
-                        <div class="icon-case">
-                            <img src="/static/assets/instructor.png" alt="">
+                    </a>
+                    <a href="income.html">
+                        <div class="card">
+                            <div class="box">
+                                <h1>{{ total_income }}</h1>
+                                <h3>Income</h3>
+                            </div>
+                            <div class="icon-case">
+                                <img src="/static/assets/income.png" alt="">
+                            </div>
                         </div>
-                    </div>
-                </a>
-                <a href="{{ url_for('edit_course') }}">
-                    <div class="card">
-                        <div class="box">
-                            <h1>{{ total_courses }}</h1>
-                            <h3>Courses</h3>
-                        </div>
-                        <div class="icon-case">
-                            <img src="/static/assets/exercise.png" alt="">
-                        </div>
-                    </div>
-                </a>
-                <a href="income.html">
-                    <div class="card">
-                        <div class="box">
-                            <h1>{{ total_income }}</h1>
-                            <h3>Income</h3>
-                        </div>
-                        <div class="icon-case">
-                            <img src="/static/assets/income.png" alt="">
-                        </div>
-                    </div>
-                </a>
-            </div>            
-            
-            <div class="tables">
-                <div class="new-students">
-                    <div class="title">
-                        <h2>New Students</h2>
-                        <a href="{{ url_for('view_all_students') }}" class="btn">View All</a>
-                    </div>
-                    <table>
-                        <tr>
-                            <th>Profile</th>
-                            <th>Name</th>
-                        </tr>
-                        {% for student in new_students %}
-                        <tr>
-                            <td><img src="https://via.placeholder.com/50" alt="Profile Picture"></td>
-                            <td>{{ student[0] }} {{ student[1] }}</td>
-                        </tr>
-                        {% endfor %}
-                    </table>
-                </div>
+                    </a>
+                </div>            
                 
-                <div class="content-2">
-                    <div class="recent-payments">
+                <div class="tables">
+                    <div class="new-students">
                         <div class="title">
-                            <h2>Recent Payments</h2>
-                            <a href="#" class="btn">View All</a>
+                            <h2>New Students</h2>
+                            <a href="{{ url_for('view_all_students') }}" class="btn">View All</a>
                         </div>
                         <table>
-                            <!--Leave table empty for entries-->
+                            <tr>
+                                <th>Profile</th>
+                                <th>Name</th>
+                            </tr>
+                            {% for student in new_students %}
+                            <tr>
+                                <td><img src="https://via.placeholder.com/50" alt="Profile Picture"></td>
+                                <td>{{ student[0] }} {{ student[1] }}</td>
+                            </tr>
+                            {% endfor %}
                         </table>
+                    </div>
+                    
+                    <div class="content-2">
+                        <div class="recent-payments">
+                            <div class="title">
+                                <h2>Recent Payments</h2>
+                                <a href="#" class="btn">View All</a>
+                            </div>
+                            <table>
+                                <!--Leave table empty for entries-->
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+
+        <!-- Right icon -->
+        <div class="icon-right">
+            <img src="/static/assets/Lotus.png" alt="Right Side Icon">
+        </div>
+
+        <div class="middle-icon-left">
+            <img src="/static/assets/stayog.png" alt="Middle Left Icon">
+        </div>
+
+        <div class="middle-icon-right">
+            <img src="/static/assets/stayog2.png" alt="Middle Right Icon">
+        </div>
+
+        <div class="bottom-icon-left">
+            <img src="/static/assets/yogicon.png" alt="Decorative Left">
+        </div>
+    
+        <div class="bottom-icon-right">
+            <img src="/static/assets/yogicon.png" alt="Decorative Right">
         </div>
     </div>
 </body>
