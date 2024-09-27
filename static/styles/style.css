@@ -1,3 +1,13 @@
+:root {
+    --primary-color: #d291bc;
+    --primary-color-dark: #f7ebf3;
+    --text-dark: #1e293b;
+    --text-light: #64748b;
+    --extra-light: #fafafa;
+    --white: #F5EDE1;
+    --max-width: 1200px;
+  }
+
 .header {
     background-color: white; /* Set background color to white */
     padding: 1rem 0;
@@ -135,7 +145,7 @@
     align-items: center;
     gap: 5rem;
     padding: 3rem 5rem;
-    background: linear-gradient(to bottom, #033f63,#819fb1);
+    background: linear-gradient(to bottom, #FAE7B5,#F1D1A5);
     margin: 0px 0px;
     height: 90vh;
 }
@@ -289,7 +299,7 @@ body{
     justify-content: center; 
     overflow: hidden; 
     width: 100%;
-    background: linear-gradient(to bottom, #819fb1, #fbf5e9);;
+    background: linear-gradient(to bottom, #F1D1A5, #fbf5e9);;
 }
 
 .yogsec img {
@@ -306,7 +316,9 @@ body{
     justify-content: center; 
     overflow: hidden; 
     width: 100%;
-    background: linear-gradient(to bottom, #07a173, #033f63)
+    background: linear-gradient(to bottom, #F5EDE1 0%, #F5EDE1 60%, #FAE7B5 100%);
+
+
 }
 
 .wowim img {
@@ -320,36 +332,44 @@ body{
 }
 
 .hero {
-    background-image: url('/static/assets/itr2.png'); /* Set your right image as background */
-    background-size: cover; /* Ensure the background covers the entire section */
-    background-position: right center; /* Align the image to the right */
+    background-image: url('/static/assets/itr10.png'); /* Use your correct image path */
+    background-size: cover;
+    background-position: center;
     position: relative;
-    height: 100vh; /* Full viewport height */
-    padding: 4rem 2rem; /* Adjust padding as needed */
+    height: 100vh;
+    padding: 4rem 2rem;
     display: flex;
-    align-items: flex-start; /* Align items to the top */
-    justify-content: flex-start; /* Align content to the left */
-    padding-top: 80px; /* Ensure the text is below the navbar */
+    align-items: center; /* Center the content vertically */
+    justify-content: flex-end; /* Align text to the right */
+    padding-top: 80px;
+    padding-right: 5%; /* Shift it more to the right */
 }
 
 .hero-text-content {
     max-width: 600px;
-    text-align: left; /* Align text to the left */
-    color: #fff; /* Ensure text color contrasts with the background */
+    text-align: right; /* Align text to the right */
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    margin-right: 0; /* Remove right margin */
+    margin-left: auto; /* Ensure it's pushed to the right */
 }
 
 .hero-title {
     font-family: 'Georgia', serif;
     font-size: 2.5rem;
     font-weight: bold;
-    color: #000000; /* Adjust as needed */
+    color: #ffdb58; /* Gold color */
     margin-bottom: 1rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Text shadow for readability */
 }
 
 .hero-text {
-    font-size: 1.1rem;
-    color: #666;
+    font-size: 1.2rem;
+    color: #f1f1f1; /* Light grey text */
     margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 .hero-button {
@@ -363,6 +383,8 @@ body{
     transition: background-color 0.3s ease;
 }
 
+
+
 .hero-button:hover {
     background-color: #e06c43;
 }
@@ -371,7 +393,7 @@ body {
     font-family: 'Georgia', serif;
     margin: 0;
     padding: 0;
-    background-color: #ebfbf3;
+    background-color: #F5EDE1;
     color: #333;
 }
 header {
@@ -442,3 +464,115 @@ header {
     text-align: center;
     line-height: 1.5rem; /* Vertically center the text within the button */
 }
+
+.stories__grid {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    background-color: #F5EDE1;
+  }
+  
+  .stories__card {
+    padding: 1rem;
+    background-color: #F5EDE1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* Ensure cards are of equal height */
+  }
+  
+  .stories__content {
+    position: relative;
+    isolation: isolate;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: flex-start; /* Align content to the top */
+    gap: 1rem;
+    height: 200px; /* Set a fixed height to keep the content consistent */
+  }
+  
+  .stories__content span {
+    padding: 7px 10px;
+    font-size: 2rem;
+    color: var(--white);
+    background-color: var(--primary-color);
+    border-radius: 100%;
+  }
+  
+  .stories__content::after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 2px;
+    top: 0;
+    left: 24px;
+    background-color: var(--text-light);
+    opacity: 0.1;
+    z-index: -1;
+  }
+  
+  .stories__content p {
+    line-height: 1.5rem;
+    color: var(--text-light);
+  }
+  
+  .stories__author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .stories__author img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .stories__author__details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .stories__author__details h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-dark);
+  }
+  
+  .stories__author__details h6 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-light);
+  }
+  
+  /* Ensure background consistency */
+  #stories {
+    background-color: #F5EDE1;
+    padding: 2rem 0; /* Extra padding to maintain spacing */
+  }
+  
+
+  .section__container {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 5rem 1rem;
+  }
+  
+  .section__header {
+    font-size: 3rem;
+    font-weight: 300;
+    text-align: center;
+    color: var(--text-dark);
+  }
+  
+  .section__subheader {
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: center;
+    color: var(--text-light);
+    letter-spacing: 2px;
+  }
