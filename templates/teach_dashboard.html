@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructor Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="instructor-card">
+        <h2>Instructor: {{ instructor_name }}</h2>
+
+        <!-- Section for the courses the instructor is teaching -->
+        <div class="instructor-details">
+            <strong>Courses Taught:</strong>
+            <ul>
+                {% for course, students in students_by_course.items() %}
+                    <li>
+                        <strong>{{ course }}</strong>
+                        <ul>
+                            {% for student in students %}
+                                <li>{{ student }}</li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <!-- Section for the courses the instructor is learning -->
+        <div class="instructor-details">
+            <strong>Courses Learning:</strong>
+            <ul>
+                {% for course in learning_courses %}
+                    <li>{{ course }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -4,31 +4,60 @@
     box-sizing: border-box;
     font-family: 'poppins', sans-serif;
     font-size: 18px;
-    
 }
 body{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    
+    background-color: #fff7e6;
 }
 
-.header{
+.header {
     height: 150px;
-    width: 70%;
-    background-color: #fedc97;
-    border-radius: 3px;
-    margin: 30px 0px;
+    width: 90%;
+    top: 0px;
+    background-color: #f7b636;
+    border-radius: 12px;
+    margin:  20px auto; 
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 15px;
+    justify-content: space-between; 
+    padding: 12px;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    margin-bottom: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
+
 .logo{
-    margin-left: 20px;
-    object-fit: cover;
+    height: 125px;
+    width: 125px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.logo img {
+    margin-left: 15px;
+    width: 100px; 
+}
+
+.header1 {
+    position: absolute; 
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center; 
+}
+
+.head-txt {
+    color: white; 
+    font-size: 24px; 
+}
+
 .cart{
     display: flex;
     background-color: white;
@@ -74,29 +103,38 @@ body{
 
 .container{
     display: flex;
-    width: 70%;
+    width: 75%;
     margin-bottom: 30px;
-    position: sticky;
-    top: 0;
+    justify-content: flex-start;
+    margin-right: 160px;
 }
 #root{
-    width: 60%;
+    width: 70%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
 }
 .sidebar{
-    width: 40%;
+    width: 30%;
+    height: 540px;
     border-radius: 5px;
     background-color: #eee;
-    margin-left: 20px;
+    margin-top: 20px;
     padding: 15px;
     text-align: center;
-    position: sticky;
-    top: 0;
+    position: fixed;
+    bottom: 3%;
+    right: 50px;
+    margin-right: 50px;
+}
+
+
+#cartItem {
+    max-height: 400px; /* Set a maximum height for the cart items */
+    overflow-y: auto;  
 }
 .head{
-    background-color: #fed480;
+    background-color: #f7b636;
     border-radius: 3px;
     height: 40px;
     padding: 10px;
@@ -104,6 +142,8 @@ body{
     color: white;
     display: flex;
     align-items: center;
+    position: sticky;
+    top: 0;
 }
 .foot{
     display: flex;
@@ -111,6 +151,9 @@ body{
     margin: 20px 0px;
     padding: 10px 0px;
     border-top: 1px solid #333;
+    position: sticky;
+    bottom: 20px;
+    background-color: #eee;
 }
 .box{
     display: flex;
@@ -154,7 +197,7 @@ button{
     position: relative;
     border: none;
     border-radius: 5px;
-    background-color: #ffc95c;
+    background-color: #f7b636;
     padding: 7px 25px;
     cursor: pointer;
     color: white;

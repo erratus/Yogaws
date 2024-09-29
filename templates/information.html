@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga Styles Information</title>
+    <link rel="stylesheet" href="/static/styles/information.css">
+    <!-- Slick CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <div class="logo">
+                <img src="/static/assets/website_icon.webp" alt="" srcset="">
+            </div>
+        </div>
+        <div class="header1">
+            <p class="head-txt">INFORMATION</p>
+        </div>
+    </div>
+    <div class="yoga-section"> <!-- This should be the container with slick initialization -->
+        <div class="yoga-slider">
+            <!-- Hatha Yoga Section -->
+            <section id="hatha-yoga">
+                <h2>Hatha Yoga</h2>
+                <div class="content">
+                    <div class="text">
+                        <p>Hatha Yoga is one of the oldest forms of yoga, with its roots going back to the 15th century. The practice was codified in the "Hatha Yoga Pradipika," a Sanskrit manual written by the sage Yogi Swatmarama. Hatha Yoga encompasses a broad set of physical postures (asanas), breath control techniques (pranayama), and meditation aimed at purifying and balancing the mind and body.</p>
+                        <p>This style of yoga is often recommended for beginners due to its slower pace and focus on breathwork. The benefits of Hatha Yoga include increased flexibility, enhanced strength, reduced stress, and improved mental clarity. It lays a foundation for other, more advanced yoga practices.</p>
+                        <a href="{{ url_for('enroll') }}" class="enroll-button">Enroll</a>
+                    </div>
+                    <div class="img">
+                        <img src="/static/assets/hatha_yoga.jpeg" alt="">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Iyengar Yoga Section -->
+            <section id="iyengar-yoga">
+                <h2>Iyengar Yoga</h2>
+                <div class="content">
+                    <div class="text">
+                        <p>Iyengar Yoga, developed by B.K.S. Iyengar in the 20th century, is a form of yoga that places great emphasis on precision and alignment in each posture. Iyengar Yoga uses props like blocks, straps, and blankets to help practitioners achieve proper form, regardless of their level of flexibility or experience.</p>
+                        <p>The primary benefits of Iyengar Yoga include improved posture, enhanced flexibility, and increased balance. Its therapeutic approach makes it particularly suitable for those recovering from injuries or dealing with physical limitations. Each posture is held for a longer duration, allowing for deep muscular engagement and focused breathwork.</p>
+                        <a href="{{ url_for('enroll') }}" class="enroll-button">Enroll</a>
+                    </div>
+                    <div class="img">
+                        <img src="/static/assets/hatha_yoga.jpeg" alt="">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Ashtanga Yoga Section -->
+            <section id="ashtanga-yoga">
+                <h2>Ashtanga Yoga</h2>
+                <div class="content">
+                    <div class="text">
+                        <p>Ashtanga Yoga, popularized by K. Pattabhi Jois, follows a strict, fast-paced sequence of postures synchronized with breath (vinyasa). The practice consists of six progressively more challenging series of poses that increase in difficulty. Ashtanga builds strength, stamina, and flexibility, and is known for creating internal heat, which purifies the body and mind.</p>
+                        <p>This dynamic and physically demanding practice is ideal for those who seek structure and discipline. Regular practitioners of Ashtanga Yoga report enhanced physical endurance, mental clarity, and emotional resilience. The repetitive sequences also allow for deeper exploration of breath and movement over time.</p>
+                        <a href="{{ url_for('enroll') }}" class="enroll-button">Enroll</a>
+                    </div>
+                    <div class="img">
+                        <img src="/static/assets/hatha_yoga.jpeg" alt="">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Power Yoga Section -->
+            <section id="power-yoga">
+                <h2>Power Yoga</h2>
+                <div class="content">
+                    <div class="text">
+                        <p>Power Yoga, which evolved in the 1990s through the work of Beryl Bender Birch and Bryan Kest, is a more fitness-oriented version of Ashtanga Yoga. This high-intensity style incorporates dynamic movements and poses to build strength and stamina. Unlike traditional Ashtanga, Power Yoga does not follow a fixed sequence of postures, allowing for greater variety.</p>
+                        <p>This practice is perfect for individuals looking for a challenging, full-body workout that improves cardiovascular fitness, muscle tone, and endurance. Power Yoga is also effective for weight loss and toning, making it a popular choice in fitness centers and gyms.</p>
+                        <a href="{{ url_for('enroll') }}" class="enroll-button">Enroll</a>
+                    </div>
+                    <div class="img">
+                        <img src="/static/assets/hatha_yoga.jpeg" alt="">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Aerial Yoga Section -->
+            <section id="aerial-yoga">
+                <h2>Aerial Yoga</h2>
+                <div class="content">
+                    <div class="text">
+                        <p>Aerial Yoga, also known as Anti-Gravity Yoga, combines traditional yoga postures with the use of a suspended hammock. Developed in the early 2000s, Aerial Yoga allows practitioners to explore poses with the support of gravity, enhancing flexibility and strength while reducing strain on the joints.</p>
+                        <p>The practice offers the unique benefit of decompression for the spine and allows for deeper stretches in inversions without pressure on the neck or shoulders. It’s a fun and adventurous way to build core strength, improve posture, and explore new dimensions of movement. Aerial Yoga is suitable for both beginners and advanced practitioners.</p>
+                        <a href="{{ url_for('enroll') }}" class="enroll-button">Enroll</a>
+                    </div>
+                    <div class="img">
+                        <img src="/static/assets/hatha_yoga.jpeg" alt="">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Vinyasa Flow Section -->
+            <section id="vinyasa-flow">
+                <h2>Vinyasa Flow</h2>
+                <div class="content">
+                    <div class="text">
+                        <p>Vinyasa Flow is a dynamic style of yoga that links breath with movement in a continuous flow. Unlike Ashtanga, which follows a strict sequence, Vinyasa Flow allows for creativity in sequencing, making it more adaptable and varied. The practice is rhythmic, often described as a moving meditation, and offers a blend of strength and flexibility training.</p>
+                        <p>With its fluid transitions and varied postures, Vinyasa Flow provides both cardiovascular and strength-building benefits. It helps practitioners improve balance, coordination, and body awareness, while also promoting mental clarity and stress relief. It is ideal for those who prefer a creative and flexible yoga practice.</p>
+                        <a href="{{ url_for('enroll') }}" class="enroll-button">Enroll</a>
+                    </div>
+                    <div class="img">
+                        <img src="/static/assets/hatha_yoga.jpeg" alt="">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Stress Management Yoga Section -->
+            <section id="stress-management">
+                <h2>Stress Management Yoga</h2>
+                <div class="content">
+                    <div class="text">
+                        <p>Stress Management Yoga is designed to address the physical, mental, and emotional aspects of stress. It combines gentle asanas, pranayama, and mindfulness techniques to reduce anxiety and promote relaxation. This practice is highly adaptable and can be customized to meet individual needs, making it effective for anyone struggling with chronic stress or burnout.</p>
+                        <p>The key benefits include relaxation of the nervous system, improved sleep quality, and enhanced mental clarity. The focus on slow, mindful movement allows practitioners to connect with their breath, calm the mind, and release built-up tension in the body.</p>
+                        <a href="{{ url_for('enroll') }}" class="enroll-button">Enroll</a>
+                    </div>
+                    <div class="img">
+                        <img src="/static/assets/hatha_yoga.jpeg" alt="">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Meditation Section -->
+            <section id="meditation">
+                <h2>Meditation</h2>
+                <div class="content">
+                    <div class="text">
+                        <p>Meditation is an ancient practice aimed at training the mind to focus and eliminate distractions. It is central to many spiritual and yogic practices, promoting mindfulness, self-awareness, and emotional balance. Through regular meditation, individuals can experience profound relaxation and mental clarity.</p>
+                        <p>The benefits of meditation extend beyond mental health, including reduced stress, improved focus, and better emotional regulation. It is accessible to everyone, regardless of age or fitness level, making it a cornerstone of holistic well-being.</p>
+                        <a href="{{ url_for('enroll') }}" class="enroll-button">Enroll</a>
+                    </div>
+                    <div class="img">
+                        <img src="/static/assets/hatha_yoga.jpeg" alt="">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Advanced Yoga Section -->
+            <section id="advanced-yoga">
+                <h2>Advanced Yoga</h2>
+                <div class="content">
+                    <div class="text">
+                        <p>Advanced Yoga involves more challenging asanas such as inversions, arm balances, and deep backbends. These poses require a strong foundation in yoga, as they demand greater strength, flexibility, and mental focus. Practicing advanced yoga allows practitioners to deepen their physical and spiritual practice.</p>
+                        <p>The benefits of Advanced Yoga include increased strength, improved flexibility, enhanced concentration, and a deeper connection to the breath. It also requires greater awareness and mindfulness, pushing practitioners to explore their physical and mental limits.</p>
+                        <a href="{{ url_for('enroll') }}" class="enroll-button">Enroll</a>
+                    </div>
+                    <div class="img">
+                        <img src="/static/assets/hatha_yoga.jpeg" alt="">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Kids Yoga Section -->
+            <section id="kids-yoga">
+                <h2>Kids Yoga</h2>
+                <div class="content">
+                    <div class="text">
+                        <p>Kids Yoga is a fun and playful approach to introducing children to yoga. The practice incorporates creative movements, games, and storytelling to engage young minds while teaching them the fundamentals of yoga. These classes are designed to enhance physical development, improve concentration, and promote a sense of calm.</p>
+                        <p>With Kids Yoga, children can develop better balance, flexibility, and coordination, while also learning the importance of mindfulness and relaxation techniques. It also helps in boosting confidence, emotional regulation, and self-awareness at an early age.</p>
+                        <a href="{{ url_for('enroll') }}" class="enroll-button">Enroll</a>
+                    </div>
+                    <div class="img">
+                        <img src="/static/assets/hatha_yoga.jpeg" alt="">
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="arrow arrow-left">&larr;</div>
+        <div class="arrow arrow-right">&rarr;</div>
+        <div class="bottom-icon">
+            <div class="bottom-icon-left">
+                <img src="/static/assets/yogicon.png" alt="Decorative Left">
+            </div>
+            <div class="bottom-icon-right">
+                <img src="/static/assets/yogicon.png" alt="Decorative Right">
+            </div>
+        </div>
+    </div>
+    <!-- Slick JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script>
+        // Slick slider initialization
+        $(document).ready(function(){
+            $('.yoga-slider').slick({
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: true,
+                arrows: false, // Disable default arrows
+                centerMode: true,
+                centerPadding: '0%', // Delay between scrolls
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 2,   // Display 2 sections at a time on tablets
+                            slidesToScroll: 1,
+                            infinite: true,
+                            dots: true
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 1,   // Display 1 section at a time on mobile
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+            $('.arrow-left').click(function(){
+                $('.yoga-slider').slick('slickPrev');
+            });
+
+            $('.arrow-right').click(function(){
+                $('.yoga-slider').slick('slickNext');
+            });
+        });
+    </script>
+</body>
+</html>

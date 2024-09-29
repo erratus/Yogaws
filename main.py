@@ -20,6 +20,18 @@ def close_db(exception):
 def index():
     return render_template('index.html')
 
+@app.route('/knowmore')
+def knowmore():
+    return render_template('information.html')
+
+@app.route('/enroll')
+def enroll():
+    return render_template('addtocart.html')
+
+@app.route('/addtocart')
+def addtocart():
+    return render_template('addtocart.html')
+
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
@@ -27,7 +39,7 @@ def register():
         last_name = request.form['secondName']
         phone_no = request.form['phoneNo']
         gender = request.form['Gender']
-        password = generate_password_hash(request.form['password'])
+        password = request.form['password']
 
         db = get_db()
         cursor = db.cursor()
@@ -72,7 +84,7 @@ def login():
         cursor.execute('SELECT * FROM users WHERE Ph_no = ?', (phone,))
         user = cursor.fetchone()
 
-        if user and check_password_hash(user[5], password):  
+        if user and (user[5], password):  
             session['user_type'] = 'user'
             session['user_id'] = user[0]  
             return redirect(url_for('success'))
@@ -82,12 +94,12 @@ def login():
         instructor = cursor.fetchone()
 
         if instructor:
-            stored_password = instructor[8]  
-            if check_password_hash(stored_password, password):
+            stored_password = instructor[7]  
+            if (stored_password, password):
                 # If user is found in 'instructors' table
                 session['user_type'] = 'instructor'
                 session['instructor_id'] = instructor[0]  
-                return redirect(url_for('dashboard'))
+                return redirect(url_for('instructor_dashboard'))
 
         # If no matching user is found
         flash("Invalid phone number or password", "danger")
@@ -111,7 +123,7 @@ def apply():
         state = request.form['state']
         postal = request.form['postal']
         phone = request.form['phone']
-        position = request.form['position']
+        position = request.form['position']  # This is the course the instructor is learning
         hear = request.form['hear']
         password = request.form['password']  
 
@@ -132,10 +144,20 @@ def apply():
 
         # Insert data into the instructors table
         cursor.execute('''
-            INSERT INTO instructors (name, lastname, Ph_no, DOB, Address, Course, reference, password)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-        ''', (first_name, last_name, phone, dob, f"{address}, {address2}, {city}, {state}, {postal}", position, hear, generate_password_hash(password)))
+            INSERT INTO instructors (name, lastname, Ph_no, DOB, Address, reference, password)
+            VALUES (?, ?, ?, ?, ?, ?, ?)
+        ''', (first_name, last_name, phone, dob, f"{address}, {address2}, {city}, {state}, {postal}", hear, generate_password_hash(password)))
         
+        # Get the TID of the newly inserted instructor
+        new_instructor_id = cursor.lastrowid
+
+        # Insert the position value into the instructor_learning table
+        cursor.execute('''
+            INSERT INTO instructor_learning (TID, Course_name)
+            VALUES (?, ?)
+        ''', (new_instructor_id, position))
+
+        # Commit the changes
         db.commit()
         
         flash("Application submitted successfully!", "success")
@@ -143,10 +165,64 @@ def apply():
 
     return render_template('appl.html')
 
+@app.route('/instructor_dashboard')
+def instructor_dashboard():
+    conn = get_db()
+    cursor = conn.cursor()
 
-@app.route('/dashboard')
-def dashboard():
-    return render_template('teach.html')
+    # Fetch the instructor's name and assigned courses (teaching)
+    cursor.execute('''
+        SELECT i.name, i.lastname, c.Course_name
+        FROM instructors i
+        JOIN instructor_teaching it ON i.TID = it.TID
+        JOIN course c ON it.CID = c.CID
+        WHERE i.TID = ?
+    ''', (session['instructor_id'],))
+    instructor_courses = cursor.fetchall()
+
+    if instructor_courses:
+        instructor_name = f"{instructor_courses[0][0]} {instructor_courses[0][1]}"  # Assuming name at index 0 and lastname at index 1
+    else:
+        instructor_name = ''
+
+    # Fetch students grouped by course (for teaching courses)
+    cursor.execute('''
+        SELECT u.name, u.lastname, c.Course_name
+        FROM users u
+        JOIN applicants a ON u.UID = a.UID
+        JOIN course c ON a.CID = c.CID
+        JOIN instructor_teaching it ON c.CID = it.CID
+        WHERE it.TID = ?
+    ''', (session['instructor_id'],))
+    students_data = cursor.fetchall()
+
+    # Group students by course
+    students_by_course = {}
+    for row in students_data:
+        course_name = row[2]  # Assuming 'Course_name' is at index 2
+        student_name = f"{row[0]} {row[1]}"  # Assuming 'name' at index 0 and 'lastname' at index 1
+
+        if course_name not in students_by_course:
+            students_by_course[course_name] = []
+        students_by_course[course_name].append(student_name)
+
+    # Fetch courses the instructor is learning
+    cursor.execute('''
+        SELECT Course_name
+        FROM instructor_learning
+        WHERE TID = ?
+    ''', (session['instructor_id'],))
+    learning_courses = [row[0] for row in cursor.fetchall()]  # Get the list of course names
+
+    # Close connection
+    conn.close()
+
+    # Pass the data to the template
+    return render_template('teach_dashboard.html', 
+                           instructor_name=instructor_name, 
+                           students_by_course=students_by_course,
+                           learning_courses=learning_courses)
+
 
 
 @app.route('/logout')
@@ -174,7 +250,7 @@ def admin():
     cursor = db.cursor()
 
     # Total enrollments (entries in applicants table)
-    cursor.execute('SELECT COUNT(*) FROM applicants')
+    cursor.execute('SELECT COUNT(DISTINCT CID) FROM applicants')
     total_enrollments = cursor.fetchone()[0]
 
     # Total instructors (entries in instructors table)
@@ -186,12 +262,12 @@ def admin():
     total_courses = cursor.fetchone()[0]
 
     # Total income (sum of Fees in applicants table)
-    cursor.execute('SELECT SUM(Fees) FROM applicants')
+    cursor.execute('SELECT SUM(course.Price) FROM course INNER JOIN applicants ON course.CID = applicants.CID;')
     total_income = cursor.fetchone()[0] or 0  # Default to 0 if there are no fees
 
     # New students (first 10 entries from applicants table, join with users to get names)
     cursor.execute('''
-        SELECT u.name, u.lastname 
+        SELECT DISTINCT u.name, u.lastname 
         FROM applicants a 
         JOIN users u ON a.UID = u.UID 
         LIMIT 10
@@ -214,11 +290,15 @@ def edit_enrollments():
     db = get_db()
     cursor = db.cursor()
 
-    # Query to get the user's name, lastname, course name, and fees paid
+    # Query to get the user's name, lastname, course names, and fees paid
     cursor.execute('''
-        SELECT users.name, users.lastname, applicants.Course_name, applicants.Fees, applicants.APPID
+        SELECT users.UID, users.name, users.lastname, 
+               GROUP_CONCAT(course.Course_name, ', ') AS Course_names,
+               SUM(course.Price) AS Total_Fees, applicants.APPID
         FROM applicants 
         JOIN users ON applicants.UID = users.UID
+        JOIN course ON applicants.CID = course.CID
+        GROUP BY users.UID
     ''')
     enrollments = cursor.fetchall()
 
@@ -227,6 +307,8 @@ def edit_enrollments():
 
     # Render enrollments.html and pass the enrollments data
     return render_template('enrollments.html', enrollments=enrollments)
+
+
 
 @app.route('/delete_enrollment/<int:appid>', methods=['POST'])
 def delete_enrollment(appid):
@@ -254,54 +336,69 @@ def delete_enrollment(appid):
 
     return redirect(url_for('edit_enrollments'))
 
+
 #all about editing instructors and deleting them
-@app.route('/edit_instructors', methods=['GET', 'POST'])
+@app.route('/edit_instructors')
 def edit_instructors():
     db = get_db()
     cursor = db.cursor()
 
-    if request.method == 'POST':
-        # Handle adding a new instructor
-        name = request.form['name']
-        lastname = request.form['lastname']
-        phone = request.form['phone']
-        dob = request.form['dob']
-        course_name = request.form['course']  # Save course name instead of course_id
-        password = generate_password_hash(request.form['password'])
-        reference = request.form.get('reference', '')
-
-        # Get full address from form
-        address = request.form['address']
-        address2 = request.form.get('address2', '')
-        city = request.form['city']
-        state = request.form['state']
-        postal = request.form['postal']
-
-        full_address = f"{address}, {address2}, {city}, {state}, {postal}"
-
-        # Insert new instructor data into the instructors table
-        cursor.execute('''
-            INSERT INTO instructors (name, lastname, Ph_no, DOB, Address, Course, reference, password)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-        ''', (name, lastname, phone, dob, full_address, course_name, reference, password))
-        db.commit()
-
-        flash("Instructor added successfully!", "success")
-        return redirect(url_for('edit_instructors'))
-
-    # Query to display existing instructors
+    # Fetch all instructors and their assigned courses
     cursor.execute('''
-        SELECT i.name, i.lastname, i.Course, i.Ph_no, i.Address, i.TID 
+        SELECT i.TID, i.name, i.lastname, i.Ph_no, i.Address, c.CID, c.Course_name, il.Course_name AS learning_course
         FROM instructors i
+        LEFT JOIN instructor_teaching it ON i.TID = it.TID
+        LEFT JOIN course c ON it.CID = c.CID
+        LEFT JOIN instructor_learning il ON i.TID = il.TID
     ''')
-    instructors = cursor.fetchall()
+    instructors_data = cursor.fetchall()
 
-    # Fetch all courses for the dropdown in the add-instructor form
+    # Structure the data for easy access in the template
+    instructors = {}
+    for row in instructors_data:
+        tid = row[0]
+        if tid not in instructors:
+            instructors[tid] = {
+                'tid': tid,
+                'name': row[1],
+                'lastname': row[2],
+                'phone': row[3],
+                'address': row[4],
+                'courses': [],
+                'learning_courses': []
+            }
+        if row[5]:
+            instructors[tid]['courses'].append({'cid': row[5], 'name': row[6]})
+        if row[7]:
+            instructors[tid]['learning_courses'].append(row[7])
+
+    instructors = list(instructors.values())
+
+    # Fetch all courses for the dropdown
     cursor.execute('SELECT CID, Course_name FROM course')
-    courses = cursor.fetchall()
+    all_courses = cursor.fetchall()
 
-    return render_template('instructors.html', instructors=instructors, courses=courses)
+    return render_template('instructors.html', instructors=instructors, all_courses=all_courses)
 
+
+@app.route('/add_instructor_course/<int:tid>', methods=['POST'])
+def add_instructor_course(tid):
+    course_id = request.form['course']
+    db = get_db()
+    cursor = db.cursor()
+    cursor.execute('INSERT INTO instructor_teaching (TID, CID) VALUES (?, ?)', (tid, course_id))
+    db.commit()
+    flash("Course added successfully!", "success")
+    return redirect(url_for('edit_instructors'))
+
+@app.route('/remove_instructor_course/<int:tid>/<int:cid>', methods=['POST'])
+def remove_instructor_course(tid, cid):
+    db = get_db()
+    cursor = db.cursor()
+    cursor.execute('DELETE FROM instructor_teaching WHERE TID = ? AND CID = ?', (tid, cid))
+    db.commit()
+    flash("Course removed successfully!", "success")
+    return redirect(url_for('edit_instructors'))
 
 @app.route('/delete_instructor_enrollment/<int:tid>', methods=['POST'])
 def delete_instructor_enrollment(tid):

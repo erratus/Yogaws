@@ -25,15 +25,12 @@
         window.addEventListener('load', function() {
             document.body.classList.add('loaded');
         });
-    
     </script>
 </head>
 <body>
     <div class="header">
         <div class="logo">
-            <div class="logo">
-                <img src="/static/assets/website_icon.webp" alt="" srcset="">
-            </div>
+            <img src="/static/assets/website_icon.webp" alt="">
         </div>
         <div class="header1">
             <p class="head-txt">ENROLLMENTS</p>
@@ -46,19 +43,19 @@
                 <tr>
                     <th>First Name</th>
                     <th>Last Name</th>
-                    <th>Course Name</th>
-                    <th>Fees Paid</th>
+                    <th>Course Names</th> <!-- Only this column now -->
+                    <th>Total Fees Paid</th>
                     <th>Action</th>
                 </tr>
             </thead>
             <tbody>
                 {% for enrollment in enrollments %}
                 <tr>
-                    <td>{{ enrollment[0] }}</td>
                     <td>{{ enrollment[1] }}</td>
                     <td>{{ enrollment[2] }}</td>
-                    <td>{{ enrollment[3] }}</td>
-                    <td><button onclick="confirmDeletion({{ enrollment[4] }})">Remove Enrollment</button></td> <!-- Pass APPID -->
+                    <td>{{ enrollment[3] }}</td> <!-- Concatenated course names -->
+                    <td>{{ enrollment[4] }}</td> <!-- Total fees paid -->
+                    <td><button onclick="confirmDeletion({{ enrollment[5] }})">Remove Enrollment</button></td> <!-- Pass APPID -->
                 </tr>
                 {% endfor %}
             </tbody>
