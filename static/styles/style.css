@@ -1,3 +1,4 @@
+
 .header {
     background-color: white; /* Set background color to white */
     padding: 1rem 0;
@@ -256,7 +257,7 @@ nav.hide {
     justify-content: center; /* Center align the navbar items */
 }
 body{
-    background-color: #fbf5e9;
+    background-color: #F5EDE1;
 }
 
 
@@ -284,21 +285,28 @@ body{
     border-color: #f5c6cb;
 }
 
+.gradient-section {
+    width: 100%;
+    height: 80px; /* You can adjust the height */
+    background: linear-gradient(to bottom, #819fb1 0%, #90aab9 50%, #eceee6 100%); /* Smoother transition */
+}
+
+
 .yogsec {
     display: flex; 
     justify-content: center; 
     overflow: hidden; 
     width: 100%;
-    background: linear-gradient(to bottom, #819fb1, #fbf5e9);;
+    background-color: #ebece5; /* Changed to solid white */
 }
 
 .yogsec img {
-    width: 80%;
-    max-width: 90%; /* Makes the image a bit larger */
+    width: 70%;
+    max-width: 50%; /* Adjust the image width as needed */
     height: auto; 
     display: block;
     margin: 0 auto; /* Centers the image */
-    padding-bottom: 150px;
+    padding-bottom: 80px;
 }
 
 .wowim {
@@ -320,7 +328,7 @@ body{
 }
 
 .hero {
-    background-image: url('/static/assets/itr2.png'); /* Set your right image as background */
+    background-image: url('/static/assets/itr1.png'); /* Set your right image as background */
     background-size: cover; /* Ensure the background covers the entire section */
     background-position: right center; /* Align the image to the right */
     position: relative;
@@ -358,8 +366,9 @@ body{
 }
 
 .hero-text {
+    
     font-size: 1.1rem;
-    color: #666;
+    color: #000000;
     margin-bottom: 1.5rem;
 }
 
@@ -382,7 +391,7 @@ body {
     font-family: 'Georgia', serif;
     margin: 0;
     padding: 0;
-    background-color: #ebfbf3;
+    background-color: #F5EDE1;
     color: #333;
 }
 header {
@@ -453,3 +462,120 @@ header {
     text-align: center;
     line-height: 1.5rem; /* Vertically center the text within the button */
 }
+
+.stories__grid {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    background-color: #F5EDE1;
+    background: linear-gradient(to bottom #07a173,#07a173) !important;
+  }
+  
+  .stories__card {
+    padding: 1rem;
+    background-color: #F5EDE1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* Ensure cards are of equal height */
+    background: linear-gradient(to bottom #07a173,#07a173) !important;
+  }
+  
+  .stories__content {
+    position: relative;
+    isolation: isolate;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: flex-start; /* Align content to the top */
+    gap: 1rem;
+    height: 200px; /* Set a fixed height to keep the content consistent */
+  }
+  
+  .stories__content span {
+    padding: 7px 10px;
+    font-size: 2rem;
+    color: var(--white);
+    background-color: var(--primary-color);
+    border-radius: 100%;
+  }
+  
+  .stories__content::after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 2px;
+    top: 0;
+    left: 24px;
+    background-color: var(--text-light);
+    opacity: 0.1;
+    z-index: -1;
+  }
+  
+  .stories__content p {
+    line-height: 1.5rem;
+    color: var(--text-light);
+  }
+  
+  .stories__author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .stories__author img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .stories__author__details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .stories__author__details h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-dark);
+  }
+  
+  .stories__author__details h6 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-light);
+  }
+  
+  /* Ensure background consistency */
+  #stories {
+    background-color: #F5EDE1;
+    padding: 2rem 0; /* Extra padding to maintain spacing */
+    background: linear-gradient(to bottom #07a173,#07a173) !important;
+  }
+  
+
+  .section__container {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 5rem 1rem;
+    background: linear-gradient(to bottom,#fbf5e9,#F5EDE1);
+  }
+  
+  .section__header {
+    font-size: 3rem;
+    font-weight: 300;
+    text-align: center;
+    color: var(--text-dark);
+  }
+  
+  .section__subheader {
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: center;
+    color: var(--text-light);
+    letter-spacing: 2px;
+    background: linear-gradient(to bottom, #eceee6 ,#F5EDE1);  
+  }

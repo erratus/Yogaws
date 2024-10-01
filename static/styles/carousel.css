@@ -38,7 +38,7 @@
   background: url("/static/assets/trainer.webp") no-repeat 50% / cover;
 }
 .team-section .container > div:nth-of-type(5){
-  background: url("/static/assets/trainer.webp") no-repeat 50% / cover;
+  background: url("/static/assets/new_trainy.png") no-repeat 50% / cover;
 }
 .team-section .container > div:nth-of-type(2) {
   background: url("/static/assets/trainer2.webp") no-repeat 50% / cover;
@@ -206,7 +206,7 @@
 .custom-carousel-item:nth-of-type(5) { --offset: 5; background-color: #e9ff70; }
 .custom-carousel-item:nth-of-type(6) { --offset: 6; background-color: #70ff96; }
 .custom-carousel-item:nth-of-type(7) { --offset: 7; background-color: #70a6ff; }
-.custom-carousel-item:nth-of-type(8) { --offset: 8; background-color: #fbf5e9; }
+.custom-carousel-item:nth-of-type(8) { --offset: 8; background-color: #d2a64f; }
 .custom-carousel-item:nth-of-type(9) { --offset: 9; background-color: #ff70e1; }
 .custom-carousel-item:nth-of-type(10) { --offset: 10; background-color: #ff7070; }
 .custom-carousel-item:nth-of-type(11) { --offset: 11; background-color: #70ffda; }
@@ -255,127 +255,3 @@
 .know-more-btn{
   margin-left: 1500%;
 }
-/* 
-.mycarousel{
-  background-color: #fff;
-
-}
-.container{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-
-}
-.carousel-item{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.carousel-content{
- display: flex;
- justify-content: center;
- position: relative;
- padding: 0 2rem;
-
-}
-.carousel-content p{
-  font-family: "Source Sans 3", sans-serif;
-  font-size: 1.5rem;
-  font-weight: 400;
-  line-height: 26.4px;
-  color: #333333;
-  text-align: center;
-  display: flex;
-  gap: 2rem;
-  
-}
-
-.person ul{
-  font-size: larger;
-  font-family: "Source Sans 3", sans-serif;
-  font-style: normal;
-}
-
-.person{
-  display: flex;
-  justify-content: center;
-}
-.person img{
-border-radius: 50%;
-}
-.person ul{
-  list-style: none;
-}
-.person ul>:nth-child(1){
-  font-weight: bolder;
-}
-.slick-dots {
-display: flex;
-justify-content: center;
-margin: 0;
-padding: 1rem 0;
-
-list-style-type: none;
-
-  li {
-    margin: 0 0.25rem;
-  }
-
-  button {
-    width: 1rem;
-    height: 1rem;
-    padding: 0;
-
-    border: none;
-    border-radius: 100%;
-    background-color: orange;
-
-    text-indent: -9999px;
-  }
-
-  li.slick-active button {
-    background-color: red;
-  }
-
-}
-.left-icon{
- align-self: flex-start;
- color: #FFA500;
-}
-.right-icon{
- align-self: flex-end;
- color: #FFA500;
-}
-.teacher-carousel{
-  background-color: #fff;
-}
-
-.services .slick-slide{
-  background-color: #b32532;
-  color: #FFF;
-  height: 200px;
-  border-radius: 30px;
-  margin: 0 15px 0 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform: scale(0.8);
-  transition: all 0.4s ease-in-out;
-}
-.services .slick-slide,
-.services .slick-slide[aria-hidden="true"]:not(.slick-cloned) ~ .slick-cloned[aria-hidden="true"] {
-transform: scale(0.8, 0.8);
-transition: all 0.4s ease-in-out;
-}
-
-.services .slick-center,
-.services .slick-slide[aria-hidden="true"]:not([tabindex="-1"]) + .slick-cloned[aria-hidden="true"] {
-transform: scale(1.1);
-background-color: #000000;
-}
-.services .slick-current.slick-active{
-transform: scale(1.1);
-background-color: #000000;
-} */
