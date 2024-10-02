@@ -54,3 +54,11 @@ document.getElementById('video-container').addEventListener('click', function() 
       videoContainer.classList.remove('fullscreen');
     }
   });
+  
+  // Close button functionality
+  document.getElementById('close-btn').addEventListener('click', function(event) {
+    event.stopPropagation(); // Prevent triggering the fullscreen toggle
+    const videoContainer = document.getElementById('video-container');
+    videoContainer.style.display = 'none'; // Hide the video container
+  });
+  
