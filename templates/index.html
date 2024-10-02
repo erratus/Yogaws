@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="/static/styles/footer.css">
         <link rel="stylesheet" href="/static/styles/registration.css">
         <link rel="stylesheet" href="/static/styles/carousel.css">
+        <link rel="stylesheet" href="/static/styles/video.css">
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
         <link
       href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
@@ -22,8 +23,8 @@
                 <ul class="nav-links">
                     <li><a href="#">Home</a></li>
                     <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
-                    <li><a href="#">Classes</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#holder">Classes</a></li>
+                    <li><a href="#foot">Contact</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropbtn">About Us</a>
                         <div class="dropdown-content">
@@ -48,6 +49,13 @@
                 </div>
             </div>
     </section>
+
+    <div id="video-container">
+        <video id="minimized-video" controls>
+            <source src="/static/assets/enrollment.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
 
     <section id="trainers" id = "gohere">
         <div class="team-section">
@@ -97,7 +105,7 @@
     </div>
 </section>
 
-<section class="courses">
+<section id="holder" class="courses">
     <div class="custom-carousel-container">
         <!-- Radio buttons (hidden) -->
 
@@ -369,17 +377,18 @@
   </section>
     
 
-    <footer class="footer">
-        <div class="container">
+<section id="foot">
+<footer class="footer">
+    <div class="container">
             <div class="row">
                 <div class="footer-col">
                     <h4>Explore</h4>
                     <ul>
                         <li><a href="{{ url_for('vision') }}">Vision & Mission</a></li>
                         <li><a href="#">Distinctive Features</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
+                        </ul>
+                    </div>
+                    <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="#">Documents & Certificate</a></li>
@@ -407,6 +416,7 @@
             </div>
         </div>
     </footer>
+</section>
     <script>
 document.addEventListener('DOMContentLoaded', () => {
     const carousel = document.querySelector('.custom-carousel');

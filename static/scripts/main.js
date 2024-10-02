@@ -43,3 +43,14 @@ function validateForm() {
         return true;
     }
 }
+
+document.getElementById('video-container').addEventListener('click', function() {
+    const videoContainer = this;
+  
+    // Toggle full screen mode
+    if (!videoContainer.classList.contains('fullscreen')) {
+      videoContainer.classList.add('fullscreen');
+    } else {
+      videoContainer.classList.remove('fullscreen');
+    }
+  });
