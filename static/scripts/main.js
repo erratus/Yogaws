@@ -58,7 +58,32 @@ document.getElementById('video-container').addEventListener('click', function() 
   // Close button functionality
   document.getElementById('close-btn').addEventListener('click', function(event) {
     event.stopPropagation(); // Prevent triggering the fullscreen toggle
+    
     const videoContainer = document.getElementById('video-container');
-    videoContainer.style.display = 'none'; // Hide the video container
+    const video = document.getElementById('minimized-video');
+    
+    // Pause the video before closing
+    video.pause();
+    
+    // Optionally reset the video playback to the start
+    video.currentTime = 0;
+    
+    // Hide the video container
+    videoContainer.style.display = 'none';
   });
+  
+  window.addEventListener('scroll', function() {
+    const footer = document.querySelector('.footer');
+    const floatingLinks = document.querySelector('.floating-social-links');
+
+    const footerRect = footer.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    // Check if the footer is in the viewport
+    if (footerRect.top <= windowHeight) {
+        floatingLinks.style.display = 'none'; // Hide links
+    } else {
+        floatingLinks.style.display = 'flex'; // Show links
+    }
+});
   

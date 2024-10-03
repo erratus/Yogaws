@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="/static/styles/registration.css">
         <link rel="stylesheet" href="/static/styles/carousel.css">
         <link rel="stylesheet" href="/static/styles/video.css">
+        <link rel="stylesheet" href="/static/styles/mod.css">
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
         <link
       href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
@@ -19,7 +20,7 @@
     <body>
         <nav class="nav">
             <header class="header">
-                <img src="/static/assets/website_icon.webp" alt="Indramala yoga sansthan logo">
+                <img src="/static/assets/website_icon1.webp" alt="Indramala yoga sansthan logo">
                 <ul class="nav-links">
                     <li><a href="#">Home</a></li>
                     <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
@@ -372,12 +373,28 @@
           <div class="stories__author__details">
             <h4>Sneha Gaikwad</h4>
             <h6>Member</h6>
-          </div>
         </div>
-      </div>
+        </div>
     </div>
-  </section>
+    </div>
+</section>
     
+<div class="floating-social-links">
+    <a href="https://wa.me/918851246435/?text=Hello%2C%20I%20am%20interested%20to%20enquire%20about%20your%20institute" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="https://www.facebook.com/people/Indramala-yoga-sansthan/100083211976601/" target="_blank">
+        <i class="fab fa-facebook"></i>
+    </a>
+    <a href="https://m.youtube.com/@IndramalayogaSansthan" target="_blank">
+        <i class="fab fa-youtube"></i>
+    </a>
+    <a href="https://www.instagram.com/indramala_yoga?igsh=eDk3NmcyZ2JweWtj" target="_blank">
+        <i class="fab fa-instagram"></i>
+    </a>
+</div>
+
+
 
 <section id="foot">
 <footer class="footer">
@@ -387,13 +404,13 @@
                     <h4>Explore</h4>
                     <ul>
                         <li><a href="{{ url_for('vision') }}">Vision & Mission</a></li>
-                        <li><a href="#">Distinctive Features</a></li>
+                        <li><a href="{{ url_for('knowmore') }}">Distinctive Features</a></li>
                         </ul>
                     </div>
                     <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="#">Documents & Certificate</a></li>
+                        <li><a href="/static/assets/Yoga Brochure-1.pdf">Documents & Certificate</a></li>
                         <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
                         <li><a href="/static/assets/Yoga Brochure-1.pdf">Brochure</a></li>
                     </ul>
@@ -401,10 +418,19 @@
                 <div class="footer-col">
                     <h4>Follow Us</h4>
                     <div class="social-links">
-                        <a href="https://www.facebook.com/people/Indramala-yoga-sansthan/100083211976601/"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://m.youtube.com/@IndramalayogaSansthan"><i class="fab fa-youtube"></i></a>
-                        <a href="https://www.instagram.com/indramala_yoga?igsh=eDk3NmcyZ2JweWtj"><i class="fab fa-instagram"></i></a>
-                        <img src="/static/assets/website_icon.webp" alt="">
+                        <a href="https://wa.me/918851246435/?text=Hello%2C%20I%20am%20interested%20to%20enquire%20about%20your%20institute" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://www.facebook.com/people/Indramala-yoga-sansthan/100083211976601/" target="_blank">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://m.youtube.com/@IndramalayogaSansthan" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.instagram.com/indramala_yoga?igsh=eDk3NmcyZ2JweWtj" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <img src="/static/assets/website_icon1.webp" alt="">
                     </div>
                 </div>
                 <div class="footer-col">

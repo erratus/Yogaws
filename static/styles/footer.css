@@ -71,7 +71,7 @@ ul{
 	display: inline-block;
 	height: 40px;
 	width: 40px;
-	background-color: ccc5b9(255,255,255,0.2);
+	background-color: rgba(255,255,255,0.2);
 	margin:0 10px 10px 0;
 	text-align: center;
 	line-height: 40px;
@@ -88,6 +88,37 @@ ul{
     background-color: #ffffff;
     color: #24262b;
 }
+
+/* Style for floating social links */
+.floating-social-links {
+    position: fixed;
+    top: 50%; /* Adjusts it vertically in the center */
+    left: 0; /* Sticks it to the left of the screen */
+    transform: translateY(-50%); /* Aligns the buttons vertically in the center */
+    z-index: 1000; /* Ensures it's on top of other elements */
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+.floating-social-links a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.2); /* Light transparent background */
+    margin: 5px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #24262b; /* Icon color */
+    transition: all 0.3s ease;
+}
+
+.floating-social-links a:hover {
+    background-color: #ecd5ac; /* Change color on hover */
+    color: #000000; /* Change text color on hover */
+}
+
 
 /*responsive*/
 @media(max-width: 767px){
